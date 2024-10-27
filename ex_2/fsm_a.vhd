@@ -32,27 +32,27 @@ begin
 	begin
 		-- Set default States
 		next_fsm_state <= fsm_state;
-		counter_restart_strobe_o <= '0' after 1 ns;
+		counter_restart_strobe_o <= '0';
 		led_o <= '0';
 
 		case fsm_state is
 			when START =>
 				if start_button_i = '1' then
-					counter_restart_strobe_o <= '1' after 1 ns;
-					next_fsm_state <= WAIT_ON_CNT after 1 ns;
+					counter_restart_strobe_o <= '1';
+					next_fsm_state <= WAIT_ON_CNT;
 				end if;
 
 			when WAIT_ON_CNT =>
 				if counter_value_i = max_counter then 
-					counter_restart_strobe_o <= '1' after 1 ns;
-					next_fsm_state <= LED_ON after 1 ns;
+					counter_restart_strobe_o <= '1';
+					next_fsm_state <= LED_ON;
 				end if;
 
 			when LED_ON =>
 				led_o <= '1';
 				if counter_value_i = max_counter then 
-					counter_restart_strobe_o <= '1' after 1 ns;
-					next_fsm_state <= START after 1 ns;
+					counter_restart_strobe_o <= '1';
+					next_fsm_state <= START;
 				end if;
 
 			when others => 

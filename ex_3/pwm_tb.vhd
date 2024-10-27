@@ -1,3 +1,7 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all; 
+
 entity pwm_tb is
 end pwm_tb;
 
@@ -13,7 +17,7 @@ architecture behav of pwm_tb is
 	signal tb_PWM_pin 				: std_ulogic := '0';
 begin
 
-	pwm_dut : entity work.pwm
+	pwm_dut : entity work.pwm(behav)
 	generic map (
 		COUNTER_LEN => tb_COUNTER_LEN
 	)
@@ -27,12 +31,26 @@ begin
 
 	clk_proc : process -- 50 MHz
 	begin
-		clk <= '0';
+		tb_clk <= '0';
 		wait for t_clk / 2;
-		clk <= '1';
+		tb_clk <= '1';
 		wait for t_clk / 2;
 	end process clk_proc;
 
-	-- Test case 1
+	stimuli : process
+	begin
 		
+		tb_rst <= '1';
+		wait for 20 ns;
+		tb_rst <= '0';
+		wait for 20 ns;
+
+		-- Test case 1
+
+		tb_Period_counter_val <= "1111";
+		tb_ON_counter_val <= "0111";
+
+		wait for 2000 ns;
+
+	end process stimuli;
 end behav;
