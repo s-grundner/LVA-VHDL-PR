@@ -30,12 +30,13 @@ begin
 		end if;
 	end process pwm_proc;
 
-	rst_proc : process (Period_counter_val_i) is
+	rst_proc : process (count, Period_counter_val_i) is
 	begin
-		if count > Period_counter_val_i then
+		if count = Period_counter_val_i-1 then
 			count_reset_flag <= '1';
 		else 
 			count_reset_flag <= '0';
 		end if;
 	end process rst_proc;
+	
 end behav;
