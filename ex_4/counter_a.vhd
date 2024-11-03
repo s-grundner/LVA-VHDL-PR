@@ -9,24 +9,24 @@ architecture behav of counter is
 
 begin
 
-	seq_proc : process (clk_i, rst_i) is
+	reg_seq : process (clk_i, rst_i) is
     begin
-		if rst_i = '1' then
-			curr_cnt <= (others => '0');
+        if rst_i = '1' then
+            curr_cnt <= (others => '0');
         elsif rising_edge(clk_i) then
             curr_cnt <= next_cnt;
         end if;
-    end process seq_proc;
+    end process reg_seq;
 
-	comb_proc : process (curr_cnt, counter_rst_strobe_i) is
+    cnt_comb : process (curr_cnt, counter_rst_strobe_i) is
     begin
         if counter_rst_strobe_i = '1' then
             next_cnt <= (others => '0');
         else
             next_cnt <= curr_cnt + 1;
         end if;
-    end process comb_proc;
+    end process cnt_comb;
 
-	counter_o <= curr_cnt;
+    counter_o <= curr_cnt;
 
-end behav;
+end behav; 

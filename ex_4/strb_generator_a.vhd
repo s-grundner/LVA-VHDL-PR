@@ -22,22 +22,22 @@ begin
 			counter_o => strb_counter
 		);
 
-	seq_proc : process (clk_i, rst_i) is
+	reg_seq : process (clk_i, rst_i) is
 	begin
 		if rst_i = '1' then
 			curr_strobe <= '0';
 		elsif rising_edge(clk_i) then
 			curr_strobe <= next_strobe;
 		end if;
-	end process seq_proc;
+	end process reg_seq;
 
-	comb_proc : process (strb_counter) is
+	strb_comb : process (strb_counter) is
 	begin
 		next_strobe <= '0';
 		if strb_counter = PRESCALER-1 then
 			next_strobe <= '1';
 		end if;
-	end process comb_proc;
+	end process strb_comb;
 
 	strb_o <= curr_strobe;
 

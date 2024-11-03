@@ -27,7 +27,7 @@ begin
 		rst_i 				 => tb_rst,
 		Period_counter_val_i => tb_Period_counter_val,
 		ON_counter_val_i 	 => tb_ON_counter_val,
-		PWM_pin_o 			 => tb_PWM_pin
+		PWM_o 				 => tb_PWM_pin
 	);
 
 	clk : process is
@@ -47,7 +47,7 @@ begin
 		-- Test case
 
 		tb_Period_counter_val <= "1111";
-		tb_ON_counter_val <= "0110";
+		tb_ON_counter_val <= "1111";
 
 		wait for 2000 ns;
 	end process;

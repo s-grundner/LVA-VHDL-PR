@@ -34,7 +34,16 @@ begin
 			strb_o => sampling_strobe
 		);
 
-	adc_comb_proc : process(sampling_strobe, Comparator_i) is
+	reg_seq : process(clk_i, rst_i) is
+	begin
+		if rst_i = '1' then
+			ADC_Value_o <= (others => '0');
+		elsif rising_edge(clk_i) then
+			ADC_Value_o <= ON_counter_val;
+		end if;
+	end process reg_seq;
+
+	adc_comb : process (sampling_strobe, Comparator_i) is
 	begin
 		if sampling_strobe = '1' then
 			if Comparator_i = '1' then
@@ -45,24 +54,15 @@ begin
 				prev_comp <= '0';
 			end if;
 		end if;
-	end process adc_comb_proc;
+	end process adc_comb;
 
-	validate_comb_proc : process(Comparator_i, prev_comp) is
+	validate_comb : process(Comparator_i, prev_comp) is
 	begin
 		if Comparator_i = not prev_comp then
 			ADC_valid_strobe_o <= '1';
 		else
 			ADC_valid_strobe_o <= '0';
 		end if;
-	end process validate_comb_proc;
-
-	seq_proc : process(clk_i, rst_i) is
-	begin
-		if rst_i = '1' then
-			ADC_Value_o <= (others => '0');
-		elsif rising_edge(clk_i) then
-			ADC_Value_o <= ON_counter_val;
-		end if;
-	end process seq_proc;
+	end process validate_comb;
 
 end behav;
