@@ -1,0 +1,6 @@
+
+State Machine - |blink|fsm:fsm_ent|curr_state
+Name curr_state.LED_ON curr_state.WAIT_ON_CNT curr_state.START 
+curr_state.START 0 0 0 
+curr_state.WAIT_ON_CNT 0 1 1 
+curr_state.LED_ON 1 0 1 

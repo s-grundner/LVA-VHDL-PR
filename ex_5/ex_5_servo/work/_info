@@ -1,0 +1,188 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/simon/source/vhdl_projects/ex_5_servo
+Ecounter
+Z1 w1731422276
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 64
+R0
+Z5 8counter_ea.vhd
+Z6 Fcounter_ea.vhd
+l0
+L7 1
+V5mj<lBG_QU:56kSE?c[@^2
+!s100 gI]A]883T5T7F^D@PY6=b2
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1731424210
+!i10b 1
+Z9 !s108 1731424210.000000
+Z10 !s90 -reportprogress|300|-work|work|counter_ea.vhd|
+Z11 !s107 counter_ea.vhd|
+!i113 1
+Z12 o-work work
+Z13 tExplicit 1 CvgOpt 0
+Abehav
+R2
+R3
+R4
+Z14 DEx4 work 7 counter 0 22 5mj<lBG_QU:56kSE?c[@^2
+!i122 64
+l26
+L21 28
+V_]A65Ne6;N[GP=EFnJQ<g2
+!s100 `biN=Xg27BnLaC6N?Wj@S0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Epwm
+Z15 w1731372853
+R2
+R3
+R4
+!i122 65
+R0
+Z16 8pwm_ea.vhd
+Z17 Fpwm_ea.vhd
+l0
+L7 1
+Vz7_LP`DD8`aCVadHZQiDE2
+!s100 XT_7X]Y05:1CPDlCT3B`h2
+R7
+32
+Z18 !s110 1731424211
+!i10b 1
+R9
+Z19 !s90 -reportprogress|300|-work|work|pwm_ea.vhd|
+Z20 !s107 pwm_ea.vhd|
+!i113 1
+R12
+R13
+Abehav
+R14
+R2
+R3
+R4
+Z21 DEx4 work 3 pwm 0 22 z7_LP`DD8`aCVadHZQiDE2
+!i122 65
+l28
+L22 50
+VBm416U2oGXJ?AzomiA;160
+!s100 J<JmllZ:dJHi?RX=<9kEV2
+R7
+32
+R18
+!i10b 1
+R9
+R19
+R20
+!i113 1
+R12
+R13
+Eservo
+Z22 w1731422673
+R2
+R3
+R4
+!i122 66
+R0
+Z23 8servo_ea.vhd
+Z24 Fservo_ea.vhd
+l0
+L7 1
+Vie[lb>=jM3_:@S<Df;1B_1
+!s100 I0YX4@C?;Mn8JoMaYBegn1
+R7
+32
+R18
+!i10b 1
+Z25 !s108 1731424211.000000
+Z26 !s90 -reportprogress|300|-work|work|servo_ea.vhd|
+Z27 !s107 servo_ea.vhd|
+!i113 1
+R12
+R13
+Abehav
+R21
+R2
+R3
+R4
+Z28 DEx4 work 5 servo 0 22 ie[lb>=jM3_:@S<Df;1B_1
+!i122 66
+l27
+L23 33
+VDzUIznLzhQiNNidgPHo1W1
+!s100 mPbz=D9R6NGS<JYOEh<[02
+R7
+32
+R18
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R12
+R13
+Eservo_tb
+Z29 w1731424206
+Z30 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+R2
+R3
+R4
+!i122 67
+R0
+Z31 8servo_tb.vhd
+Z32 Fservo_tb.vhd
+l0
+L8 1
+Vm_`Z4cB=5K:Wi?m?n32J]3
+!s100 SaRX0a6gHn:<`023W@ioQ3
+R7
+32
+R18
+!i10b 1
+R25
+Z33 !s90 -reportprogress|300|-work|work|servo_tb.vhd|
+Z34 !s107 servo_tb.vhd|
+!i113 1
+R12
+R13
+Abehav
+R28
+R30
+R2
+R3
+R4
+Z35 DEx4 work 8 servo_tb 0 22 m_`Z4cB=5K:Wi?m?n32J]3
+!i122 67
+l35
+Z36 L13 71
+V0XaAdQChMONU@_DT=4]ac1
+!s100 S]`j3`E7L9S1?mZz573V@0
+R7
+32
+R18
+!i10b 1
+R25
+R33
+R34
+!i113 1
+R12
+R13

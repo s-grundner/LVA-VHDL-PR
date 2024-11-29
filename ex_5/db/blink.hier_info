@@ -1,0 +1,68 @@
+|blink
+clk_i => counter:counter_ent.clk_i
+clk_i => fsm:fsm_ent.clk_i
+clk_i => sync:sync_ent.clk_i
+rst_i => counter:counter_ent.rst_i
+rst_i => fsm:fsm_ent.rst_i
+rst_i => sync:sync_ent.rst_i
+start_button_i => sync:sync_ent.sig_i
+led_o << fsm:fsm_ent.led_o
+
+
+|blink|counter:counter_ent
+clk_i => curr_cnt[0].CLK
+clk_i => curr_cnt[1].CLK
+clk_i => curr_cnt[2].CLK
+clk_i => curr_cnt[3].CLK
+clk_i => curr_cnt[4].CLK
+clk_i => curr_cnt[5].CLK
+rst_i => curr_cnt[0].ACLR
+rst_i => curr_cnt[1].ACLR
+rst_i => curr_cnt[2].ACLR
+rst_i => curr_cnt[3].ACLR
+rst_i => curr_cnt[4].ACLR
+rst_i => curr_cnt[5].ACLR
+counter_rst_strobe_i => next_cnt[5].OUTPUTSELECT
+counter_rst_strobe_i => next_cnt[4].OUTPUTSELECT
+counter_rst_strobe_i => next_cnt[3].OUTPUTSELECT
+counter_rst_strobe_i => next_cnt[2].OUTPUTSELECT
+counter_rst_strobe_i => next_cnt[1].OUTPUTSELECT
+counter_rst_strobe_i => next_cnt[0].OUTPUTSELECT
+counter_o[0] <= curr_cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+counter_o[1] <= curr_cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+counter_o[2] <= curr_cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+counter_o[3] <= curr_cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+counter_o[4] <= curr_cnt[4].DB_MAX_OUTPUT_PORT_TYPE
+counter_o[5] <= curr_cnt[5].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|blink|fsm:fsm_ent
+clk_i => curr_state~1.DATAIN
+rst_i => curr_state~3.DATAIN
+start_button_i => next_state.OUTPUTSELECT
+start_button_i => next_state.OUTPUTSELECT
+start_button_i => next_state.OUTPUTSELECT
+start_button_i => Selector0.IN0
+counter_i[0] => Equal0.IN11
+counter_i[1] => Equal0.IN10
+counter_i[2] => Equal0.IN9
+counter_i[3] => Equal0.IN8
+counter_i[4] => Equal0.IN7
+counter_i[5] => Equal0.IN6
+counter_rst_strobe_o <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+led_o <= led_o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|blink|sync:sync_ent
+clk_i => sync_chain[0].CLK
+clk_i => sync_chain[1].CLK
+clk_i => sync_chain[2].CLK
+clk_i => sync_chain[3].CLK
+rst_i => sync_chain[0].ACLR
+rst_i => sync_chain[1].ACLR
+rst_i => sync_chain[2].ACLR
+rst_i => sync_chain[3].ACLR
+sig_i => sync_chain[0].DATAIN
+sig_o <= sync_chain[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

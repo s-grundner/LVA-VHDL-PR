@@ -1,0 +1,1168 @@
+# Reading pref.tcl
+do sim.do
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:35:38 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:35:38 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:35:38 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:35:39 on Nov 12,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:35:39 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity servo
+# ** Error: servo_ea.vhd(4): (vcom-1396) Object "PWM_MAX_COUNT" cannot appear within the same interface list in which it is declared.
+# ** Error: servo_ea.vhd(4): (vcom-1136) Unknown identifier "ceil".
+# ** Error: servo_ea.vhd(7): (vcom-1136) Unknown identifier "std_logic".
+# ** Error: servo_ea.vhd(8): (vcom-1136) Unknown identifier "std_logic".
+# ** Error: servo_ea.vhd(9): (vcom-1136) Unknown identifier "std_logic_vector".
+# ** Error: servo_ea.vhd(10): (vcom-1136) Unknown identifier "std_logic".
+# ** Error: servo_ea.vhd(11): near ")": (vcom-1576) expecting IDENTIFIER.
+# End time: 15:35:39 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 6
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work servo_ea.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:37:59 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:38:00 on Nov 12,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:38:00 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:38:00 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:38:00 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# ** Error: servo_ea.vhd(11): near ")": (vcom-1576) expecting FUNCTION or PROCEDURE or IMPURE or PURE.
+# End time: 15:38:00 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 6
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work servo_ea.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:39:08 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:39:08 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:39:08 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:39:08 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:39:08 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# ** Error: servo_ea.vhd(36): Generic "PWM_MAX_COUNT" is type std.STANDARD.NATURAL; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: servo_ea.vhd(37): Signal [mode IN port] "encoded_angle_i" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: servo_ea.vhd(52): Signal [mode IN port] "encoded_angle_i" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.std_logic_1164.STD_LOGIC.
+# ** Note: servo_ea.vhd(55): VHDL Compiler exiting
+# End time: 15:39:08 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 6
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work servo_ea.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:41:12 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:41:12 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:41:12 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:41:12 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:41:13 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# ** Error: servo_ea.vhd(25): near "in": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
+# -- Loading entity pwm
+# ** Error: servo_ea.vhd(36): Generic "PWM_MAX_COUNT" is type std.STANDARD.NATURAL; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: servo_ea.vhd(44): Illegal target for signal assignment.
+# ** Error: servo_ea.vhd(44): (vcom-1136) Unknown identifier "ON_counter_val".
+# ** Error: servo_ea.vhd(46): Illegal target for signal assignment.
+# ** Error: servo_ea.vhd(46): (vcom-1136) Unknown identifier "ON_counter_val".
+# ** Error: servo_ea.vhd(52): Illegal target for signal assignment.
+# ** Error: servo_ea.vhd(52): (vcom-1136) Unknown identifier "next_On_counter_val".
+# ** Note: servo_ea.vhd(55): VHDL Compiler exiting
+# End time: 15:41:13 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 8, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 6
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work servo_ea.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:41:29 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:41:29 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:41:29 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:41:29 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:41:29 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# ** Error: servo_ea.vhd(36): Generic "PWM_MAX_COUNT" is type std.STANDARD.NATURAL; expecting type ieee.NUMERIC_STD.UNSIGNED.
+# ** Error: servo_ea.vhd(44): Enumeration literal '0' is not of type ieee.NUMERIC_STD.UNSIGNED.
+# ** Note: servo_ea.vhd(55): VHDL Compiler exiting
+# End time: 15:41:30 on Nov 12,2024, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 6
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work servo_ea.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:42:50 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:42:50 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:42:50 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:42:50 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:42:50 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# ** Error: servo_ea.vhd(44): Enumeration literal '0' is not of type ieee.NUMERIC_STD.UNSIGNED.
+# ** Note: servo_ea.vhd(55): VHDL Compiler exiting
+# End time: 15:42:50 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 6
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work servo_ea.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:37 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:43:38 on Nov 12,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:38 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:43:38 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:38 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 15:43:38 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:38 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo_tb
+# -- Compiling architecture behav of servo_tb
+# -- Loading entity servo
+# ** Error: servo_tb.vhd(42): (vcom-1031) Formal generic "PWM_RESOLUTION" has OPEN or no actual associated with it.
+# ** Note: servo_tb.vhd(77): VHDL Compiler exiting
+# End time: 15:43:38 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 7
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work servo_tb.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:44:35 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:44:35 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:44:36 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:44:36 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:44:36 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 15:44:36 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:44:36 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo_tb
+# -- Compiling architecture behav of servo_tb
+# -- Loading entity servo
+# ** Error: servo_tb.vhd(36): near "PWM_RESOLUTION": (vcom-1576) expecting ',' or ')'.
+# ** Error: servo_tb.vhd(45): Statement cannot be labeled.
+# ** Note: servo_tb.vhd(78): VHDL Compiler exiting
+# End time: 15:44:36 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 7
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work servo_tb.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:44:58 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:44:59 on Nov 12,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:44:59 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:44:59 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:44:59 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 15:44:59 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:44:59 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo_tb
+# -- Compiling architecture behav of servo_tb
+# -- Loading entity servo
+# ** Error: servo_tb.vhd(36): (vcom-1136) Unknown identifier "ceil".
+# ** Note: servo_tb.vhd(78): VHDL Compiler exiting
+# End time: 15:44:59 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 7
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work servo_tb.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:18 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:45:18 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:18 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:45:18 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:18 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 15:45:18 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:18 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity servo_tb
+# -- Compiling architecture behav of servo_tb
+# -- Loading entity servo
+# End time: 15:45:18 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.servo_tb 
+# Start time: 15:45:19 on Nov 12,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.servo_tb(behav)
+# Loading work.servo(behav)
+# ** Fatal: (vsim-3348) Port length (20) does not match actual length (100000) for port "/servo_tb/servo_dut/encoded_angle_i".
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut File: servo_ea.vhd Line: 15
+# FATAL ERROR while loading design
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./sim.do PAUSED at line 9
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:46:49 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:46:49 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:46:49 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:46:49 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:46:49 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 15:46:49 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:46:49 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity servo_tb
+# -- Compiling architecture behav of servo_tb
+# -- Loading entity servo
+# End time: 15:46:49 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.servo_tb 
+# Start time: 15:45:19 on Nov 12,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.servo_tb(behav)
+# Loading work.servo(behav)
+# Loading work.pwm(behav)
+# Loading work.counter(behav)
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut/pwm_ent
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 20 (19 downto 0). Right is 100000 (99999 downto 0).
+#    Time: 200 ns  Iteration: 0  Process: /servo_tb/stimulus File: servo_tb.vhd
+# Fatal error in Process stimulus at servo_tb.vhd line 63
+# 
+# HDL call sequence:
+# Stopped at servo_tb.vhd 63 Process stimulus
+# 
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:31 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:48:31 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:31 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:48:31 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:31 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 15:48:31 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:31 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity servo_tb
+# -- Compiling architecture behav of servo_tb
+# -- Loading entity servo
+# End time: 15:48:31 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:48:33 on Nov 12,2024, Elapsed time: 0:03:14
+# Errors: 2, Warnings: 2
+# vsim work.servo_tb 
+# Start time: 15:48:33 on Nov 12,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.servo_tb(behav)
+# Loading work.servo(behav)
+# ** Fatal: (vsim-3348) Port length (20) does not match actual length (17) for port "/servo_tb/servo_dut/encoded_angle_i".
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut File: servo_ea.vhd Line: 15
+# FATAL ERROR while loading design
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./sim.do PAUSED at line 9
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:01 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:50:01 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:01 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:50:01 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:01 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 15:50:02 on Nov 12,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:02 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity servo_tb
+# -- Compiling architecture behav of servo_tb
+# -- Loading entity servo
+# End time: 15:50:02 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.servo_tb 
+# Start time: 15:48:33 on Nov 12,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.servo_tb(behav)
+# Loading work.servo(behav)
+# ** Fatal: (vsim-3348) Port length (20) does not match actual length (17) for port "/servo_tb/servo_dut/encoded_angle_i".
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut File: servo_ea.vhd Line: 15
+# FATAL ERROR while loading design
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./sim.do PAUSED at line 9
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:15 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:50:15 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:15 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:50:15 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:16 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 15:50:16 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:16 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity servo_tb
+# -- Compiling architecture behav of servo_tb
+# -- Loading entity servo
+# End time: 15:50:16 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.servo_tb 
+# Start time: 15:48:33 on Nov 12,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.servo_tb(behav)
+# Loading work.servo(behav)
+# Loading work.pwm(behav)
+# Loading work.counter(behav)
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut/pwm_ent
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:52:00 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:52:00 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:52:00 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:52:00 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:52:01 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 15:52:01 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:52:01 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity servo_tb
+# -- Compiling architecture behav of servo_tb
+# -- Loading entity servo
+# ** Error: servo_tb.vhd(68): (vcom-1136) Unknown identifier "s".
+# ** Error: servo_tb.vhd(68): Integer literal 1 is not of type std.STANDARD.TIME.
+# ** Error: servo_tb.vhd(74): (vcom-1136) Unknown identifier "s".
+# ** Error: servo_tb.vhd(74): Integer literal 1 is not of type std.STANDARD.TIME.
+# ** Error: servo_tb.vhd(80): (vcom-1136) Unknown identifier "s".
+# ** Error: servo_tb.vhd(80): Integer literal 1 is not of type std.STANDARD.TIME.
+# ** Note: servo_tb.vhd(83): VHDL Compiler exiting
+# End time: 15:52:01 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./sim.do line 7
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work servo_tb.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:52:33 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:52:33 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:52:33 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:52:33 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:52:33 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 15:52:33 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:52:33 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity servo_tb
+# -- Compiling architecture behav of servo_tb
+# -- Loading entity servo
+# End time: 15:52:33 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:52:34 on Nov 12,2024, Elapsed time: 0:04:01
+# Errors: 3, Warnings: 2
+# vsim work.servo_tb 
+# Start time: 15:52:34 on Nov 12,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.servo_tb(behav)
+# Loading work.servo(behav)
+# Loading work.pwm(behav)
+# Loading work.counter(behav)
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut/pwm_ent
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/simon/source/vhdl_projects/ex_5_servo/wave.do
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:24 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:59:24 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:24 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:59:24 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:24 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 15:59:25 on Nov 12,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:25 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity servo_tb
+# -- Compiling architecture behav of servo_tb
+# -- Loading entity servo
+# End time: 15:59:25 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:59:26 on Nov 12,2024, Elapsed time: 0:06:52
+# Errors: 0, Warnings: 2
+# vsim work.servo_tb 
+# Start time: 15:59:26 on Nov 12,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.servo_tb(behav)
+# Loading work.servo(behav)
+# Loading work.pwm(behav)
+# Loading work.counter(behav)
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut/pwm_ent
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:06:57 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 16:06:57 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:06:57 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 16:06:57 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:06:57 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 16:06:57 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:06:57 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity servo_tb
+# -- Compiling architecture behav of servo_tb
+# -- Loading entity servo
+# End time: 16:06:57 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:06:59 on Nov 12,2024, Elapsed time: 0:07:33
+# Errors: 0, Warnings: 2
+# vsim work.servo_tb 
+# Start time: 16:06:59 on Nov 12,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.servo_tb(behav)
+# Loading work.servo(behav)
+# Loading work.pwm(behav)
+# Loading work.counter(behav)
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut/pwm_ent
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:10:10 on Nov 12,2024
+# vcom -reportprogress 300 -work work counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 16:10:10 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:10:10 on Nov 12,2024
+# vcom -reportprogress 300 -work work pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 16:10:11 on Nov 12,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:10:11 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 16:10:11 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:10:11 on Nov 12,2024
+# vcom -reportprogress 300 -work work servo_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity servo_tb
+# -- Compiling architecture behav of servo_tb
+# -- Loading entity servo
+# End time: 16:10:11 on Nov 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:10:12 on Nov 12,2024, Elapsed time: 0:03:13
+# Errors: 0, Warnings: 2
+# vsim work.servo_tb 
+# Start time: 16:10:12 on Nov 12,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.servo_tb(behav)
+# Loading work.servo(behav)
+# Loading work.pwm(behav)
+# Loading work.counter(behav)
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /servo_tb/servo_dut/pwm_ent
+# End time: 16:13:13 on Nov 12,2024, Elapsed time: 0:03:01
+# Errors: 0, Warnings: 2
