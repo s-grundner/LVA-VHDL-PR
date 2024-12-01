@@ -1,0 +1,714 @@
+Analysis & Synthesis report for Tilt
+Fri Nov 29 23:40:54 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: sync:sync_ent
+ 15. Parameter Settings for User Entity Instance: delta_adc:adc_ent
+ 16. Parameter Settings for User Entity Instance: delta_adc:adc_ent|pwm:pwm_ent
+ 17. Parameter Settings for User Entity Instance: delta_adc:adc_ent|pwm:pwm_ent|counter:counter_ent
+ 18. Parameter Settings for User Entity Instance: delta_adc:adc_ent|strb_generator:sampling_strobe_ent
+ 19. Parameter Settings for User Entity Instance: delta_adc:adc_ent|strb_generator:sampling_strobe_ent|counter:counter_ent
+ 20. Parameter Settings for User Entity Instance: servo:servo_ent|pwm:pwm_ent
+ 21. Parameter Settings for User Entity Instance: servo:servo_ent|pwm:pwm_ent|counter:counter_ent
+ 22. Parameter Settings for Inferred Entity Instance: tilt:tilt_ent|lpm_divide:Div0
+ 23. Port Connectivity Checks: "bin2bcd:bin2bcd_ent"
+ 24. Port Connectivity Checks: "servo:servo_ent|pwm:pwm_ent"
+ 25. Port Connectivity Checks: "delta_adc:adc_ent|pwm:pwm_ent"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Nov 29 23:40:54 2024       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; Tilt                                        ;
+; Top-level Entity Name           ; tilt_tl                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 111                                         ;
+; Total pins                      ; 26                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 1                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; tilt_tl            ; Tilt               ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; ../top_level_ea.vhd              ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_6/top_level_ea.vhd                       ;         ;
+; ../tilt_ea.vhd                   ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_6/tilt_ea.vhd                            ;         ;
+; ../sync_ea.vhd                   ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_6/sync_ea.vhd                            ;         ;
+; ../strb_generator_ea.vhd         ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_6/strb_generator_ea.vhd                  ;         ;
+; ../std_definitions.vhd           ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_6/std_definitions.vhd                    ;         ;
+; ../servo_pkg.vhd                 ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_6/servo_pkg.vhd                          ;         ;
+; ../servo_ea.vhd                  ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd                           ;         ;
+; ../sample_hold_ea.vhd            ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd                     ;         ;
+; ../pwm_ea.vhd                    ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_6/pwm_ea.vhd                             ;         ;
+; ../delta_adc_ea.vhd              ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd                       ;         ;
+; ../counter_ea.vhd                ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_6/counter_ea.vhd                         ;         ;
+; ../bin2bcd_ea.vhd                ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_6/bin2bcd_ea.vhd                         ;         ;
+; ../bcd_to_7seg_ea.vhd            ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_6/bcd_to_7seg_ea.vhd                     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc          ;         ;
+; db/lpm_divide_dpo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Smon/source/vhdl_projects/ex_6/quartus project/db/lpm_divide_dpo.tdf  ;         ;
+; db/abs_divider_mbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Smon/source/vhdl_projects/ex_6/quartus project/db/abs_divider_mbg.tdf ;         ;
+; db/alt_u_div_sve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Smon/source/vhdl_projects/ex_6/quartus project/db/alt_u_div_sve.tdf   ;         ;
+; db/lpm_abs_mn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Smon/source/vhdl_projects/ex_6/quartus project/db/lpm_abs_mn9.tdf     ;         ;
+; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Smon/source/vhdl_projects/ex_6/quartus project/db/lpm_abs_4p9.tdf     ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 393         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 759         ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 25          ;
+;     -- 5 input functions                    ; 24          ;
+;     -- 4 input functions                    ; 173         ;
+;     -- <=3 input functions                  ; 537         ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 111         ;
+;                                             ;             ;
+; I/O pins                                    ; 26          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 1           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clk_i~input ;
+; Maximum fan-out                             ; 111         ;
+; Total fan-out                               ; 2699        ;
+; Average fan-out                             ; 2.92        ;
++---------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                        ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Entity Name     ; Library Name ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |tilt_tl                                   ; 759 (0)             ; 111 (0)                   ; 0                 ; 1          ; 26   ; 0            ; |tilt_tl                                                                                                            ; tilt_tl         ; work         ;
+;    |bcd_to_7seg:seg_hundreds_ent|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|bcd_to_7seg:seg_hundreds_ent                                                                               ; bcd_to_7seg     ; work         ;
+;    |bcd_to_7seg:seg_ones_ent|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|bcd_to_7seg:seg_ones_ent                                                                                   ; bcd_to_7seg     ; work         ;
+;    |bcd_to_7seg:seg_tens_ent|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|bcd_to_7seg:seg_tens_ent                                                                                   ; bcd_to_7seg     ; work         ;
+;    |bin2bcd:bin2bcd_ent|                   ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|bin2bcd:bin2bcd_ent                                                                                        ; bin2bcd         ; work         ;
+;    |delta_adc:adc_ent|                     ; 45 (16)             ; 39 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|delta_adc:adc_ent                                                                                          ; delta_adc       ; work         ;
+;       |pwm:pwm_ent|                        ; 14 (6)              ; 9 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|delta_adc:adc_ent|pwm:pwm_ent                                                                              ; pwm             ; work         ;
+;          |counter:counter_ent|             ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|delta_adc:adc_ent|pwm:pwm_ent|counter:counter_ent                                                          ; counter         ; work         ;
+;       |strb_generator:sampling_strobe_ent| ; 15 (3)              ; 13 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|delta_adc:adc_ent|strb_generator:sampling_strobe_ent                                                       ; strb_generator  ; work         ;
+;          |counter:counter_ent|             ; 12 (12)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|delta_adc:adc_ent|strb_generator:sampling_strobe_ent|counter:counter_ent                                   ; counter         ; work         ;
+;    |sample_hold:sample_hold_ent|           ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|sample_hold:sample_hold_ent                                                                                ; sample_hold     ; work         ;
+;    |servo:servo_ent|                       ; 52 (14)             ; 41 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|servo:servo_ent                                                                                            ; servo           ; work         ;
+;       |pwm:pwm_ent|                        ; 38 (18)             ; 21 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|servo:servo_ent|pwm:pwm_ent                                                                                ; pwm             ; work         ;
+;          |counter:counter_ent|             ; 20 (20)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|servo:servo_ent|pwm:pwm_ent|counter:counter_ent                                                            ; counter         ; work         ;
+;    |sync:sync_ent|                         ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|sync:sync_ent                                                                                              ; sync            ; work         ;
+;    |tilt:tilt_ent|                         ; 625 (40)            ; 20 (20)                   ; 0                 ; 1          ; 0    ; 0            ; |tilt_tl|tilt:tilt_ent                                                                                              ; tilt            ; work         ;
+;       |lpm_divide:Div0|                    ; 585 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|tilt:tilt_ent|lpm_divide:Div0                                                                              ; lpm_divide      ; work         ;
+;          |lpm_divide_dpo:auto_generated|   ; 585 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|tilt:tilt_ent|lpm_divide:Div0|lpm_divide_dpo:auto_generated                                                ; lpm_divide_dpo  ; work         ;
+;             |abs_divider_mbg:divider|      ; 585 (33)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|tilt:tilt_ent|lpm_divide:Div0|lpm_divide_dpo:auto_generated|abs_divider_mbg:divider                        ; abs_divider_mbg ; work         ;
+;                |alt_u_div_sve:divider|     ; 520 (520)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|tilt:tilt_ent|lpm_divide:Div0|lpm_divide_dpo:auto_generated|abs_divider_mbg:divider|alt_u_div_sve:divider  ; alt_u_div_sve   ; work         ;
+;                |lpm_abs_4p9:my_abs_num|    ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |tilt_tl|tilt:tilt_ent|lpm_divide:Div0|lpm_divide_dpo:auto_generated|abs_divider_mbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9     ; work         ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary    ;
++-----------------------------------+-------------+
+; Statistic                         ; Number Used ;
++-----------------------------------+-------------+
+; Two Independent 18x18             ; 1           ;
+; Total number of DSP blocks        ; 1           ;
+;                                   ;             ;
+; Fixed Point Mixed Sign Multiplier ; 1           ;
++-----------------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                             ;
++-----------------------------------------------------+------------------------------------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                                              ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------------------------------------------+------------------------+
+; sample_hold:sample_hold_ent|hold_value[0]           ; delta_adc:adc_ent|ADC_valid_strobe_o                             ; yes                    ;
+; sample_hold:sample_hold_ent|hold_value[1]           ; delta_adc:adc_ent|ADC_valid_strobe_o                             ; yes                    ;
+; sample_hold:sample_hold_ent|hold_value[2]           ; delta_adc:adc_ent|ADC_valid_strobe_o                             ; yes                    ;
+; sample_hold:sample_hold_ent|hold_value[3]           ; delta_adc:adc_ent|ADC_valid_strobe_o                             ; yes                    ;
+; sample_hold:sample_hold_ent|hold_value[4]           ; delta_adc:adc_ent|ADC_valid_strobe_o                             ; yes                    ;
+; sample_hold:sample_hold_ent|hold_value[5]           ; delta_adc:adc_ent|ADC_valid_strobe_o                             ; yes                    ;
+; sample_hold:sample_hold_ent|hold_value[7]           ; delta_adc:adc_ent|ADC_valid_strobe_o                             ; yes                    ;
+; sample_hold:sample_hold_ent|hold_value[6]           ; delta_adc:adc_ent|ADC_valid_strobe_o                             ; yes                    ;
+; delta_adc:adc_ent|next_ON_counter_val[7]            ; delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe ; yes                    ;
+; delta_adc:adc_ent|next_ON_counter_val[6]            ; delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe ; yes                    ;
+; delta_adc:adc_ent|next_ON_counter_val[5]            ; delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe ; yes                    ;
+; delta_adc:adc_ent|next_ON_counter_val[4]            ; delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe ; yes                    ;
+; delta_adc:adc_ent|next_ON_counter_val[3]            ; delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe ; yes                    ;
+; delta_adc:adc_ent|next_ON_counter_val[2]            ; delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe ; yes                    ;
+; delta_adc:adc_ent|next_ON_counter_val[1]            ; delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe ; yes                    ;
+; delta_adc:adc_ent|next_ON_counter_val[0]            ; delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe ; yes                    ;
+; Number of user-specified and inferred latches = 16  ;                                                                  ;                        ;
++-----------------------------------------------------+------------------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                       ;
++-------------------------------------------------+----------------------------------------+
+; Register name                                   ; Reason for Removal                     ;
++-------------------------------------------------+----------------------------------------+
+; sample_hold:sample_hold_ent|hold_value_o[8..15] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 8           ;                                        ;
++-------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 111   ;
+; Number of registers using Synchronous Clear  ; 54    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 102   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 9     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; servo:servo_ent|ON_counter_val[19]      ; 1       ;
+; servo:servo_ent|ON_counter_val[18]      ; 1       ;
+; servo:servo_ent|ON_counter_val[17]      ; 2       ;
+; servo:servo_ent|ON_counter_val[16]      ; 1       ;
+; servo:servo_ent|ON_counter_val[15]      ; 1       ;
+; servo:servo_ent|ON_counter_val[14]      ; 1       ;
+; servo:servo_ent|ON_counter_val[13]      ; 1       ;
+; servo:servo_ent|ON_counter_val[12]      ; 2       ;
+; servo:servo_ent|ON_counter_val[11]      ; 1       ;
+; servo:servo_ent|ON_counter_val[10]      ; 1       ;
+; servo:servo_ent|ON_counter_val[9]       ; 1       ;
+; servo:servo_ent|ON_counter_val[8]       ; 1       ;
+; servo:servo_ent|ON_counter_val[7]       ; 2       ;
+; servo:servo_ent|ON_counter_val[6]       ; 1       ;
+; servo:servo_ent|ON_counter_val[5]       ; 1       ;
+; servo:servo_ent|ON_counter_val[4]       ; 1       ;
+; servo:servo_ent|ON_counter_val[3]       ; 1       ;
+; servo:servo_ent|ON_counter_val[2]       ; 1       ;
+; servo:servo_ent|ON_counter_val[0]       ; 1       ;
+; servo:servo_ent|ON_counter_val[1]       ; 1       ;
+; tilt:tilt_ent|angle_o[18]               ; 1       ;
+; tilt:tilt_ent|angle_o[17]               ; 1       ;
+; tilt:tilt_ent|angle_o[12]               ; 1       ;
+; tilt:tilt_ent|angle_o[11]               ; 1       ;
+; tilt:tilt_ent|angle_o[9]                ; 1       ;
+; tilt:tilt_ent|angle_o[7]                ; 1       ;
+; Total number of inverted registers = 26 ;         ;
++-----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |tilt_tl|tilt:tilt_ent|angle_o[16] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |tilt_tl|tilt:tilt_ent|angle_o[11] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sync:sync_ent ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; n_dff          ; 3     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delta_adc:adc_ent ;
++-----------------+-------+--------------------------------------+
+; Parameter Name  ; Value ; Type                                 ;
++-----------------+-------+--------------------------------------+
+; adc_resolution  ; 8     ; Signed Integer                       ;
+; sampling_psc    ; 4000  ; Signed Integer                       ;
+; max_counter_val ; 250   ; Signed Integer                       ;
++-----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delta_adc:adc_ent|pwm:pwm_ent ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; counter_len    ; 8     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delta_adc:adc_ent|pwm:pwm_ent|counter:counter_ent ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; counter_len    ; 8     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delta_adc:adc_ent|strb_generator:sampling_strobe_ent ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; prescaler      ; 4000  ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delta_adc:adc_ent|strb_generator:sampling_strobe_ent|counter:counter_ent ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; counter_len    ; 12    ; Signed Integer                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: servo:servo_ent|pwm:pwm_ent ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; counter_len    ; 20    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: servo:servo_ent|pwm:pwm_ent|counter:counter_ent ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; counter_len    ; 20    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: tilt:tilt_ent|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------+
+; Parameter Name         ; Value          ; Type                                 ;
++------------------------+----------------+--------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                              ;
+; LPM_WIDTHD             ; 7              ; Untyped                              ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                              ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                              ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                              ;
+; CBXI_PARAMETER         ; lpm_divide_dpo ; Untyped                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                       ;
++------------------------+----------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin2bcd:bin2bcd_ent"                                                                          ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; thousands_o    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; tenthousands_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "servo:servo_ent|pwm:pwm_ent"        ;
++------------------------------+-------+----------+--------------+
+; Port                         ; Type  ; Severity ; Details      ;
++------------------------------+-------+----------+--------------+
+; period_counter_val_i[19..16] ; Input ; Info     ; Stuck at VCC ;
+; period_counter_val_i[13..10] ; Input ; Info     ; Stuck at GND ;
+; period_counter_val_i[8..7]   ; Input ; Info     ; Stuck at GND ;
+; period_counter_val_i[5..0]   ; Input ; Info     ; Stuck at GND ;
+; period_counter_val_i[15]     ; Input ; Info     ; Stuck at GND ;
+; period_counter_val_i[14]     ; Input ; Info     ; Stuck at VCC ;
+; period_counter_val_i[9]      ; Input ; Info     ; Stuck at VCC ;
+; period_counter_val_i[6]      ; Input ; Info     ; Stuck at VCC ;
++------------------------------+-------+----------+--------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "delta_adc:adc_ent|pwm:pwm_ent"    ;
++----------------------------+-------+----------+--------------+
+; Port                       ; Type  ; Severity ; Details      ;
++----------------------------+-------+----------+--------------+
+; period_counter_val_i[7..3] ; Input ; Info     ; Stuck at VCC ;
+; period_counter_val_i[2]    ; Input ; Info     ; Stuck at GND ;
+; period_counter_val_i[1]    ; Input ; Info     ; Stuck at VCC ;
+; period_counter_val_i[0]    ; Input ; Info     ; Stuck at GND ;
++----------------------------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 111                         ;
+;     CLR               ; 48                          ;
+;     CLR SCLR          ; 54                          ;
+;     ENA               ; 9                           ;
+; arriav_lcell_comb     ; 764                         ;
+;     arith             ; 372                         ;
+;         0 data inputs ; 53                          ;
+;         1 data inputs ; 100                         ;
+;         2 data inputs ; 41                          ;
+;         3 data inputs ; 78                          ;
+;         4 data inputs ; 100                         ;
+;     normal            ; 385                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 18                          ;
+;         2 data inputs ; 188                         ;
+;         3 data inputs ; 56                          ;
+;         4 data inputs ; 73                          ;
+;         5 data inputs ; 24                          ;
+;         6 data inputs ; 25                          ;
+;     shared            ; 7                           ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 6                           ;
+; arriav_mac            ; 1                           ;
+; boundary_port         ; 26                          ;
+;                       ;                             ;
+; Max LUT depth         ; 56.10                       ;
+; Average LUT depth     ; 39.48                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Nov 29 23:40:47 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Tilt -c Tilt
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/ex_6/top_level_ea.vhd
+    Info (12022): Found design unit 1: tilt_tl-behav File: C:/Users/Smon/source/vhdl_projects/ex_6/top_level_ea.vhd Line: 28
+    Info (12023): Found entity 1: tilt_tl File: C:/Users/Smon/source/vhdl_projects/ex_6/top_level_ea.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/ex_6/tilt_ea.vhd
+    Info (12022): Found design unit 1: tilt-behav File: C:/Users/Smon/source/vhdl_projects/ex_6/tilt_ea.vhd Line: 19
+    Info (12023): Found entity 1: tilt File: C:/Users/Smon/source/vhdl_projects/ex_6/tilt_ea.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/ex_6/sync_ea.vhd
+    Info (12022): Found design unit 1: sync-behav File: C:/Users/Smon/source/vhdl_projects/ex_6/sync_ea.vhd Line: 17
+    Info (12023): Found entity 1: sync File: C:/Users/Smon/source/vhdl_projects/ex_6/sync_ea.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/ex_6/strb_generator_ea.vhd
+    Info (12022): Found design unit 1: strb_generator-behav File: C:/Users/Smon/source/vhdl_projects/ex_6/strb_generator_ea.vhd Line: 21
+    Info (12023): Found entity 1: strb_generator File: C:/Users/Smon/source/vhdl_projects/ex_6/strb_generator_ea.vhd Line: 8
+Info (12021): Found 1 design units, including 0 entities, in source file /users/smon/source/vhdl_projects/ex_6/std_definitions.vhd
+    Info (12022): Found design unit 1: std_definitions File: C:/Users/Smon/source/vhdl_projects/ex_6/std_definitions.vhd Line: 5
+Info (12021): Found 1 design units, including 0 entities, in source file /users/smon/source/vhdl_projects/ex_6/servo_pkg.vhd
+    Info (12022): Found design unit 1: servo_pkg File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_pkg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/ex_6/servo_ea.vhd
+    Info (12022): Found design unit 1: servo-behav File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 22
+    Info (12023): Found entity 1: servo File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd
+    Info (12022): Found design unit 1: sample_hold-behav File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 20
+    Info (12023): Found entity 1: sample_hold File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/ex_6/pwm_ea.vhd
+    Info (12022): Found design unit 1: pwm-behav File: C:/Users/Smon/source/vhdl_projects/ex_6/pwm_ea.vhd Line: 22
+    Info (12023): Found entity 1: pwm File: C:/Users/Smon/source/vhdl_projects/ex_6/pwm_ea.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd
+    Info (12022): Found design unit 1: delta_adc-behav File: C:/Users/Smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd Line: 25
+    Info (12023): Found entity 1: delta_adc File: C:/Users/Smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/ex_6/counter_ea.vhd
+    Info (12022): Found design unit 1: counter-behav File: C:/Users/Smon/source/vhdl_projects/ex_6/counter_ea.vhd Line: 21
+    Info (12023): Found entity 1: counter File: C:/Users/Smon/source/vhdl_projects/ex_6/counter_ea.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/ex_6/bin2bcd_ea.vhd
+    Info (12022): Found design unit 1: bin2bcd-rtl File: C:/Users/Smon/source/vhdl_projects/ex_6/bin2bcd_ea.vhd Line: 17
+    Info (12023): Found entity 1: bin2bcd File: C:/Users/Smon/source/vhdl_projects/ex_6/bin2bcd_ea.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/ex_6/bcd_to_7seg_ea.vhd
+    Info (12022): Found design unit 1: bcd_to_7seg-rtl File: C:/Users/Smon/source/vhdl_projects/ex_6/bcd_to_7seg_ea.vhd Line: 14
+    Info (12023): Found entity 1: bcd_to_7seg File: C:/Users/Smon/source/vhdl_projects/ex_6/bcd_to_7seg_ea.vhd Line: 7
+Info (12127): Elaborating entity "tilt_tl" for the top level hierarchy
+Info (12129): Elaborating entity "sync" using architecture "A:behav" for hierarchy "sync:sync_ent" File: C:/Users/Smon/source/vhdl_projects/ex_6/top_level_ea.vhd Line: 45
+Info (12129): Elaborating entity "delta_adc" using architecture "A:behav" for hierarchy "delta_adc:adc_ent" File: C:/Users/Smon/source/vhdl_projects/ex_6/top_level_ea.vhd Line: 56
+Warning (10631): VHDL Process Statement warning at delta_adc_ea.vhd(70): inferring latch(es) for signal or variable "next_ON_counter_val", which holds its previous value in one or more paths through the process File: C:/Users/Smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd Line: 70
+Info (10041): Inferred latch for "next_ON_counter_val[0]" at delta_adc_ea.vhd(70) File: C:/Users/Smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd Line: 70
+Info (10041): Inferred latch for "next_ON_counter_val[1]" at delta_adc_ea.vhd(70) File: C:/Users/Smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd Line: 70
+Info (10041): Inferred latch for "next_ON_counter_val[2]" at delta_adc_ea.vhd(70) File: C:/Users/Smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd Line: 70
+Info (10041): Inferred latch for "next_ON_counter_val[3]" at delta_adc_ea.vhd(70) File: C:/Users/Smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd Line: 70
+Info (10041): Inferred latch for "next_ON_counter_val[4]" at delta_adc_ea.vhd(70) File: C:/Users/Smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd Line: 70
+Info (10041): Inferred latch for "next_ON_counter_val[5]" at delta_adc_ea.vhd(70) File: C:/Users/Smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd Line: 70
+Info (10041): Inferred latch for "next_ON_counter_val[6]" at delta_adc_ea.vhd(70) File: C:/Users/Smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd Line: 70
+Info (10041): Inferred latch for "next_ON_counter_val[7]" at delta_adc_ea.vhd(70) File: C:/Users/Smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd Line: 70
+Info (12129): Elaborating entity "pwm" using architecture "A:behav" for hierarchy "delta_adc:adc_ent|pwm:pwm_ent" File: C:/Users/Smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd Line: 37
+Info (12129): Elaborating entity "counter" using architecture "A:behav" for hierarchy "delta_adc:adc_ent|pwm:pwm_ent|counter:counter_ent" File: C:/Users/Smon/source/vhdl_projects/ex_6/pwm_ea.vhd Line: 31
+Info (12129): Elaborating entity "strb_generator" using architecture "A:behav" for hierarchy "delta_adc:adc_ent|strb_generator:sampling_strobe_ent" File: C:/Users/Smon/source/vhdl_projects/ex_6/delta_adc_ea.vhd Line: 49
+Info (12129): Elaborating entity "counter" using architecture "A:behav" for hierarchy "delta_adc:adc_ent|strb_generator:sampling_strobe_ent|counter:counter_ent" File: C:/Users/Smon/source/vhdl_projects/ex_6/strb_generator_ea.vhd Line: 31
+Info (12129): Elaborating entity "sample_hold" using architecture "A:behav" for hierarchy "sample_hold:sample_hold_ent" File: C:/Users/Smon/source/vhdl_projects/ex_6/top_level_ea.vhd Line: 71
+Warning (10631): VHDL Process Statement warning at sample_hold_ea.vhd(35): inferring latch(es) for signal or variable "hold_value", which holds its previous value in one or more paths through the process File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[0]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[1]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[2]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[3]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[4]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[5]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[6]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[7]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[8]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[9]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[10]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[11]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[12]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[13]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[14]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (10041): Inferred latch for "hold_value[15]" at sample_hold_ea.vhd(35) File: C:/Users/Smon/source/vhdl_projects/ex_6/sample_hold_ea.vhd Line: 35
+Info (12129): Elaborating entity "tilt" using architecture "A:behav" for hierarchy "tilt:tilt_ent" File: C:/Users/Smon/source/vhdl_projects/ex_6/top_level_ea.vhd Line: 80
+Info (12129): Elaborating entity "servo" using architecture "A:behav" for hierarchy "servo:servo_ent" File: C:/Users/Smon/source/vhdl_projects/ex_6/top_level_ea.vhd Line: 89
+Warning (10492): VHDL Process Statement warning at servo_ea.vhd(55): signal "encoded_angle_i" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 55
+Info (12129): Elaborating entity "pwm" using architecture "A:behav" for hierarchy "servo:servo_ent|pwm:pwm_ent" File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 30
+Info (12129): Elaborating entity "counter" using architecture "A:behav" for hierarchy "servo:servo_ent|pwm:pwm_ent|counter:counter_ent" File: C:/Users/Smon/source/vhdl_projects/ex_6/pwm_ea.vhd Line: 31
+Info (12129): Elaborating entity "bin2bcd" using architecture "A:rtl" for hierarchy "bin2bcd:bin2bcd_ent" File: C:/Users/Smon/source/vhdl_projects/ex_6/top_level_ea.vhd Line: 99
+Info (12129): Elaborating entity "bcd_to_7seg" using architecture "A:rtl" for hierarchy "bcd_to_7seg:seg_ones_ent" File: C:/Users/Smon/source/vhdl_projects/ex_6/top_level_ea.vhd Line: 107
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "tilt:tilt_ent|Div0" File: C:/Users/Smon/source/vhdl_projects/ex_6/tilt_ea.vhd Line: 41
+Info (12130): Elaborated megafunction instantiation "tilt:tilt_ent|lpm_divide:Div0" File: C:/Users/Smon/source/vhdl_projects/ex_6/tilt_ea.vhd Line: 41
+Info (12133): Instantiated megafunction "tilt:tilt_ent|lpm_divide:Div0" with the following parameter: File: C:/Users/Smon/source/vhdl_projects/ex_6/tilt_ea.vhd Line: 41
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_dpo.tdf
+    Info (12023): Found entity 1: lpm_divide_dpo File: C:/Users/Smon/source/vhdl_projects/ex_6/quartus project/db/lpm_divide_dpo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_mbg.tdf
+    Info (12023): Found entity 1: abs_divider_mbg File: C:/Users/Smon/source/vhdl_projects/ex_6/quartus project/db/abs_divider_mbg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_sve.tdf
+    Info (12023): Found entity 1: alt_u_div_sve File: C:/Users/Smon/source/vhdl_projects/ex_6/quartus project/db/alt_u_div_sve.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_mn9.tdf
+    Info (12023): Found entity 1: lpm_abs_mn9 File: C:/Users/Smon/source/vhdl_projects/ex_6/quartus project/db/lpm_abs_mn9.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
+    Info (12023): Found entity 1: lpm_abs_4p9 File: C:/Users/Smon/source/vhdl_projects/ex_6/quartus project/db/lpm_abs_4p9.tdf Line: 23
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg_hundreds_o[1]" is stuck at GND File: C:/Users/Smon/source/vhdl_projects/ex_6/top_level_ea.vhd Line: 22
+Info (286030): Timing-Driven Synthesis is running
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register servo:servo_ent|ON_counter_val[19] will power up to High File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 46
+    Critical Warning (18010): Register servo:servo_ent|ON_counter_val[16] will power up to High File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 46
+    Critical Warning (18010): Register servo:servo_ent|ON_counter_val[15] will power up to High File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 46
+    Critical Warning (18010): Register servo:servo_ent|ON_counter_val[14] will power up to High File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 46
+    Critical Warning (18010): Register servo:servo_ent|ON_counter_val[13] will power up to High File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 46
+    Critical Warning (18010): Register servo:servo_ent|ON_counter_val[10] will power up to High File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 46
+    Critical Warning (18010): Register servo:servo_ent|ON_counter_val[8] will power up to High File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 46
+    Critical Warning (18010): Register servo:servo_ent|ON_counter_val[6] will power up to High File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 46
+    Critical Warning (18010): Register servo:servo_ent|ON_counter_val[5] will power up to High File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 46
+    Critical Warning (18010): Register servo:servo_ent|ON_counter_val[4] will power up to High File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 46
+    Critical Warning (18010): Register servo:servo_ent|ON_counter_val[3] will power up to High File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 46
+    Critical Warning (18010): Register servo:servo_ent|ON_counter_val[2] will power up to High File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 46
+    Critical Warning (18010): Register servo:servo_ent|ON_counter_val[0] will power up to High File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 46
+    Critical Warning (18010): Register servo:servo_ent|ON_counter_val[1] will power up to High File: C:/Users/Smon/source/vhdl_projects/ex_6/servo_ea.vhd Line: 46
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 820 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 23 output pins
+    Info (21061): Implemented 793 logic cells
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4926 megabytes
+    Info: Processing ended: Fri Nov 29 23:40:54 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
+
+

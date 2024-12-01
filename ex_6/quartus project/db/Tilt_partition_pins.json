@@ -1,0 +1,109 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "axis_servo_pwm_o",
+					"strict" : false
+				},
+				{
+					"name" : "axis_adc_pwm_o",
+					"strict" : false
+				},
+				{
+					"name" : "seg_ones_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_ones_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_ones_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_ones_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_ones_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_ones_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_ones_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_tens_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_tens_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_tens_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_tens_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_tens_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_tens_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_tens_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_hundreds_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_hundreds_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_hundreds_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_hundreds_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_hundreds_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_hundreds_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_i",
+					"strict" : false
+				},
+				{
+					"name" : "rst_i",
+					"strict" : false
+				},
+				{
+					"name" : "axis_comp_i",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -53,7 +53,6 @@ begin
             sig_o => comp_sync
         );
 
-
     adc_ent : entity work.delta_adc(behav)
         generic map (
             ADC_RESOLUTION => ADC_RESOLUTION,
@@ -80,10 +79,10 @@ begin
 
     tilt_ent : entity work.tilt(behav)
         port map (
-            clk_i    => clk_i,
-            rst_i    => rst_i,
-            value_i  => hold_value,
-            on_cnt_o => servo_encoded_angle
+            clk_i   => clk_i,
+            rst_i   => rst_i,
+            value_i => hold_value,
+            angle_o => servo_encoded_angle
         );
         
 
