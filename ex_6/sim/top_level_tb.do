@@ -2,9 +2,10 @@ vlib work
 vmap work work
 
 vcom -work work ../packages/std_definitions.vhd
+vcom -work work ../packages/servo_pkg.vhd
+
 vcom -work work ../bcd_to_7seg_ea.vhd
 vcom -work work ../bin2bcd_ea.vhd
-vcom -work work ../packages/servo_pkg.vhd
 
 vcom -work work ../counter_ea.vhd
 vcom -work work ../pwm_ea.vhd
@@ -30,6 +31,8 @@ add wave -noupdate -expand -group ADC -color Orange -label {ADC PWM Period}     
 add wave -noupdate -expand -group ADC -color Orange -label {ADC Value}             -radix unsigned /top_level_tb/top_level_dut/adc_value
 add wave -noupdate -expand -group ADC -color Orange -label {ADC PWM CNT}           -radix unsigned /top_level_tb/top_level_dut/adc_ent/pwm_ent/counter_ent/counter_o
 add wave -noupdate -expand -group ADC -color Orange -label {ADC Prescaler Counter} -radix unsigned /top_level_tb/top_level_dut/adc_ent/sampling_strobe_ent/strb_counter
+add wave -noupdate -expand -group ADC -color Orange -label {ADC Valid Strobe} /top_level_tb/top_level_dut/adc_ent/ADC_valid_strobe_o
+add wave -noupdate -expand -group ADC -color Orange -label {ADC Sampling Strobe} /top_level_tb/top_level_dut/adc_ent/sampling_strobe
 
 add wave -noupdate -expand -group Servo -color {Cornflower Blue} -label {Servo PWM} /top_level_tb/top_level_dut/axis_servo_pwm_o
 add wave -noupdate -expand -group Servo -color {Cornflower Blue} -label {Servo Encoded Angle}   -radix unsigned /top_level_tb/top_level_dut/servo_encoded_angle

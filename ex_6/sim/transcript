@@ -1,53 +1,29 @@
 # Reading pref.tcl
-pwd
-# C:/Users/simon/source/vhdl_projects/ex_6/sim
-cd sim
-# couldn't change working directory to "sim": no such file or directory
-sim top_level_tb.do
-# bad option "top_level_tb.do": must be blank, cget, configure, copy, data, get, put, read, redither, transparency, or write
-do top_level_tb.do
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work work 
-# Modifying modelsim.ini
-# ** Error: can't read "workspaceFolder": no such variable
-# Error in macro ./top_level_tb.do line 4
-# can't read "workspaceFolder": no such variable
-#     while executing
-# "vcom -work work ${workspaceFolder}/packages/std_definitions.vhd"
 do top_level_tb.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work work 
 # Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:19 on Dec 02,2024
-# vcom -reportprogress 300 -work work packages/std_definitions.vhd 
-# ** Error: (vcom-7) Failed to open design unit file "packages/std_definitions.vhd" in read mode.
-# No such file or directory. (errno = ENOENT)
-# End time: 14:28:19 on Dec 02,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
-# Error in macro ./top_level_tb.do line 4
-# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vcom failed.
-#     while executing
-# "vcom -work work packages/std_definitions.vhd"
-do top_level_tb.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work work 
-# Modifying modelsim.ini
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:39 on Dec 02,2024
+# Start time: 15:19:30 on Dec 06,2024
 # vcom -reportprogress 300 -work work ../packages/std_definitions.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package MATH_REAL
 # -- Compiling package std_definitions
-# End time: 14:28:39 on Dec 02,2024, Elapsed time: 0:00:00
+# End time: 15:19:30 on Dec 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:39 on Dec 02,2024
+# Start time: 15:19:30 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../packages/servo_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package servo_pkg
+# End time: 15:19:31 on Dec 06,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:19:31 on Dec 06,2024
 # vcom -reportprogress 300 -work work ../bcd_to_7seg_ea.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -57,10 +33,10 @@ do top_level_tb.do
 # -- Loading package std_definitions
 # -- Compiling entity bcd_to_7seg
 # -- Compiling architecture rtl of bcd_to_7seg
-# End time: 14:28:39 on Dec 02,2024, Elapsed time: 0:00:00
+# End time: 15:19:31 on Dec 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:39 on Dec 02,2024
+# Start time: 15:19:31 on Dec 06,2024
 # vcom -reportprogress 300 -work work ../bin2bcd_ea.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -68,18 +44,10 @@ do top_level_tb.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity bin2bcd
 # -- Compiling architecture rtl of bin2bcd
-# End time: 14:28:39 on Dec 02,2024, Elapsed time: 0:00:00
+# End time: 15:19:31 on Dec 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:39 on Dec 02,2024
-# vcom -reportprogress 300 -work work ../packages/servo_pkg.vhd 
-# -- Loading package STANDARD
-# -- Loading package MATH_REAL
-# -- Compiling package servo_pkg
-# End time: 14:28:39 on Dec 02,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:39 on Dec 02,2024
+# Start time: 15:19:31 on Dec 06,2024
 # vcom -reportprogress 300 -work work ../counter_ea.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -87,10 +55,10 @@ do top_level_tb.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity counter
 # -- Compiling architecture behav of counter
-# End time: 14:28:39 on Dec 02,2024, Elapsed time: 0:00:00
+# End time: 15:19:31 on Dec 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:39 on Dec 02,2024
+# Start time: 15:19:31 on Dec 06,2024
 # vcom -reportprogress 300 -work work ../pwm_ea.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -99,10 +67,10 @@ do top_level_tb.do
 # -- Compiling entity pwm
 # -- Compiling architecture behav of pwm
 # -- Loading entity counter
-# End time: 14:28:40 on Dec 02,2024, Elapsed time: 0:00:01
+# End time: 15:19:31 on Dec 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:40 on Dec 02,2024
+# Start time: 15:19:31 on Dec 06,2024
 # vcom -reportprogress 300 -work work ../strb_generator_ea.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -112,10 +80,10 @@ do top_level_tb.do
 # -- Compiling entity strb_generator
 # -- Compiling architecture behav of strb_generator
 # -- Loading entity counter
-# End time: 14:28:40 on Dec 02,2024, Elapsed time: 0:00:00
+# End time: 15:19:31 on Dec 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:40 on Dec 02,2024
+# Start time: 15:19:31 on Dec 06,2024
 # vcom -reportprogress 300 -work work ../delta_adc_ea.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -126,10 +94,10 @@ do top_level_tb.do
 # -- Loading entity pwm
 # -- Loading package MATH_REAL
 # -- Loading entity strb_generator
-# End time: 14:28:40 on Dec 02,2024, Elapsed time: 0:00:00
+# End time: 15:19:31 on Dec 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:40 on Dec 02,2024
+# Start time: 15:19:31 on Dec 06,2024
 # vcom -reportprogress 300 -work work ../sample_hold_ea.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -139,10 +107,10 @@ do top_level_tb.do
 # -- Loading package servo_pkg
 # -- Compiling entity sample_hold
 # -- Compiling architecture behav of sample_hold
-# End time: 14:28:40 on Dec 02,2024, Elapsed time: 0:00:00
+# End time: 15:19:31 on Dec 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:40 on Dec 02,2024
+# Start time: 15:19:31 on Dec 06,2024
 # vcom -reportprogress 300 -work work ../servo_ea.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -153,10 +121,10 @@ do top_level_tb.do
 # -- Compiling entity servo
 # -- Compiling architecture behav of servo
 # -- Loading entity pwm
-# End time: 14:28:40 on Dec 02,2024, Elapsed time: 0:00:00
+# End time: 15:19:31 on Dec 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:40 on Dec 02,2024
+# Start time: 15:19:31 on Dec 06,2024
 # vcom -reportprogress 300 -work work ../sync_ea.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -164,10 +132,10 @@ do top_level_tb.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity sync
 # -- Compiling architecture behav of sync
-# End time: 14:28:40 on Dec 02,2024, Elapsed time: 0:00:00
+# End time: 15:19:31 on Dec 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:40 on Dec 02,2024
+# Start time: 15:19:31 on Dec 06,2024
 # vcom -reportprogress 300 -work work ../tilt_ea.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -177,10 +145,10 @@ do top_level_tb.do
 # -- Loading package servo_pkg
 # -- Compiling entity tilt
 # -- Compiling architecture behav of tilt
-# End time: 14:28:41 on Dec 02,2024, Elapsed time: 0:00:01
+# End time: 15:19:31 on Dec 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:41 on Dec 02,2024
+# Start time: 15:19:31 on Dec 06,2024
 # vcom -reportprogress 300 -work work ../top_level_ea.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -198,10 +166,10 @@ do top_level_tb.do
 # -- Loading entity bin2bcd
 # -- Loading package std_definitions
 # -- Loading entity bcd_to_7seg
-# End time: 14:28:41 on Dec 02,2024, Elapsed time: 0:00:00
+# End time: 15:19:31 on Dec 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:28:41 on Dec 02,2024
+# Start time: 15:19:31 on Dec 06,2024
 # vcom -reportprogress 300 -work work ../test/top_level_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -212,10 +180,10 @@ do top_level_tb.do
 # -- Compiling architecture behav of top_level_tb
 # -- Loading package servo_pkg
 # -- Loading entity tilt_tl
-# End time: 14:28:41 on Dec 02,2024, Elapsed time: 0:00:00
+# End time: 15:19:31 on Dec 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim work.top_level_tb 
-# Start time: 14:28:41 on Dec 02,2024
+# Start time: 15:19:32 on Dec 06,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -324,5 +292,891 @@ do top_level_tb.do
 #    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/adc_ent/pwm_ent
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 #    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/adc_ent/pwm_ent
-# End time: 16:40:14 on Dec 02,2024, Elapsed time: 2:11:33
+add wave -position insertpoint  \
+sim:/top_level_tb/top_level_dut/adc_ent/ADC_valid_strobe_o \
+sim:/top_level_tb/top_level_dut/adc_ent/sampling_strobe
+do top_level_tb.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:28:22 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../packages/std_definitions.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Compiling package std_definitions
+# End time: 15:28:22 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:28:22 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../packages/servo_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package servo_pkg
+# End time: 15:28:22 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:28:22 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../bcd_to_7seg_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package std_definitions
+# -- Compiling entity bcd_to_7seg
+# -- Compiling architecture rtl of bcd_to_7seg
+# End time: 15:28:22 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:28:22 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../bin2bcd_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2bcd
+# -- Compiling architecture rtl of bin2bcd
+# End time: 15:28:22 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:28:22 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:28:23 on Dec 06,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:28:23 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:28:23 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:28:23 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../strb_generator_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity strb_generator
+# -- Compiling architecture behav of strb_generator
+# -- Loading entity counter
+# End time: 15:28:23 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:28:23 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../delta_adc_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity delta_adc
+# -- Compiling architecture behav of delta_adc
+# -- Loading entity pwm
+# -- Loading package MATH_REAL
+# -- Loading entity strb_generator
+# End time: 15:28:23 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:28:23 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../sample_hold_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package servo_pkg
+# -- Compiling entity sample_hold
+# -- Compiling architecture behav of sample_hold
+# End time: 15:28:23 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:28:23 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package servo_pkg
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 15:28:23 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:28:23 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../sync_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sync
+# -- Compiling architecture behav of sync
+# End time: 15:28:23 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:28:23 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../tilt_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package servo_pkg
+# -- Compiling entity tilt
+# -- Compiling architecture behav of tilt
+# End time: 15:28:23 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:28:23 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../top_level_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package servo_pkg
+# -- Compiling entity tilt_tl
+# -- Compiling architecture behav of tilt_tl
+# -- Loading entity sync
+# -- Loading entity delta_adc
+# -- Loading entity sample_hold
+# -- Loading entity tilt
+# -- Loading entity servo
+# -- Loading entity bin2bcd
+# -- Loading package std_definitions
+# -- Loading entity bcd_to_7seg
+# End time: 15:28:23 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:28:23 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../test/top_level_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity top_level_tb
+# -- Compiling architecture behav of top_level_tb
+# -- Loading package servo_pkg
+# -- Loading entity tilt_tl
+# End time: 15:28:23 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:28:25 on Dec 06,2024, Elapsed time: 0:08:53
 # Errors: 0, Warnings: 44
+# vsim work.top_level_tb 
+# Start time: 15:28:25 on Dec 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.servo_pkg
+# Loading work.top_level_tb(behav)
+# Loading work.std_definitions
+# Loading work.tilt_tl(behav)
+# Loading work.sync(behav)
+# Loading work.delta_adc(behav)
+# Loading work.pwm(behav)
+# Loading work.counter(behav)
+# Loading work.strb_generator(behav)
+# Loading work.sample_hold(behav)
+# Loading work.tilt(behav)
+# Loading work.servo(behav)
+# Loading work.bin2bcd(rtl)
+# Loading work.bcd_to_7seg(rtl)
+# WARNING: No extended dataflow license exists
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/servo_ent/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/servo_ent/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/tilt_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/tilt_ent
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/tilt_ent
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/adc_ent/sampling_strobe_ent
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/adc_ent/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/adc_ent/pwm_ent
+do top_level_tb.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:30:11 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../packages/std_definitions.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Compiling package std_definitions
+# End time: 15:30:11 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:30:11 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../packages/servo_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package servo_pkg
+# End time: 15:30:12 on Dec 06,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:30:12 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../bcd_to_7seg_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package std_definitions
+# -- Compiling entity bcd_to_7seg
+# -- Compiling architecture rtl of bcd_to_7seg
+# End time: 15:30:12 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:30:12 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../bin2bcd_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2bcd
+# -- Compiling architecture rtl of bin2bcd
+# End time: 15:30:12 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:30:12 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:30:12 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:30:12 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:30:12 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:30:12 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../strb_generator_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity strb_generator
+# -- Compiling architecture behav of strb_generator
+# -- Loading entity counter
+# End time: 15:30:12 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:30:12 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../delta_adc_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity delta_adc
+# -- Compiling architecture behav of delta_adc
+# -- Loading entity pwm
+# -- Loading package MATH_REAL
+# -- Loading entity strb_generator
+# End time: 15:30:12 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:30:12 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../sample_hold_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package servo_pkg
+# -- Compiling entity sample_hold
+# -- Compiling architecture behav of sample_hold
+# End time: 15:30:12 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:30:12 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package servo_pkg
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 15:30:12 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:30:12 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../sync_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sync
+# -- Compiling architecture behav of sync
+# End time: 15:30:12 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:30:12 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../tilt_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package servo_pkg
+# -- Compiling entity tilt
+# -- Compiling architecture behav of tilt
+# End time: 15:30:12 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:30:12 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../top_level_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package servo_pkg
+# -- Compiling entity tilt_tl
+# -- Compiling architecture behav of tilt_tl
+# -- Loading entity sync
+# -- Loading entity delta_adc
+# -- Loading entity sample_hold
+# -- Loading entity tilt
+# -- Loading entity servo
+# -- Loading entity bin2bcd
+# -- Loading package std_definitions
+# -- Loading entity bcd_to_7seg
+# End time: 15:30:12 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:30:12 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../test/top_level_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity top_level_tb
+# -- Compiling architecture behav of top_level_tb
+# -- Loading package servo_pkg
+# -- Loading entity tilt_tl
+# End time: 15:30:13 on Dec 06,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 15:30:14 on Dec 06,2024, Elapsed time: 0:01:49
+# Errors: 0, Warnings: 44
+# vsim work.top_level_tb 
+# Start time: 15:30:14 on Dec 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.servo_pkg
+# Loading work.top_level_tb(behav)
+# Loading work.std_definitions
+# Loading work.tilt_tl(behav)
+# Loading work.sync(behav)
+# Loading work.delta_adc(behav)
+# Loading work.pwm(behav)
+# Loading work.counter(behav)
+# Loading work.strb_generator(behav)
+# Loading work.sample_hold(behav)
+# Loading work.tilt(behav)
+# Loading work.servo(behav)
+# Loading work.bin2bcd(rtl)
+# Loading work.bcd_to_7seg(rtl)
+# WARNING: No extended dataflow license exists
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/servo_ent/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/servo_ent/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/tilt_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/tilt_ent
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/tilt_ent
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/adc_ent/sampling_strobe_ent
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/adc_ent/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/adc_ent/pwm_ent
+do top_level_tb.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:49:58 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../packages/std_definitions.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Compiling package std_definitions
+# End time: 15:49:58 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:49:58 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../packages/servo_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package servo_pkg
+# End time: 15:49:58 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:49:58 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../bcd_to_7seg_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package std_definitions
+# -- Compiling entity bcd_to_7seg
+# -- Compiling architecture rtl of bcd_to_7seg
+# End time: 15:49:59 on Dec 06,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:49:59 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../bin2bcd_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bin2bcd
+# -- Compiling architecture rtl of bin2bcd
+# End time: 15:49:59 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:49:59 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../counter_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture behav of counter
+# End time: 15:49:59 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:49:59 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../pwm_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm
+# -- Compiling architecture behav of pwm
+# -- Loading entity counter
+# End time: 15:49:59 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:49:59 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../strb_generator_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity strb_generator
+# -- Compiling architecture behav of strb_generator
+# -- Loading entity counter
+# End time: 15:49:59 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:49:59 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../delta_adc_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity delta_adc
+# -- Compiling architecture behav of delta_adc
+# -- Loading entity pwm
+# -- Loading package MATH_REAL
+# -- Loading entity strb_generator
+# End time: 15:49:59 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:49:59 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../sample_hold_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package servo_pkg
+# -- Compiling entity sample_hold
+# -- Compiling architecture behav of sample_hold
+# End time: 15:49:59 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:49:59 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../servo_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package servo_pkg
+# -- Compiling entity servo
+# -- Compiling architecture behav of servo
+# -- Loading entity pwm
+# End time: 15:49:59 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:49:59 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../sync_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sync
+# -- Compiling architecture behav of sync
+# End time: 15:49:59 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:49:59 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../tilt_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package servo_pkg
+# -- Compiling entity tilt
+# -- Compiling architecture behav of tilt
+# End time: 15:49:59 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:49:59 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../top_level_ea.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package servo_pkg
+# -- Compiling entity tilt_tl
+# -- Compiling architecture behav of tilt_tl
+# -- Loading entity sync
+# -- Loading entity delta_adc
+# -- Loading entity sample_hold
+# -- Loading entity tilt
+# -- Loading entity servo
+# -- Loading entity bin2bcd
+# -- Loading package std_definitions
+# -- Loading entity bcd_to_7seg
+# End time: 15:49:59 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:49:59 on Dec 06,2024
+# vcom -reportprogress 300 -work work ../test/top_level_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity top_level_tb
+# -- Compiling architecture behav of top_level_tb
+# -- Loading package servo_pkg
+# -- Loading entity tilt_tl
+# End time: 15:49:59 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:50:01 on Dec 06,2024, Elapsed time: 0:19:47
+# Errors: 0, Warnings: 44
+# vsim work.top_level_tb 
+# Start time: 15:50:01 on Dec 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.servo_pkg
+# Loading work.top_level_tb(behav)
+# Loading work.std_definitions
+# Loading work.tilt_tl(behav)
+# Loading work.sync(behav)
+# Loading work.delta_adc(behav)
+# Loading work.pwm(behav)
+# Loading work.counter(behav)
+# Loading work.strb_generator(behav)
+# Loading work.sample_hold(behav)
+# Loading work.tilt(behav)
+# Loading work.servo(behav)
+# Loading work.bin2bcd(rtl)
+# Loading work.bcd_to_7seg(rtl)
+# WARNING: No extended dataflow license exists
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/bin2bcd_ent
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/servo_ent/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/servo_ent/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/tilt_ent
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/tilt_ent
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/tilt_ent
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/adc_ent/sampling_strobe_ent
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/adc_ent/pwm_ent
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/adc_ent/pwm_ent

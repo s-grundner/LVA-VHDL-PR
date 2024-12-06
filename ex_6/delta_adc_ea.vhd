@@ -60,10 +60,11 @@ begin
 	begin
 		if rst_i = '1' then
 			ADC_Value_o <= (others => '0');
+			next_adc_valid_strobe <= '0';
 		elsif rising_edge(clk_i) then
 			On_counter_val <= next_ON_counter_val;
 			ADC_Value_o <= next_ON_counter_val;
-			ADC_Valid_strobe_o <= next_adc_valid_strobe;
+			next_adc_valid_strobe <= sampling_strobe;
 		end if;
 	end process reg_seq;
 
@@ -71,14 +72,14 @@ begin
 	begin
 		next_On_counter_val <= ON_counter_val; -- default value (infers latches otherwise)
 		if sampling_strobe = '1' then
-			next_adc_valid_strobe <= '0';
 			if Comparator_i = '1' then
 				next_ON_counter_val <= ON_counter_val + 1;
 			else 
 				next_ON_counter_val <= ON_counter_val - 1;
 			end if;
 		end if;
-		next_adc_valid_strobe <= '1';
 	end process adc_comb;
+	
+	ADC_Valid_strobe_o <= next_adc_valid_strobe;
 
 end behav;
