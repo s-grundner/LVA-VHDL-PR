@@ -38,8 +38,8 @@ begin
 
 	tilt_x : entity work.tilt_axis(behav)
 		port map (
-			clk_i => clk_tb,
-			rst_i => rst_tb,
+			clk_i => clk_i,
+			rst_i => rst_i,
 			axis_comp_i => x_comp,
 			axis_servo_pwm_o => x_servo_pwm_o,
 			axis_adc_pwm_o => x_adc_pwm_o,
@@ -50,8 +50,8 @@ begin
 
 	tilt_y : entity work.tilt_axis(behav)
 		port map (
-			clk_i => clk_tb,
-			rst_i => rst_tb,
+			clk_i => clk_i,
+			rst_i => rst_i,
 			axis_comp_i => y_comp,
 			axis_servo_pwm_o => y_servo_pwm_o,
 			axis_adc_pwm_o => y_adc_pwm_o,

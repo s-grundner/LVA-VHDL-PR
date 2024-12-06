@@ -24,12 +24,9 @@ end delta_adc;
 
 architecture behav of delta_adc is
 
-
 	signal ON_counter_val : unsigned(ADC_RESOLUTION-1 downto 0) := (others => '0');
 	signal next_ON_counter_val : unsigned(ADC_RESOLUTION-1 downto 0) := (others => '0');
-
 	signal sampling_strobe : std_ulogic := '0';
-
 	signal next_adc_valid_strobe : std_ulogic := '0';
 
 begin

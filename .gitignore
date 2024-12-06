@@ -1,5 +1,7 @@
 
-devices/*.qdz
+devices/*
+ex_*/quartus project/*
+
 */modelsim.ini
 */ModelSim.lnk
 */transcript

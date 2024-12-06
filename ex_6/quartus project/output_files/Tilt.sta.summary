@@ -3,147 +3,51 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clk_i'
-Slack : -53.491
-TNS   : -1208.371
-
-Type  : Slow 1100mV 85C Model Setup 'delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe'
-Slack : -5.734
-TNS   : -42.863
-
-Type  : Slow 1100mV 85C Model Setup 'delta_adc:adc_ent|ADC_valid_strobe_o'
-Slack : -4.894
-TNS   : -36.231
+Slack : -53.610
+TNS   : -1185.378
 
 Type  : Slow 1100mV 85C Model Hold 'clk_i'
-Slack : -2.532
-TNS   : -5.015
-
-Type  : Slow 1100mV 85C Model Hold 'delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe'
-Slack : 3.230
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'delta_adc:adc_ent|ADC_valid_strobe_o'
-Slack : 3.475
+Slack : 0.259
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_i'
 Slack : -0.394
-TNS   : -61.337
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe'
-Slack : 0.269
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'delta_adc:adc_ent|ADC_valid_strobe_o'
-Slack : 0.446
-TNS   : 0.000
+TNS   : -61.491
 
 Type  : Slow 1100mV 0C Model Setup 'clk_i'
-Slack : -55.229
-TNS   : -1231.494
-
-Type  : Slow 1100mV 0C Model Setup 'delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe'
-Slack : -5.891
-TNS   : -43.715
-
-Type  : Slow 1100mV 0C Model Setup 'delta_adc:adc_ent|ADC_valid_strobe_o'
-Slack : -4.997
-TNS   : -36.902
+Slack : -55.476
+TNS   : -1223.138
 
 Type  : Slow 1100mV 0C Model Hold 'clk_i'
-Slack : -2.579
-TNS   : -5.151
-
-Type  : Slow 1100mV 0C Model Hold 'delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe'
-Slack : 3.244
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'delta_adc:adc_ent|ADC_valid_strobe_o'
-Slack : 3.486
+Slack : 0.245
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_i'
 Slack : -0.394
-TNS   : -66.726
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe'
-Slack : 0.298
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'delta_adc:adc_ent|ADC_valid_strobe_o'
-Slack : 0.404
-TNS   : 0.000
+TNS   : -67.820
 
 Type  : Fast 1100mV 85C Model Setup 'clk_i'
-Slack : -28.998
-TNS   : -656.140
-
-Type  : Fast 1100mV 85C Model Setup 'delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe'
-Slack : -2.762
-TNS   : -20.851
-
-Type  : Fast 1100mV 85C Model Setup 'delta_adc:adc_ent|ADC_valid_strobe_o'
-Slack : -2.419
-TNS   : -17.733
+Slack : -29.178
+TNS   : -611.757
 
 Type  : Fast 1100mV 85C Model Hold 'clk_i'
-Slack : -1.136
-TNS   : -2.247
-
-Type  : Fast 1100mV 85C Model Hold 'delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe'
-Slack : 1.879
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'delta_adc:adc_ent|ADC_valid_strobe_o'
-Slack : 2.142
+Slack : 0.156
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_i'
-Slack : -0.086
-TNS   : -9.182
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe'
-Slack : 0.319
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'delta_adc:adc_ent|ADC_valid_strobe_o'
-Slack : 0.468
-TNS   : 0.000
+Slack : -0.084
+TNS   : -8.718
 
 Type  : Fast 1100mV 0C Model Setup 'clk_i'
-Slack : -27.506
-TNS   : -605.547
-
-Type  : Fast 1100mV 0C Model Setup 'delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe'
-Slack : -2.693
-TNS   : -20.237
-
-Type  : Fast 1100mV 0C Model Setup 'delta_adc:adc_ent|ADC_valid_strobe_o'
-Slack : -2.337
-TNS   : -17.169
+Slack : -27.779
+TNS   : -576.846
 
 Type  : Fast 1100mV 0C Model Hold 'clk_i'
-Slack : -1.137
-TNS   : -2.269
-
-Type  : Fast 1100mV 0C Model Hold 'delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe'
-Slack : 1.904
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'delta_adc:adc_ent|ADC_valid_strobe_o'
-Slack : 2.095
+Slack : 0.148
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_i'
 Slack : -0.082
-TNS   : -9.145
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'delta_adc:adc_ent|strb_generator:sampling_strobe_ent|curr_strobe'
-Slack : 0.347
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'delta_adc:adc_ent|ADC_valid_strobe_o'
-Slack : 0.479
-TNS   : 0.000
+TNS   : -8.948
 
 ------------------------------------------------------------

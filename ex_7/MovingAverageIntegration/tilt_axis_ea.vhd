@@ -72,7 +72,7 @@ begin
             ADC_Value_o  => adc_value
         );
 
-    mov_avg_ent : entity work.moving_average(behav)
+    mov_avg_ent : entity work.moving_average_filter(behav)
         generic map (
             N => 8,
             BITWIDTH => ADC_RESOLUTION
@@ -80,10 +80,10 @@ begin
         port map (
             clk_i => clk_i,
             rst_i => rst_i,
-            value_i => adc_value,
-            valid_strb_i => adc_valid_strb,
-            value_o => adc_value_filter,
-            valid_strb_o => adc_valid_strb_filter
+            data_i => adc_value,
+            data_o => adc_value_filter,
+            strb_data_valid_i => adc_valid_strb,
+            strb_data_valid_o => adc_valid_strb_filter
         );
 
     sample_hold_ent : entity work.sample_hold(behav)
@@ -109,7 +109,7 @@ begin
             clk_i => clk_i,
             rst_i => rst_i,
             encoded_angle_i => servo_encoded_angle,
-            pwm_o => axis_servo_pwm_o
+            PWM_o => axis_servo_pwm_o
         );
 
     -- DISPLAY

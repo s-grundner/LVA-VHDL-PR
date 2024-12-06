@@ -46,7 +46,7 @@ begin
         end if;
     end process reg_seq;
 
-    comb_filter : process (data_i, filter_reg, strb_data_valid_i) is
+    filter_comb : process (data_i, filter_reg, strb_data_valid_i) is
     begin
         next_sum <= sum;
         next_filter_reg <= filter_reg;
@@ -60,9 +60,9 @@ begin
             end loop;
         end if;
         strb_data_valid_o <= '1';
-    end process comb_filter;
+    end process filter_comb;
 
-    -- Divide by shift right
+    -- Divide by shift right by taking the upper bits
     data_o <= unsigned(sum(BITWIDTH-1+N downto N));
 
 end architecture behav;

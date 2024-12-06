@@ -49,9 +49,13 @@ begin
         end if;
     end process reg_seq;
 
-    servo_comb : process (pwm) is
+    servo_comb : process (encoded_angle_i, pwm) is
     begin
-        next_On_counter_val <= encoded_angle_i; -- deliberately not in sensitivity list
+        if pwm = '1' then
+            next_On_counter_val <= encoded_angle_i;
+        else
+            next_On_counter_val <= ON_counter_val;
+        end if;
     end process servo_comb;
 
 end architecture;

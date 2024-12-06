@@ -12,7 +12,7 @@ entity servo is
         clk_i : in std_logic;
         rst_i : in std_logic;
         encoded_angle_i : in unsigned(SERVO_RESOLUTION-1 downto 0);
-        pwm_o : out std_logic
+        PWM_o : out std_logic
     );
 end servo;
 
@@ -38,7 +38,7 @@ begin
             PWM_o => pwm
         );
         
-    pwm_o <= pwm;
+    PWM_o <= pwm;
 
     reg_seq : process (clk_i, rst_i) is
     begin
@@ -49,9 +49,13 @@ begin
         end if;
     end process reg_seq;
 
-    servo_comb : process (pwm) is
+    servo_comb : process (encoded_angle_i, pwm) is
     begin
-        next_On_counter_val <= encoded_angle_i; -- deliberately not in sensitivity list
+        if pwm = '1' then
+            next_On_counter_val <= encoded_angle_i;
+        else
+            next_On_counter_val <= ON_counter_val;
+        end if;
     end process servo_comb;
 
 end architecture;
