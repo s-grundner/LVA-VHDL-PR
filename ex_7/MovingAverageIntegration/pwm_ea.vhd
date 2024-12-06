@@ -39,23 +39,12 @@ begin
             counter_o => count
         );
     
-    -- PWM logic
-
-    reg_seq : process (clk_i, rst_i) is
-    begin
-        if rst_i = '1' then
-            PWM_o <= '0';
-        elsif rising_edge(clk_i) then	
-            PWM_o <= next_pwm;
-        end if;
-    end process reg_seq;
-
     pwm_comb : process (count, ON_counter_val_i) is
     begin
         if count < ON_counter_val_i then
-            next_pwm <= '1';
+            PWM_o <= '1';
         else
-            next_pwm <= '0';
+            PWM_o <= '0';
         end if;
     end process pwm_comb;
 

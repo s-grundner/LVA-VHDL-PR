@@ -22,13 +22,13 @@ entity top_level is
 		x_adc_pwm_o : out std_ulogic;
 		y_adc_pwm_o : out std_ulogic;
 
-		x_seg_ones_o     : out  std_ulogic_vector (0 to 6);
-		x_seg_tens_o     : out  std_ulogic_vector (0 to 6);
-		x_seg_hundreds_o : out  std_ulogic_vector (0 to 6);
+		x_seg_ones_o     : out std_ulogic_vector (0 to 6);
+		x_seg_tens_o     : out std_ulogic_vector (0 to 6);
+		x_seg_hundreds_o : out std_ulogic_vector (0 to 6);
 
-		y_seg_ones_o     : out  std_ulogic_vector (0 to 6);
-		y_seg_tens_o     : out  std_ulogic_vector (0 to 6);
-		y_seg_hundreds_o : out  std_ulogic_vector (0 to 6)
+		y_seg_ones_o     : out std_ulogic_vector (0 to 6);
+		y_seg_tens_o     : out std_ulogic_vector (0 to 6);
+		y_seg_hundreds_o : out std_ulogic_vector (0 to 6)
 	);
 end top_level;
 

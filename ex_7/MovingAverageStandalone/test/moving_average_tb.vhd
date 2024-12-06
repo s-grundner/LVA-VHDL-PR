@@ -15,6 +15,8 @@ architecture arch of moving_average_filter_tb is
 	signal data_in_tb : unsigned(7 downto 0) := (others => '0');
 	signal data_out_tb : unsigned(7 downto 0);
 
+	signal data_valid_strobe_tb : std_logic := '0';
+
 begin
 
 	moving_average_filter_dut : entity work.moving_average_filter(behav)
@@ -25,7 +27,7 @@ begin
 		port map (
 			clk_i => clk_tb,
 			rst_i => rst_tb,
-			strb_data_valid_i => '1',
+			strb_data_valid_i => data_valid_strobe_tb,
 			strb_data_valid_o => open,
 			data_i => data_in_tb,
 			data_o => data_out_tb
@@ -44,6 +46,8 @@ begin
 		wait for t_clk_tb * 2;
 		rst_tb <= '0';
 		wait for t_clk_tb * 2;
+		
+		data_valid_strobe_tb <= '1';
 
 		-- Test 1
 

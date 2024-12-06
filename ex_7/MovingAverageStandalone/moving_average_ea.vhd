@@ -32,7 +32,8 @@ architecture behav of moving_average_filter is
     
     signal sum : signed(BITWIDTH-1+N downto 0) := (others => '0');
     signal next_sum : signed(BITWIDTH-1+N downto 0) := (others => '0');
-
+    
+    signal next_strobe : std_ulogic := '0';
 begin
 
     reg_seq : process (clk_i, rst_i) is
@@ -40,9 +41,11 @@ begin
         if rst_i = '1' then
             filter_reg <= (others => (others => '0'));
             sum <= (others => '0');
+            next_strobe <= '0';
         elsif rising_edge(clk_i) then
             filter_reg <= next_filter_reg;
             sum <= next_sum;
+            next_strobe <= strb_data_valid_i;
         end if;
     end process reg_seq;
 
@@ -52,17 +55,16 @@ begin
         next_filter_reg <= filter_reg;
 
         if(strb_data_valid_i = '1') then
-            strb_data_valid_o <= '0';
             next_filter_reg(0) <= signed(data_i);
             next_sum <= sum + signed(data_i) - filter_reg(2**N-1);
             for i in 1 to 2**N-1 loop
                 next_filter_reg(i) <= filter_reg(i-1);
             end loop;
         end if;
-        strb_data_valid_o <= '1';
     end process comb_filter;
 
     -- Divide by shift right
     data_o <= unsigned(sum(BITWIDTH-1+N downto N));
+    strb_data_valid_o <= next_strobe;
 
 end architecture behav;

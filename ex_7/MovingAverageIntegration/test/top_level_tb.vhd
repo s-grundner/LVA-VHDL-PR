@@ -18,7 +18,7 @@ architecture behav of top_level_tb is
 	signal rst_tb : std_ulogic := '0';
 
 	signal x_comp_tb : std_ulogic := '0';
-	signal y_comp_tb : std_ulogic := '0';
+	signal y_comp_tb : std_ulogic := '1';
 
 	signal x_adc_pwm_tb : std_ulogic;
 	signal y_adc_pwm_tb : std_ulogic;
@@ -27,10 +27,8 @@ architecture behav of top_level_tb is
 	signal y_servo_pwm_tb : std_ulogic;
 
 	type seg is array (integer range <>) of std_ulogic_vector(0 to 6);
-
 	signal x_seg_tb : seg(0 to 2);
 	signal y_seg_tb : seg(0 to 2);
-
 
 begin
 
@@ -64,7 +62,9 @@ begin
 		rst_tb <= '1';
 		wait for T_CLK*10;
 		rst_tb <= '0';
-		wait;
+		wait for 5 ms;
+		y_comp_tb <= '0';
+		wait for 50 ms;
 		
 	end process;
 

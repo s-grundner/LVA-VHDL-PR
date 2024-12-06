@@ -1180,3 +1180,5 @@ do top_level_tb.do
 #    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/adc_ent/pwm_ent
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 #    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/top_level_dut/adc_ent/pwm_ent
+# End time: 16:26:31 on Dec 06,2024, Elapsed time: 0:36:30
+# Errors: 0, Warnings: 44

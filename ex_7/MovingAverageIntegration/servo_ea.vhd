@@ -38,8 +38,6 @@ begin
             PWM_o => pwm
         );
         
-    PWM_o <= pwm;
-
     reg_seq : process (clk_i, rst_i) is
     begin
         if rst_i = '1' then
@@ -49,7 +47,7 @@ begin
         end if;
     end process reg_seq;
 
-    servo_comb : process (encoded_angle_i, pwm) is
+    servo_comb : process (encoded_angle_i, pwm, ON_counter_val) is
     begin
         if pwm = '1' then
             next_On_counter_val <= encoded_angle_i;
@@ -57,5 +55,7 @@ begin
             next_On_counter_val <= ON_counter_val;
         end if;
     end process servo_comb;
+
+    PWM_o <= pwm;
 
 end architecture;

@@ -31,7 +31,7 @@ begin
         end if;
     end process reg_seq;
 
-    tilt_comb : process(value_i) is
+    comb_tilt : process(value_i) is
     begin
         if(value_i < ADC_MIN_ANGLE) then
             next_angle <= to_unsigned(SERVO_MIN_ANGLE, SERVO_RESOLUTION);
@@ -40,6 +40,6 @@ begin
         else
             next_angle <= to_unsigned(SERVO_MIN_ANGLE + SERVO_RANGE * (to_integer(value_i) - ADC_MIN_ANGLE) / ADC_RANGE, SERVO_RESOLUTION);
         end if;
-    end process tilt_comb;
+    end process comb_tilt;
 
-end architecture behav;
+end architecture;

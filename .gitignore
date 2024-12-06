@@ -1,14 +1,11 @@
 
 devices/*
-ex_*/quartus project/*
 
-*/modelsim.ini
-*/ModelSim.lnk
-*/transcript
-*/vsim.wlf
-*/work/_info
-*/work/_lib.qdb
-*/work/_lib1_5.qdb
-*/work/_lib1_5.qpg
-*/work/_lib1_5.qtl
-*/work/_vmake
+ex_*/**/quartus_project/*
+ex_*/**/quartus project/*
+
+ex_*/**/modelsim.ini
+ex_*/**/ModelSim.lnk
+ex_*/**/transcript
+ex_*/**/vsim.wlf
+ex_*/**/work/*

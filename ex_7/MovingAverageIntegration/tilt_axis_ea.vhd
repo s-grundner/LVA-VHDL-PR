@@ -74,7 +74,7 @@ begin
 
     mov_avg_ent : entity work.moving_average_filter(behav)
         generic map (
-            N => 8,
+            N => 2,
             BITWIDTH => ADC_RESOLUTION
         )
         port map (

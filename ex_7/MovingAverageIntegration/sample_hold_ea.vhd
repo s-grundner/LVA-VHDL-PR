@@ -27,7 +27,7 @@ begin
     reg_seq : process(clk_i, rst_i) is
     begin
         if rst_i = '1' then
-            hold_value_o <= (others => '0');
+            hold_value <= (others => '0');
         elsif rising_edge(clk_i) then
             hold_value <= next_hold_value;
         end if;
