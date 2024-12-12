@@ -10,7 +10,7 @@ end tl_tb;
 
 architecture behav of tl_tb is
 
-	constant T_CLK : time := 10 ns;
+	constant T_CLK : time := 20 ns; -- 50 MHz
 
 	signal clk_tb : std_ulogic := '0';
 	signal rst_tb : std_ulogic := '0';
@@ -49,8 +49,10 @@ begin
 		wait for T_CLK*10;
 
 		start_strb_tb <= '1';
+		wait for T_CLK;
+		start_strb_tb <= '0';
 		
-		wait for 1000 ms;
+		wait for 1350 ms;
 	
 	end process stimulus;
 

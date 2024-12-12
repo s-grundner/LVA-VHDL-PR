@@ -8,7 +8,7 @@ entity command_rom is
     port (
         clock_i    : in std_ulogic;
         addr_i     : in  unsigned(COMCNTBW-1 downto 0);
-        data_o     : out std_ulogic_vector(2*SERVO_RESOLUTION-1 downto 0)
+        data_o     : out std_ulogic_vector(2*SERVO_CNT_LEN-1 downto 0)
     );
 end entity command_rom;
 

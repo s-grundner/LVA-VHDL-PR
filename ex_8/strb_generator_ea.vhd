@@ -49,7 +49,7 @@ begin
 		end if;
 	end process reg_seq;
 
-	strb_comb : process (strb_counter) is
+	strb_comb : process (strb_counter, sync_rst_i) is
 	begin
 		next_strobe <= '0';
 		if sync_rst_i = '1' then

@@ -19,8 +19,8 @@ package std_definitions is
     constant ADC_SAMPLING_PSC : natural := 4000;  -- f_adc / f_sampling
 
     constant SERVO_MAX_VAL   : natural := 1_000_000; -- f_clk / f_servo
-    constant SERVO_MIN_ANGLE : natural := 400_000;  -- 0°   -> SERVO_MAX_VAL*(ADC_MIN_ANGLE/ADC_MAX_VAL)
-    constant SERVO_MAX_ANGLE : natural := 600_000;  -- 180° -> SERVO_MAX_VAL*(ADC_MAX_ANGLE/ADC_MAX_VAL)
+    constant SERVO_MIN_ANGLE : natural := 40_000;  -- 0° 1ms - 10_000 for Saturation
+    constant SERVO_MAX_ANGLE : natural := 110_000;  -- 180° 2ms + 10_000 for Saturation
     constant SERVO_RANGE     : natural := SERVO_MAX_ANGLE - SERVO_MIN_ANGLE;
 
     constant MOVE_TIME_PS : natural := 1_000_000; -- f_clk * 1/50s

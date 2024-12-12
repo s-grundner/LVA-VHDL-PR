@@ -49,7 +49,7 @@ begin
         end if;
     end process reg_seq;
 
-    servo_comb : process (encoded_angle_i, pwm) is
+    servo_comb : process (encoded_angle_i, pwm, ON_counter_val) is
     begin
         if pwm = '1' then
             next_On_counter_val <= encoded_angle_i;

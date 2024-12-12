@@ -2,12 +2,17 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
 
+library work;
+use work.std_definitions.all;
+
+
 -- entitiy
 
 entity accu_reg is
     generic (
         D : integer := 2;
-        BITWIDTH : integer := 8
+        BITWIDTH : integer := 8;
+        INIT_SUM : integer := 0
     );
     port (
         clk_i : in std_ulogic;
@@ -15,7 +20,7 @@ entity accu_reg is
 
         accu_strb_i : in std_ulogic;
         data_i : in std_ulogic_vector(BITWIDTH-1 downto 0);
-        data_o : out unsigned(BITWIDTH-1 downto 0)
+        data_o : out signed(BITWIDTH-1 downto 0)
     );
 end accu_reg;
 
@@ -23,8 +28,8 @@ end accu_reg;
 
 architecture behav of accu_reg is
 
-    signal sum : signed(BITWIDTH-1+D downto 0) := (others => '0');
-    signal next_sum : signed(BITWIDTH-1+D downto 0) := (others => '0');
+    signal sum : signed(BITWIDTH-1+D downto 0) := to_signed(INIT_SUM, BITWIDTH+D);
+    signal next_sum : signed(BITWIDTH-1+D downto 0) := to_signed(INIT_SUM, BITWIDTH+D);
 
 begin
 
@@ -37,7 +42,7 @@ begin
         end if;
     end process reg_seq;
 
-    accumulate_comb : process (data_i, accu_strb_i) is
+    accumulate_comb : process (data_i, accu_strb_i, sum) is
     begin
         next_sum <= sum;
 
@@ -46,6 +51,6 @@ begin
         end if;
     end process accumulate_comb;
 
-    data_o <= unsigned(sum(BITWIDTH-1+D downto D));
+    data_o <= sum(BITWIDTH-1+D downto D);
 
 end architecture behav;

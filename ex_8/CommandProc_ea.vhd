@@ -25,19 +25,25 @@ end cmd_proc;
 
 architecture behav of cmd_proc is
 
-type fsm_state_type is (IDLE, DRAWING);
+    type fsm_state_type is (IDLE, DRAWING);
+    signal fsm_state, next_fsm_state : fsm_state_type;
 
-signal fsm_state, next_fsm_state : fsm_state_type;
+    signal curr_addr : unsigned(COMCNTBW-1 downto 0) := (others => '0');
+    signal next_addr : unsigned(COMCNTBW-1 downto 0) := (others => '0');
 
-signal curr_addr : unsigned(COMCNTBW-1 downto 0) := (others => '0');
-signal next_addr : unsigned(COMCNTBW-1 downto 0) := (others => '0');
+    signal curr_cmd : std_ulogic_vector(2*SERVO_RESOLUTION-1 downto 0) := (others => '0');
 
-signal curr_cmd : std_ulogic_vector(2*SERVO_RESOLUTION-1 downto 0) := (others => '0');
+    signal next_move_strb : std_ulogic := '0';
+    signal sync_rst : std_ulogic := '0';
 
-signal next_move_strb : std_ulogic := '0';
-signal sync_rst : std_ulogic := '0';
+    signal dx : signed(SERVO_RESOLUTION-1 downto 0);
+    signal dy : signed(SERVO_RESOLUTION-1 downto 0);
 
 begin
+
+    x_servo_o <= unsigned(dx + to_signed(52000, SERVO_RESOLUTION)); -- radius
+    y_servo_o <= unsigned(dy + to_signed(SERVO_MIN_ANGLE + SERVO_RANGE/2, SERVO_RESOLUTION)); -- angle (90 degree offset)
+
     reg_seq : process (clk_i, rst_i) is
     begin
         if rst_i = '1' then
@@ -59,6 +65,7 @@ begin
 
         case fsm_state is
             when IDLE =>
+                next_addr <= (others => '0');
                 if start_strb_i = '1' then
                     sync_rst <= '1';
                     next_fsm_state <= DRAWING;
@@ -66,18 +73,14 @@ begin
 
             when DRAWING =>
                 drawing_o <= '1';
-                if curr_addr > NCOMMANDS-1 then
-                    drawing_o <= '0';
-                    next_addr <= (others => '0');
+                if curr_addr >= NCOMMANDS-1 then
                     next_fsm_state <= IDLE;
+                elsif curr_addr >= 11 and curr_addr < NCOMMANDS-3 then
+                    z_servo_o <= to_unsigned(SERVO_MAX_ANGLE, SERVO_RESOLUTION);
                 end if;
                 
                 if next_move_strb = '1' then
                     next_addr <= curr_addr + 1;
-                end if;
-
-                if curr_addr >= 11 and curr_addr < NCOMMANDS-2 then
-                    z_servo_o <= to_unsigned(SERVO_MAX_ANGLE, SERVO_RESOLUTION);
                 end if;
 
             when others =>
@@ -99,27 +102,29 @@ begin
     accu_reg_dr_ent : entity work.accu_reg(behav)
     generic map (
         D => D,
-        BITWIDTH => SERVO_RESOLUTION
+        BITWIDTH => SERVO_RESOLUTION,
+        INIT_SUM => 0
     )
     port map (
         clk_i => clk_i,
         rst_i => rst_i,
         accu_strb_i => next_move_strb,
         data_i => curr_cmd(2*SERVO_RESOLUTION-1 downto SERVO_RESOLUTION),
-        data_o => x_servo_o
+        data_o => dx
     );
 
     accu_reg_dtheta_ent : entity work.accu_reg(behav)
     generic map (
         D => D,
-        BITWIDTH => SERVO_RESOLUTION
+        BITWIDTH => SERVO_RESOLUTION,
+        INIT_SUM => 0
     )
     port map (
         clk_i => clk_i,
         rst_i => rst_i,
         accu_strb_i => next_move_strb,
         data_i => curr_cmd(SERVO_RESOLUTION-1 downto 0),
-        data_o => y_servo_o
+        data_o => dy
     );
 
     rom_ent : entity work.command_rom(rtl)
