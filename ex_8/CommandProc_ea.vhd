@@ -41,7 +41,7 @@ architecture behav of cmd_proc is
 
 begin
 
-    x_servo_o <= unsigned(dx + to_signed(52000, SERVO_RESOLUTION)); -- radius
+    x_servo_o <= unsigned(dx + to_signed(52000, SERVO_RESOLUTION)); -- radius (52000 ist starting Point) 
     y_servo_o <= unsigned(dy + to_signed(SERVO_MIN_ANGLE + SERVO_RANGE/2, SERVO_RESOLUTION)); -- angle (90 degree offset)
 
     reg_seq : process (clk_i, rst_i) is
