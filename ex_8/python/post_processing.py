@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 csv_file = "list_d2.csv"
 data_frame = pd.read_csv(csv_file).astype(str)
 
+starting_point = 52000
+
 servo_max = 110000
 servo_min = 40000
 servo_mid = servo_min + (servo_max - servo_min) / 2
@@ -24,8 +26,8 @@ print(data_frame)
 for valX, valY, valZ in zip(data_frame["X"], data_frame["Y"], data_frame["Z"]):
     
     # normieren
-    valX = (valX-22000)
-    valY = (valY-servo_mid) / 70000
+    valX = (valX-(servo_mid-starting_point))
+    valY = (valY-servo_mid) / (servo_max - servo_min)
     
     #convert from polar to cartesian
     cartesianX = valX * np.cos(np.pi*valY)
