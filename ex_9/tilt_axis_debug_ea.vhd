@@ -1,7 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
-use ieee.math_real.all;
 
 library work;
 use work.std_definitions.all;
@@ -12,6 +11,10 @@ entity tilt_axis is
     port (
         clk_i            : in std_ulogic;
         rst_i            : in std_ulogic;
+
+        sw_mode_i        : in std_ulogic;
+        btn_inc_i        : in std_ulogic;
+        btn_dec_i        : in std_ulogic;
 
         axis_comp_i      : in std_ulogic;
         axis_servo_pwm_o : out std_ulogic;
@@ -27,16 +30,42 @@ end tilt_axis;
 
 architecture behav of tilt_axis is
 
-    signal adc_valid_strb, adc_valid_strb_filter : std_ulogic := '0';
-    signal adc_val, adc_val_filter : unsigned(ADC_RESOLUTION-1 downto 0) := (others => '0');
-    signal comp_sync               : std_ulogic := '0';
-    signal hold_val                : unsigned(15 downto 0) := (others => '0');
-    signal encoded_angle           : unsigned(SERVO_RESOLUTION-1 downto 0) := to_unsigned(SERVO_MIN_ANGLE, SERVO_RESOLUTION);
+    signal adc_val        : unsigned(ADC_RESOLUTION-1 downto 0) := (others => '0');
+    signal adc_valid_strb : std_ulogic := '0';
+    signal comp_sync      : std_ulogic := '0';
+    signal hold_val       : unsigned(15 downto 0) := (others => '0');
+    signal encoded_angle  : unsigned(SERVO_RESOLUTION-1 downto 0) := to_unsigned(SERVO_MIN_ANGLE, SERVO_RESOLUTION);
 
     -- DISPLAY
     signal ones_bcd, tens_bcd, hundreds_bcd : std_ulogic_vector(3 downto 0);
 
 begin
+
+    btn_ctrl_ent : entity work.btn_ctrl(behav)
+        port map (
+            clk_i            => clk_i,
+            rst_i            => rst_i,
+            sw_mode_i        => sw_mode_i,
+            btn_inc_i        => btn_inc_i,
+            btn_dec_i        => btn_dec_i,
+            adc_val_o        => adc_val,
+            adc_valid_strb_o => adc_valid_strb
+        );
+
+    adc_debug_ent : entity work.delta_adc_debug(behav)
+        generic map (
+            ADC_RESOLUTION => ADC_RESOLUTION,
+            SAMPLING_PSC   => ADC_SAMPLING_PSC,
+            MAX_CNT_VAL    => ADC_MAX_VAL
+        )
+        port map (
+            clk_i  => clk_i,
+            rst_i  => rst_i,
+            comp_i => comp_sync,
+            pwm_o  => axis_adc_pwm_o,
+            adc_debug_i   => adc_val,
+            adc_in_strb_i => adc_valid_strb
+        );
 
     sync_ent : entity work.sync(behav)
         generic map (
@@ -49,41 +78,12 @@ begin
             sig_o => comp_sync
         );
 
-    adc_ent : entity work.delta_adc(behav)
-        generic map (
-            ADC_RESOLUTION => ADC_RESOLUTION,
-            SAMPLING_PSC   => ADC_SAMPLING_PSC,
-            MAX_CNT_VAL    => ADC_MAX_VAL
-        )
-        port map (
-            clk_i            => clk_i,
-            rst_i            => rst_i,
-            comp_i           => comp_sync,
-            pwm_o            => axis_adc_pwm_o,
-            adc_valid_strb_o => adc_valid_strb,
-            adc_val_o        => adc_val
-        );
-
-    mov_avg_ent : entity work.moving_average_filter(behav)
-        generic map (
-            N => 2,
-            BITWIDTH => ADC_RESOLUTION
-        )
-        port map (
-            clk_i => clk_i,
-            rst_i => rst_i,
-            data_i => adc_val,
-            data_o => adc_val_filter,
-            strb_data_valid_i => adc_valid_strb,
-            strb_data_valid_o => adc_valid_strb_filter
-        );
-
     sample_hold_ent : entity work.sample_hold(behav)
         port map (
             clk_i      => clk_i,
             rst_i      => rst_i,
-            strb_i     => adc_valid_strb_filter,
-            val_i      => adc_val_filter,
+            strb_i     => adc_valid_strb,
+            val_i      => adc_val,
             hold_val_o => hold_val
         );    
 
