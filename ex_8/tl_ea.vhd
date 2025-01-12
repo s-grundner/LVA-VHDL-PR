@@ -27,9 +27,9 @@ signal z_servo : unsigned(SERVO_RESOLUTION-1 downto 0);
 
 begin
 
-cmd_proc_ent : entity work.cmd_proc(behav)
+	cmd_proc_ent : entity work.cmd_proc(behav)
 	generic map (
-		D => 2
+		D => 4
 	)
 	port map (
 		clk_i => clk_i,
@@ -41,7 +41,7 @@ cmd_proc_ent : entity work.cmd_proc(behav)
 		z_servo_o => z_servo
 	);
 
-servo_x_ent : entity work.servo(behav)
+	servo_x_ent : entity work.servo(behav)
 	port map (
 		clk_i => clk_i,
 		rst_i => rst_i,
@@ -49,7 +49,7 @@ servo_x_ent : entity work.servo(behav)
 		pwm_o => x_servo_pwm_o
 	);
 
-servo_y_ent : entity work.servo(behav)
+	servo_y_ent : entity work.servo(behav)
 	port map (
 		clk_i => clk_i,
 		rst_i => rst_i,
@@ -57,7 +57,7 @@ servo_y_ent : entity work.servo(behav)
 		pwm_o => y_servo_pwm_o
 	);
 
-servo_z_ent : entity work.servo(behav)
+	servo_z_ent : entity work.servo(behav)
 	port map (
 		clk_i => clk_i,
 		rst_i => rst_i,

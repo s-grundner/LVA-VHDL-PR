@@ -5,13 +5,12 @@ use ieee.numeric_std.all;
 library work;
 use work.std_definitions.all;
 
-
 -- entitiy
 
 entity accu_reg is
     generic (
-        D : integer := 2;
-        BITWIDTH : integer := 8;
+        D : natural;
+        BITWIDTH : integer;
         INIT_SUM : integer := 0
     );
     port (
@@ -42,15 +41,7 @@ begin
         end if;
     end process reg_seq;
 
-    accumulate_comb : process (data_i, accu_strb_i, sum) is
-    begin
-        next_sum <= sum;
-
-        if accu_strb_i = '1' then
-            next_sum <= sum + signed(data_i);
-        end if;
-    end process accumulate_comb;
-
+    next_sum <= sum + signed(data_i) when accu_strb_i = '1' else sum;
     data_o <= sum(BITWIDTH-1+D downto D);
 
 end architecture behav;

@@ -6,13 +6,13 @@ use ieee.numeric_std.all;
 
 entity counter is
     generic (
-        COUNTER_LEN : natural
+        CNT_LEN : natural
     );
     port (
-        clk_i 				 : in std_ulogic;
-        rst_i 				 : in std_ulogic;
-		counter_rst_strobe_i : in std_ulogic;
-        counter_o 			 : out unsigned(COUNTER_LEN-1 downto 0)
+        clk_i 	   : in std_ulogic;
+        rst_i 	   : in std_ulogic;
+		sync_rst_i : in std_ulogic;
+        cnt_o 	   : out unsigned(CNT_LEN-1 downto 0)
     );
 end entity counter;
 
@@ -20,8 +20,8 @@ end entity counter;
 
 architecture behav of counter is
 
-	signal curr_cnt : unsigned(COUNTER_LEN-1 downto 0) := (others => '0');
-    signal next_cnt : unsigned(COUNTER_LEN-1 downto 0);
+	signal curr_cnt : unsigned(CNT_LEN-1 downto 0) := (others => '0');
+    signal next_cnt : unsigned(CNT_LEN-1 downto 0);
 
 begin
 
@@ -34,15 +34,7 @@ begin
         end if;
     end process reg_seq;
 
-    cnt_comb : process (curr_cnt, counter_rst_strobe_i) is
-    begin
-        if counter_rst_strobe_i = '1' then
-            next_cnt <= (others => '0');
-        else
-            next_cnt <= curr_cnt + 1;
-        end if;
-    end process cnt_comb;
-
-    counter_o <= curr_cnt;
+    next_cnt <= (others => '0') when sync_rst_i = '1' else curr_cnt + 1;
+    cnt_o <= curr_cnt;
 
 end behav; 

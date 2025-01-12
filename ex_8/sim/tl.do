@@ -7,8 +7,8 @@ vcom -work work ../packages/Commands_p.vhd
 vcom -work work ../accu_reg_ea.vhd
 vcom -work work ../counter_ea.vhd
 vcom -work work ../strb_generator_ea.vhd
-vcom -work work ../CommandROM_ea.vhd
-vcom -work work ../CommandProc_ea.vhd
+vcom -work work ../cmd_rom_ea.vhd
+vcom -work work ../cmd_proc_ea.vhd
 vcom -work work ../pwm_ea.vhd
 vcom -work work ../servo_ea.vhd
 vcom -work work ../tl_ea.vhd
@@ -36,7 +36,7 @@ add wave -noupdate -expand -group {CMD PROC} -color {Dark Orchid} -label CLK -ra
 add wave -noupdate -expand -group {CMD PROC} -color {Dark Orchid} -label {FSM State} -radix unsigned /tl_tb/tb_dut/cmd_proc_ent/fsm_state
 add wave -noupdate -expand -group {CMD PROC} -color {Dark Orchid} -label {Current Address} -radix unsigned /tl_tb/tb_dut/cmd_proc_ent/curr_addr
 add wave -noupdate -expand -group {CMD PROC} -color {Dark Orchid} -label {Current CMD (dTheta and dR concatenated)} -radix unsigned /tl_tb/tb_dut/cmd_proc_ent/curr_cmd
-add wave -noupdate -expand -group {CMD PROC} -color {Dark Orchid} -label {Next Move Strobe (20ms Period)} -radix unsigned /tl_tb/tb_dut/cmd_proc_ent/next_move_strb
+add wave -noupdate -expand -group {CMD PROC} -color {Dark Orchid} -label {Next Move Strobe (20ms Period)} -radix unsigned /tl_tb/tb_dut/cmd_proc_ent/step_strb
 add wave -noupdate -expand -group {CMD PROC} -color {Dark Orchid} -label {Next Move Strobe Gen: Sync Reset} -radix unsigned /tl_tb/tb_dut/cmd_proc_ent/sync_rst
 add wave -noupdate -expand -group {CMD PROC} -color {Dark Orchid} -label dx -radix decimal /tl_tb/tb_dut/cmd_proc_ent/dx
 add wave -noupdate -expand -group {CMD PROC} -color {Dark Orchid} -label dy -radix decimal /tl_tb/tb_dut/cmd_proc_ent/dy
@@ -59,15 +59,15 @@ add wave -noupdate -expand -group {CMD PROC DTHETA} -color Orange -label {Curren
 add wave -noupdate -expand -group {SERVO X} -color {Cornflower Blue} -label CLK -radix binary /tl_tb/tb_dut/servo_x_ent/clk_i
 add wave -noupdate -expand -group {SERVO X} -color {Cornflower Blue} -label {Encoded Angle} -radix unsigned /tl_tb/tb_dut/servo_x_ent/encoded_angle_i
 add wave -noupdate -expand -group {SERVO X} -color {Cornflower Blue} -label PWM -radix binary /tl_tb/tb_dut/servo_x_ent/pwm_o
-add wave -noupdate -expand -group {SERVO X} -color {Cornflower Blue} -label {On Counter Val} -radix unsigned /tl_tb/tb_dut/servo_x_ent/ON_counter_val
+add wave -noupdate -expand -group {SERVO X} -color {Cornflower Blue} -label {On Counter Val} -radix unsigned /tl_tb/tb_dut/servo_x_ent/on_cnt_val
 add wave -noupdate -expand -group {SERVO Y} -color {Cornflower Blue} -label CLK -radix binary /tl_tb/tb_dut/servo_y_ent/clk_i
 add wave -noupdate -expand -group {SERVO Y} -color {Cornflower Blue} -label {Encoded Angle} -radix unsigned /tl_tb/tb_dut/servo_y_ent/encoded_angle_i
 add wave -noupdate -expand -group {SERVO Y} -color {Cornflower Blue} -label PWM -radix binary /tl_tb/tb_dut/servo_y_ent/pwm_o
-add wave -noupdate -expand -group {SERVO Y} -color {Cornflower Blue} -label {On Counter Val} -radix unsigned /tl_tb/tb_dut/servo_y_ent/ON_counter_val
+add wave -noupdate -expand -group {SERVO Y} -color {Cornflower Blue} -label {On Counter Val} -radix unsigned /tl_tb/tb_dut/servo_y_ent/on_cnt_val
 add wave -noupdate -expand -group {SERVO Z} -color {Cornflower Blue} -label CLK -radix binary /tl_tb/tb_dut/servo_z_ent/clk_i
 add wave -noupdate -expand -group {SERVO Z} -color {Cornflower Blue} -label {Encoded Angle} -radix unsigned /tl_tb/tb_dut/servo_z_ent/encoded_angle_i
 add wave -noupdate -expand -group {SERVO Z} -color {Cornflower Blue} -label PWM -radix binary /tl_tb/tb_dut/servo_z_ent/pwm_o
-add wave -noupdate -expand -group {SERVO Z} -color {Cornflower Blue} -label {On Counter Val} -radix unsigned /tl_tb/tb_dut/servo_z_ent/ON_counter_val
+add wave -noupdate -expand -group {SERVO Z} -color {Cornflower Blue} -label {On Counter Val} -radix unsigned /tl_tb/tb_dut/servo_z_ent/on_cnt_val
 
 # ROM
 add wave -noupdate -expand -group {ROM} -color {Dark Olive Green} -label CLK -radix binary /tl_tb/tb_dut/cmd_proc_ent/rom_ent/ROMMEM
@@ -75,8 +75,6 @@ add wave -noupdate -expand -group {ROM} -color {Dark Olive Green} -label CLK -ra
 # --- RUN SIMULATION ---
 
 TreeUpdate [SetDefaultTree]
-
-run 500 ms
 
 configure wave -namecolwidth 288
 configure wave -valuecolwidth 75
@@ -93,4 +91,6 @@ configure wave -timeline 0
 configure wave -timelineunits us
 update
 
-WaveRestoreZoom {0 ps} {550 ms}
+run 2000 ms
+
+WaveRestoreZoom {0 ps} {1000 ms}

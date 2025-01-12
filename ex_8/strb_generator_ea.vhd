@@ -23,43 +23,43 @@ architecture behav of strb_generator is
 
 	constant PS_WIDTH : natural := natural(ceil(log2(real(PRESCALER))));
 
-	signal next_strobe : std_ulogic := '0';
-	signal curr_strobe : std_ulogic := '0';
-	signal strb_counter : unsigned(PS_WIDTH-1 downto 0) := (others => '0');
+	signal next_strb : std_ulogic := '0';
+	signal curr_strb : std_ulogic := '0';
+	signal cnt : unsigned(PS_WIDTH-1 downto 0) := (others => '0');
 
 begin
 
 	counter_ent : entity work.counter(behav)
 		generic map (
-			COUNTER_LEN => PS_WIDTH
+			CNT_LEN => PS_WIDTH
 		)
 		port map (
-			clk_i => clk_i,
-			rst_i => rst_i,
-			counter_rst_strobe_i => curr_strobe,
-			counter_o => strb_counter
+			clk_i      => clk_i,
+			rst_i      => rst_i,
+			sync_rst_i => curr_strb,
+			cnt_o      => cnt
 		);
 
 	reg_seq : process (clk_i, rst_i) is
 	begin
 		if rst_i = '1' then
-			curr_strobe <= '0';
+			curr_strb <= '0';
 		elsif rising_edge(clk_i) then
-			curr_strobe <= next_strobe;
+			curr_strb <= next_strb;
 		end if;
 	end process reg_seq;
 
-	strb_comb : process (strb_counter, sync_rst_i) is
+	strb_comb : process (cnt, sync_rst_i) is
 	begin
-		next_strobe <= '0';
+		next_strb <= '0';
 		if sync_rst_i = '1' then
-			next_strobe <= '0';
-		elsif strb_counter = PRESCALER-1 then
-			next_strobe <= '1';
+			next_strb <= '0';
+		elsif cnt = PRESCALER-1 then
+			next_strb <= '1';
 		end if;
 		
 	end process strb_comb;
 
-	strb_o <= curr_strobe;
+	strb_o <= curr_strb;
 
 end behav;

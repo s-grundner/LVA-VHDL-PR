@@ -23,5 +23,5 @@ package std_definitions is
     constant SERVO_MAX_ANGLE : natural := 110_000;  -- 180° 2ms + 10_000 for Saturation
     constant SERVO_RANGE     : natural := SERVO_MAX_ANGLE - SERVO_MIN_ANGLE;
 
-    constant MOVE_TIME_PS : natural := 1_000_000; -- f_clk * 1/50s
+    constant MICRO_STEP_TIME_PS : natural := 1_000_000/16; -- f_clk * 1/50s * 1/2**4
 end package std_definitions;

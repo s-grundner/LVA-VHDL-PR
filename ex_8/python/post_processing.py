@@ -5,8 +5,6 @@ import matplotlib.pyplot as plt
 csv_file = "list_d2.csv"
 data_frame = pd.read_csv(csv_file).astype(str)
 
-starting_point = 52000
-
 servo_max = 110000
 servo_min = 40000
 servo_mid = servo_min + (servo_max - servo_min) / 2
@@ -24,15 +22,9 @@ print(data_frame)
 
 # Scatterplot X and Y
 for valX, valY, valZ in zip(data_frame["X"], data_frame["Y"], data_frame["Z"]):
-    
-    # normieren
-    valX = (valX-(servo_mid-starting_point))
     valY = (valY-servo_mid) / (servo_max - servo_min)
-    
-    #convert from polar to cartesian
     cartesianX = valX * np.cos(np.pi*valY)
     cartesianY = valX * np.sin(np.pi*valY)
-
     plt.scatter(cartesianX, cartesianY, color=pen_down_color[valZ])
     
 plt.scatter(0, 0, color="black")    

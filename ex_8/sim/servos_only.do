@@ -7,8 +7,8 @@ vcom -work work ../packages/Commands_p.vhd
 vcom -work work ../accu_reg_ea.vhd
 vcom -work work ../counter_ea.vhd
 vcom -work work ../strb_generator_ea.vhd
-vcom -work work ../CommandROM_ea.vhd
-vcom -work work ../CommandProc_ea.vhd
+vcom -work work ../cmd_rom_ea.vhd
+vcom -work work ../cmd_proc_ea.vhd
 vcom -work work ../pwm_ea.vhd
 vcom -work work ../servo_ea.vhd
 vcom -work work ../tl_ea.vhd

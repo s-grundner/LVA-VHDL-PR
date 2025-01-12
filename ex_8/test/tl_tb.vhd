@@ -52,7 +52,7 @@ begin
 		wait for T_CLK;
 		start_strb_tb <= '0';
 		
-		wait for 1350 ms;
+		wait for 2000 ms;
 	
 	end process stimulus;
 

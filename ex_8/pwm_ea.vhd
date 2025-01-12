@@ -6,14 +6,14 @@ use ieee.numeric_std.all;
 
 entity pwm is
     generic (
-        COUNTER_LEN : natural
+        CNT_LEN : natural
     );
     port (
-        clk_i 				 : in std_ulogic;
-        rst_i 				 : in std_ulogic;
-        Period_counter_val_i : in unsigned(COUNTER_LEN-1 downto 0);
-        ON_counter_val_i 	 : in unsigned(COUNTER_LEN-1 downto 0);
-        PWM_o 			     : out std_ulogic
+        clk_i 			 : in std_ulogic;
+        rst_i 			 : in std_ulogic;
+        period_cnt_val_i : in unsigned(CNT_LEN-1 downto 0);
+        on_cnt_val_i 	 : in unsigned(CNT_LEN-1 downto 0);
+        pwm_o 			 : out std_ulogic
     );
 end entity pwm;
 
@@ -21,39 +21,22 @@ end entity pwm;
 
 architecture behav of pwm is
 
-    signal count : unsigned(COUNTER_LEN-1 downto 0);
-    signal count_reset_flag : std_ulogic := '0';
+    signal cnt : unsigned(CNT_LEN-1 downto 0);
+    signal cnt_rst_flag : std_ulogic := '0';
 
 begin
-    -- counter for the PWM
-
-    counter_ent : entity work.counter(behav)
+    cnt_ent : entity work.counter(behav)
         generic map (
-            COUNTER_LEN => COUNTER_LEN
+            CNT_LEN => CNT_LEN
         )
         port map (
-            clk_i => clk_i,
-            rst_i => rst_i,
-            counter_rst_strobe_i => count_reset_flag,
-            counter_o => count
+            clk_i      => clk_i,
+            rst_i      => rst_i,
+            sync_rst_i => cnt_rst_flag,
+            cnt_o      => cnt
         );
     
-    pwm_comb : process (count, ON_counter_val_i) is
-    begin
-        if count < ON_counter_val_i then
-            PWM_o <= '1';
-        else
-            PWM_o <= '0';
-        end if;
-    end process pwm_comb;
-
-    clr_comb : process (count, Period_counter_val_i) is
-    begin
-        if count = Period_counter_val_i-1 then
-            count_reset_flag <= '1';
-        else
-            count_reset_flag <= '0';
-        end if;
-    end process clr_comb;
+    pwm_o <= '1' when cnt < on_cnt_val_i else '0';
+    cnt_rst_flag <= '1' when cnt = period_cnt_val_i-1 else '0';
 
 end behav;
