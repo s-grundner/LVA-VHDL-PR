@@ -57,19 +57,17 @@ add wave -noupdate -expand -group Buttons -color {Lime} -label {Inc} /tl_tb/tl_d
 add wave -noupdate -expand -group Buttons -color {Lime} -label {Dec} /tl_tb/tl_dut/btn_dec_i
 
 add wave -noupdate -expand -group Buttons -color {Lime} -label {Axis (0 X, 1Y)} /tl_tb/tl_dut/sw_axis_i
-add wave -noupdate -expand -group Buttons -color {Lime} -label {Mode (1 UP, 0 DN)} /tl_tb/tl_dut/sw_mode_i
+add wave -noupdate -expand -group Buttons -color {Lime} -label {Mode (0: +-1, 1: +-10)} /tl_tb/tl_dut/sw_mode_i
 
-add wave -noupdate -expand -group Buttons -color {Lime} -label {X Inc} /tl_tb/tl_dut/tilt_x/btn_inc_i
-add wave -noupdate -expand -group Buttons -color {Lime} -label {X Dec} /tl_tb/tl_dut/tilt_x/btn_dec_i
+add wave -noupdate -expand -group Buttons -color {Lime} -label {STATE X} /tl_tb/tl_dut/tilt_x/btn_ctrl_ent/curr_state
+add wave -noupdate -expand -group Buttons -color {Lime} -label {STATE Y} /tl_tb/tl_dut/tilt_y/btn_ctrl_ent/curr_state
 
-add wave -noupdate -expand -group Buttons -color {Lime} -label {Y Inc} /tl_tb/tl_dut/tilt_y/btn_inc_i
-add wave -noupdate -expand -group Buttons -color {Lime} -label {Y Dec} /tl_tb/tl_dut/tilt_y/btn_dec_i
 
 # ---
 
-run 50 ms
+run 10 ms
 
-WaveRestoreZoom {0 ps} {50 ms}
+WaveRestoreZoom {0 ps} {10 ms}
 
 configure wave -timelineunits us
 configure wave -namecolwidth 339

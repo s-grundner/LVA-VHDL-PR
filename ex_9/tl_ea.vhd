@@ -12,25 +12,25 @@ entity tl is
 		clk_i : in std_ulogic;
 		rst_i : in std_ulogic;
 		
-		sw_axis_i : in std_ulogic;
-		sw_mode_i : in std_ulogic; 
-		btn_inc_i : in std_ulogic;
-		btn_dec_i : in std_ulogic;
+		sw_axis_i : in std_ulogic := SW(0);
+		sw_mode_i : in std_ulogic := SW(1); 
+		btn_inc_i : in std_ulogic := KEY(0);
+		btn_dec_i : in std_ulogic := KEY(1);
 
-		x_comp_i : in std_ulogic;
-		y_comp_i : in std_ulogic;
+		x_comp_i : in std_ulogic : SW(2);
+		y_comp_i : in std_ulogic : SW(3);
 
 		x_servo_pwm_o : out std_ulogic;
 		x_adc_pwm_o   : out std_ulogic;
 		y_servo_pwm_o : out std_ulogic;
 		y_adc_pwm_o   : out std_ulogic;
 
-		x_seg_ones_o     : out std_ulogic_vector (0 to 6);
-		x_seg_tens_o     : out std_ulogic_vector (0 to 6);
-		x_seg_hundreds_o : out std_ulogic_vector (0 to 6);
-		y_seg_ones_o     : out std_ulogic_vector (0 to 6);
-		y_seg_tens_o     : out std_ulogic_vector (0 to 6);
-		y_seg_hundreds_o : out std_ulogic_vector (0 to 6)
+		x_seg_ones_o     : out std_ulogic_vector (0 to 6) := HEX0;
+		x_seg_tens_o     : out std_ulogic_vector (0 to 6) := HEX1;
+		x_seg_hundreds_o : out std_ulogic_vector (0 to 6) := HEX2;
+		y_seg_ones_o     : out std_ulogic_vector (0 to 6) := HEX3;
+		y_seg_tens_o     : out std_ulogic_vector (0 to 6) := HEX4;
+		y_seg_hundreds_o : out std_ulogic_vector (0 to 6) := HEX5
 	);
 end tl;
 
@@ -41,11 +41,21 @@ architecture behav of tl is
 
 begin
 
-	x_btn_inc <= btn_inc_i when sw_axis_i = '0' else '0';
-	x_btn_dec <= btn_dec_i when sw_axis_i = '0' else '0';
-	y_btn_inc <= btn_inc_i when sw_axis_i = '1' else '0';
-	y_btn_dec <= btn_dec_i when sw_axis_i = '1' else '0';
-
+	bus_switch : process(sw_axis_i, btn_inc_i, btn_dec_i) is
+	begin
+		if sw_axis_i = '0' then
+			x_btn_inc <= btn_inc_i;
+			x_btn_dec <= btn_dec_i;
+			y_btn_inc <= '0';
+			y_btn_dec <= '0';
+		else
+			x_btn_inc <= '0';
+			x_btn_dec <= '0';
+			y_btn_inc <= btn_inc_i;
+			y_btn_dec <= btn_dec_i;
+		end if;
+	end process bus_switch;
+	
 	tilt_x : entity work.tilt_axis(behav)
 		port map (
 			clk_i            => clk_i,

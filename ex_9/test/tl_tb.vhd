@@ -72,48 +72,48 @@ begin
 		sw_mode_tb <= '0'; -- step size 1
 
 		btn_inc_tb <= '1';
-		wait for T_CLK*5;
+		wait for T_CLK*20;
 		btn_inc_tb <= '0';
-		wait for T_CLK*5;
+		wait for T_CLK*20;
 		btn_inc_tb <= '1';
-		wait for T_CLK*5;
+		wait for T_CLK*20;
 		btn_inc_tb <= '0';
 
 		sw_mode_tb <= '1'; -- step size 10
 
 		btn_dec_tb <= '1';
-		wait for T_CLK*5;
+		wait for T_CLK*20;
 		btn_dec_tb <= '0';
-		wait for T_CLK*5;
+		wait for T_CLK*20;
 		btn_dec_tb <= '1';
-		wait for T_CLK*5;
+		wait for T_CLK*20;
 		btn_dec_tb <= '0';
 
-		wait for 10 ms;
+		wait for T_CLK*60;
 
 		sw_axis_tb <= '1'; -- y axis
 		sw_mode_tb <= '0'; -- step size 1
 
 		btn_inc_tb <= '1';
-		wait for T_CLK*5;
+		wait for T_CLK*20;
 		btn_inc_tb <= '0';
-		wait for T_CLK*5;
+		wait for T_CLK*20;
 		btn_inc_tb <= '1';
-		wait for T_CLK*5;
+		wait for T_CLK*20;
 		btn_inc_tb <= '0';
 
 		sw_mode_tb <= '1'; -- step size 10
 
 		btn_dec_tb <= '1';
-		wait for T_CLK*5;
+		wait for T_CLK*20;
 		btn_dec_tb <= '0';
-		wait for T_CLK*5;
+		wait for T_CLK*20;
 		btn_dec_tb <= '1';
-		wait for T_CLK*5;
+		wait for T_CLK*20;
 		btn_dec_tb <= '0';
 
 
-		wait for 50 ms;
+		wait for 5 ms;
 	end process;
 
 end architecture behav;
