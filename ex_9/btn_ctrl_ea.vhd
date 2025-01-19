@@ -64,31 +64,31 @@ begin
 
         next_state <= curr_state;
         next_register <= curr_register;
-        adc_valid_strb_o <= '1';
+        adc_valid_strb_o <= '0';
 
         case curr_state is
             when IDLE =>
-                adc_valid_strb_o <= '0';
+                adc_valid_strb_o <= '1';
                 if btn_inc_sync = '1' then
+                    if curr_register > REG_MAX_VAL - step_size then
+                        next_register <= REG_MAX_VAL-1;
+                    else
+                        next_register <= curr_register + step_size;
+                    end if;
                     next_state <= INCREMENT;
                 elsif btn_dec_sync = '1' then
+                    if curr_register < step_size then
+                        next_register <= (others => '0');
+                    else
+                        next_register <= curr_register - step_size;
+                    end if;
                     next_state <= DECREMENT;
                 end if;
             when INCREMENT =>
-                if curr_register > REG_MAX_VAL - step_size then
-                    next_register <= REG_MAX_VAL-1;
-                else
-                    next_register <= curr_register + step_size;
-                end if;
                 if btn_inc_sync = '0' then
                     next_state <= IDLE;
                 end if;
             when DECREMENT =>
-                if curr_register < step_size then
-                    next_register <= (others => '0');
-                else
-                    next_register <= curr_register - step_size;
-                end if;
                 if btn_dec_sync = '0' then
                     next_state <= IDLE;
                 end if;
