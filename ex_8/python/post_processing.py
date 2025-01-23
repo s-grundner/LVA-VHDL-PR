@@ -19,6 +19,7 @@ for key in data_frame.keys():
     data_frame[key] = data_frame[key].apply(lambda x: int(x, 2))
 
 print(data_frame)
+# 
 
 # Scatterplot X and Y
 for valX, valY, valZ in zip(data_frame["X"], data_frame["Y"], data_frame["Z"]):

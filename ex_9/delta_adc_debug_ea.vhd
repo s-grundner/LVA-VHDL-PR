@@ -52,14 +52,12 @@ begin
 		end if;
 	end process reg_seq;
 
-	adc_comb : process(on_cnt_val, comp_i, adc_debug_i) is
+	adc_comb : process(on_cnt_val, adc_in_strb_i, adc_debug_i) is
 	begin
 		if adc_in_strb_i = '1' then
 			next_on_cnt_val <= adc_debug_i;
-		elsif comp_i = '1' then
-			next_on_cnt_val <= on_cnt_val + 1;
 		else
-			next_on_cnt_val <= on_cnt_val - 1;
+			next_on_cnt_val	<= on_cnt_val;
 		end if;
 	end process adc_comb;
 

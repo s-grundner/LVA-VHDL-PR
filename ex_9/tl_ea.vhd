@@ -12,25 +12,25 @@ entity tl is
 		clk_i : in std_ulogic;
 		rst_i : in std_ulogic;
 		
-		sw_axis_i : in std_ulogic := SW(0);
-		sw_mode_i : in std_ulogic := SW(1); 
-		btn_inc_i : in std_ulogic := KEY(0);
-		btn_dec_i : in std_ulogic := KEY(1);
+		sw_axis_i : in std_ulogic;
+		sw_mode_i : in std_ulogic; 
+		btn_inc_i : in std_ulogic;
+		btn_dec_i : in std_ulogic;
 
-		x_comp_i : in std_ulogic : SW(2);
-		y_comp_i : in std_ulogic : SW(3);
+		x_comp_i : in std_ulogic;
+		y_comp_i : in std_ulogic;
 
 		x_servo_pwm_o : out std_ulogic;
 		x_adc_pwm_o   : out std_ulogic;
 		y_servo_pwm_o : out std_ulogic;
 		y_adc_pwm_o   : out std_ulogic;
 
-		x_seg_ones_o     : out std_ulogic_vector (0 to 6) := HEX0;
-		x_seg_tens_o     : out std_ulogic_vector (0 to 6) := HEX1;
-		x_seg_hundreds_o : out std_ulogic_vector (0 to 6) := HEX2;
-		y_seg_ones_o     : out std_ulogic_vector (0 to 6) := HEX3;
-		y_seg_tens_o     : out std_ulogic_vector (0 to 6) := HEX4;
-		y_seg_hundreds_o : out std_ulogic_vector (0 to 6) := HEX5
+		x_seg_ones_o     : out std_logic_vector (0 to 6);
+		x_seg_tens_o     : out std_logic_vector (0 to 6);
+		x_seg_hundreds_o : out std_logic_vector (0 to 6);		
+		y_seg_ones_o     : out std_logic_vector (0 to 6);
+		y_seg_tens_o     : out std_logic_vector (0 to 6);
+		y_seg_hundreds_o : out std_logic_vector (0 to 6)
 	);
 end tl;
 

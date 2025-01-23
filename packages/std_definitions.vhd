@@ -14,10 +14,10 @@ package std_definitions is
     constant ADC_MIN_ANGLE : natural := 100; -- 2V -> 0°
     constant ADC_RANGE     : natural := ADC_MAX_ANGLE - ADC_MIN_ANGLE;
 
-    constant SERVO_RESOLUTION : natural := 20;    -- ld(f_clk / f_servo)
     constant ADC_RESOLUTION   : natural := 8;     -- ld(ADC_MAX_VAL)
     constant ADC_SAMPLING_PSC : natural := 4000;  -- f_adc / f_sampling
-
+    
+    constant SERVO_RESOLUTION : natural := 20;    -- ld(f_clk / f_servo)
     constant SERVO_MAX_VAL   : natural := 1_000_000; -- f_clk / f_servo
     constant SERVO_MIN_ANGLE : natural := 40_000;  -- 0° 1ms (- 10_000 for Saturation)
     constant SERVO_MAX_ANGLE : natural := 110_000;  -- 180° 2ms (+ 10_000 for Saturation)

@@ -54,12 +54,12 @@ begin
     -- FSM
 
     fsm_comb : process(curr_state, btn_inc_sync, btn_dec_sync, sw_mode_sync, curr_register) is
-        variable step_size : unsigned(REG_SIZE-1 downto 0);
+        variable step_size : unsigned(REG_SIZE-1 downto 0) := 1;
     begin
         if sw_mode_sync = '1' then
-            step_size := to_unsigned(10, REG_SIZE);
+            step_size := 10;
         else
-            step_size := to_unsigned(1, REG_SIZE);
+            step_size := 1;
         end if;
 
         next_state <= curr_state;

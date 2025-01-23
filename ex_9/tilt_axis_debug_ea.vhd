@@ -20,9 +20,9 @@ entity tilt_axis is
         axis_servo_pwm_o : out std_ulogic;
         axis_adc_pwm_o   : out std_ulogic;
 
-        seg_ones_o       : out std_ulogic_vector (0 to 6);
-        seg_tens_o       : out std_ulogic_vector (0 to 6);
-        seg_hundreds_o   : out std_ulogic_vector (0 to 6)
+        seg_ones_o       : out std_logic_vector (0 to 6);
+        seg_tens_o       : out std_logic_vector (0 to 6);
+        seg_hundreds_o   : out std_logic_vector (0 to 6)
     );
 end tilt_axis;
 
@@ -91,7 +91,7 @@ begin
         port map (
             clk_i   => clk_i,
             rst_i   => rst_i,
-            adc_i => hold_val,
+            adc_i   => hold_val,
             angle_o => encoded_angle
         );
         
