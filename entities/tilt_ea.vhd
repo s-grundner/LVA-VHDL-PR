@@ -11,7 +11,7 @@ entity tilt is
     port (
         clk_i   : in std_ulogic;
         rst_i   : in std_ulogic;
-        adc_i   : in unsigned(15 downto 0);
+        adc_i   : in unsigned(ADC_RESOLUTION-1 downto 0);
         angle_o : out unsigned(SERVO_RESOLUTION-1 downto 0)
     );
 end tilt ;
@@ -31,7 +31,7 @@ begin
         end if;
     end process reg_seq;
 
-    comb_tilt : process(adc_i) is
+    limit_tilt : process(adc_i) is
     begin
         if(adc_i < ADC_MIN_ANGLE) then
             next_angle <= to_unsigned(SERVO_MIN_ANGLE, SERVO_RESOLUTION);
@@ -40,6 +40,6 @@ begin
         else
             next_angle <= to_unsigned(SERVO_MIN_ANGLE + SERVO_RANGE * (to_integer(adc_i) - ADC_MIN_ANGLE) / ADC_RANGE, SERVO_RESOLUTION);
         end if;
-    end process comb_tilt;
+    end process limit_tilt;
 
 end architecture;

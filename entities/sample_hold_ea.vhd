@@ -13,13 +13,13 @@ entity sample_hold is
         rst_i      : in std_ulogic;
         strb_i     : in std_ulogic;
         val_i 	   : in unsigned(ADC_RESOLUTION-1 downto 0);
-        hold_val_o : out unsigned(15 downto 0)
+        hold_val_o : out unsigned(ADC_RESOLUTION-1 downto 0)
     );
 end sample_hold;
 
 architecture behav of sample_hold is
 
-    signal hold_val, next_hold_val : unsigned(15 downto 0) := (others => '0');
+    signal hold_val, next_hold_val : unsigned(ADC_RESOLUTION-1 downto 0) := (others => '0');
 
 begin
 
@@ -32,7 +32,7 @@ begin
         end if;
     end process reg_seq;
 
-    next_hold_val <= resize(val_i, 16) when strb_i = '1' else hold_val;
+    next_hold_val <= val_i when strb_i = '1' else hold_val;
     hold_val_o <= hold_val;
 
 end architecture behav;

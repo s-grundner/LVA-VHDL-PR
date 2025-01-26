@@ -12,6 +12,7 @@ entity moving_average_filter is
     port (
         clk_i : in std_ulogic;
         rst_i : in std_ulogic;
+        filter_en_i : in std_ulogic;
 
         strb_data_valid_i : in std_ulogic;
         strb_data_valid_o : out std_ulogic;
@@ -46,7 +47,7 @@ begin
         end if;
     end process reg_seq;
 
-    comb_filter : process (data_i, filter_reg, strb_data_valid_i) is
+    comb_filter : process (data_i, filter_reg, strb_data_valid_i, sum) is
     begin
         next_sum <= sum;
         next_filter_reg <= filter_reg;
@@ -61,7 +62,7 @@ begin
     end process comb_filter;
 
     -- Divide by shift right
-    data_o <= unsigned(sum(BITWIDTH-1+N downto N));
+    data_o <= data_i when filter_en_i = '1' else unsigned(sum(BITWIDTH-1+N downto N));
     strb_data_valid_o <= next_strobe;
 
 end architecture behav;

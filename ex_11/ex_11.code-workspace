@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../devices"
+		},
+		{
+			"path": "../entities"
+		},
+		{
+			"path": "../packages"
+		},
+		{
+			"path": "../../../Downloads/Controller/Controller"
+		}
+	],
+	"settings": {}
+}
