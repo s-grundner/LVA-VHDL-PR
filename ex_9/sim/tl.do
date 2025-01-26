@@ -13,8 +13,8 @@ vcom -work work ../../entities/sample_hold_ea.vhd
 vcom -work work ../../entities/servo_ea.vhd
 vcom -work work ../../entities/sync_ea.vhd
 vcom -work work ../../entities/tilt_ea.vhd
+vcom -work work ../../entities/btn_ctrl_ea.vhd
 
-vcom -work work ../btn_ctrl_ea.vhd
 vcom -work work ../delta_adc_debug_ea.vhd
 vcom -work work ../tilt_axis_debug_ea.vhd
 vcom -work work ../tl_ea.vhd

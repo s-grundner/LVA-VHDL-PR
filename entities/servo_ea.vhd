@@ -11,7 +11,7 @@ entity servo is
     port (
         clk_i : in std_logic;
         rst_i : in std_logic;
-        encoded_angle_i : in unsigned(SERVO_RESOLUTION-1 downto 0);
+        angle_i : in unsigned(SERVO_RESOLUTION-1 downto 0);
         pwm_o : out std_logic
     );
 end servo;
@@ -46,7 +46,7 @@ begin
         end if;
     end process reg_seq;
 
-    next_on_cnt_val <= encoded_angle_i when pwm = '1' else on_cnt_val;
+    next_on_cnt_val <= angle_i when pwm = '1' else on_cnt_val;
     pwm_o <= pwm;
 
 end architecture;

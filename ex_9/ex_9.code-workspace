@@ -10,7 +10,5 @@
 			"path": "../packages"
 		}
 	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "ex_9"
-	}
+	"settings": {}
 }
