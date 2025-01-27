@@ -1,6 +1,0 @@
-
-State Machine - |PINOUT|tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_state
-Name curr_state.DECREMENT curr_state.INCREMENT curr_state.IDLE 
-curr_state.IDLE 0 0 0 
-curr_state.INCREMENT 0 1 1 
-curr_state.DECREMENT 1 0 1 
