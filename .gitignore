@@ -12,3 +12,7 @@ ex_*/**/work/*
 *.bak
 db
 incremental_db
+*.rpt
+*.summary
+*.done
+*.qws
