@@ -18,21 +18,21 @@ end servo;
 
 -- architecture
 
-architecture behav of servo is
+architecture rtl of servo is
 
-    signal on_cnt_val, next_on_cnt_val : unsigned(SERVO_RESOLUTION-1 downto 0) := to_unsigned(SERVO_MIN_ANGLE, SERVO_RESOLUTION);
+    signal on_cnt_val, next_on_cnt_val : unsigned(SERVO_RESOLUTION-1 downto 0);
     signal pwm : std_logic := '0';
 
 begin
 
-    pwm_ent : entity work.pwm(behav)
+    pwm_ent : entity work.pwm(rtl)
     generic map (
         CNT_LEN => SERVO_RESOLUTION
     )
     port map (
         clk_i => clk_i,
         rst_i => rst_i,
-        period_cnt_val_i => to_unsigned(SERVO_MAX_VAL, SERVO_RESOLUTION),
+        period_cnt_val_i => SERVO_MAX_VAL,
         on_cnt_val_i => on_cnt_val,
         pwm_o => pwm
     );
@@ -40,7 +40,7 @@ begin
     reg_seq : process (clk_i, rst_i) is
     begin
         if rst_i = '1' then
-            on_cnt_val <= (others => '1');
+            on_cnt_val <= SERVO_MIN_ANGLE;
         elsif rising_edge(clk_i) then
             on_cnt_val <= next_on_cnt_val;
         end if;

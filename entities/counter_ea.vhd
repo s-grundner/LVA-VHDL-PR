@@ -18,9 +18,10 @@ end entity counter;
 
 -- architecture
 
-architecture behav of counter is
-
-	signal curr_cnt, next_cnt : unsigned(CNT_LEN-1 downto 0) := (others => '0');
+architecture rtl of counter is
+    
+    signal curr_cnt : unsigned(CNT_LEN-1 downto 0) := (others => '0');
+    signal next_cnt : unsigned(CNT_LEN-1 downto 0);
 
 begin
 
@@ -36,4 +37,4 @@ begin
     next_cnt <= (others => '0') when sync_rst_i = '1' else curr_cnt + 1;
     cnt_o <= curr_cnt;
 
-end behav; 
+end rtl; 

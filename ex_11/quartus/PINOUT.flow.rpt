@@ -1,5 +1,5 @@
 Flow report for PINOUT
-Sun Jan 26 20:11:20 2025
+Mon Jan 27 19:28:49 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,19 +41,19 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun Jan 26 20:11:15 2025       ;
+; Flow Status                     ; Successful - Mon Jan 27 19:28:38 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; PINOUT                                      ;
 ; Top-level Entity Name           ; PINOUT                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 254 / 41,910 ( < 1 % )                      ;
-; Total registers                 ; 349                                         ;
-; Total pins                      ; 96 / 499 ( 19 % )                           ;
+; Logic utilization (in ALMs)     ; 372 / 41,910 ( < 1 % )                      ;
+; Total registers                 ; 503                                         ;
+; Total pins                      ; 59 / 499 ( 12 % )                           ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
-; Total DSP Blocks                ; 0 / 112 ( 0 % )                             ;
+; Total block memory bits         ; 128 / 5,662,720 ( < 1 % )                   ;
+; Total DSP Blocks                ; 2 / 112 ( 2 % )                             ;
 ; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                               ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/26/2025 20:10:23 ;
+; Start date & time ; 01/27/2025 19:26:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PINOUT              ;
 +-------------------+---------------------+
@@ -79,9 +79,10 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 134660532877804.173791862323836        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 260005664287009.173800241621432        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
+; NUM_PARALLEL_PROCESSORS             ; 4                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -95,11 +96,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4919 MB             ; 00:00:06                           ;
-; Fitter               ; 00:00:39     ; 1.0                     ; 7348 MB             ; 00:00:56                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4846 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.4                     ; 5257 MB             ; 00:00:03                           ;
-; Total                ; 00:00:54     ; --                      ; --                  ; 00:01:07                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4916 MB             ; 00:00:22                           ;
+; Fitter               ; 00:01:09     ; 1.0                     ; 6622 MB             ; 00:01:24                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 4846 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:10     ; 1.3                     ; 5183 MB             ; 00:00:08                           ;
+; Total                ; 00:01:49     ; --                      ; --                  ; 00:02:01                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -108,10 +109,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Smino            ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Smino            ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Smino            ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Smino            ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; NOTEBOOK-SMINO   ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; NOTEBOOK-SMINO   ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; NOTEBOOK-SMINO   ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; NOTEBOOK-SMINO   ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

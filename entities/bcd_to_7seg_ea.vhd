@@ -8,12 +8,12 @@ use work.all;
 
 entity bcd_to_7seg is
     port (
-		  bcd_i : in std_ulogic_vector(3 downto 0);
+		bcd_i : in std_ulogic_vector(3 downto 0);
         led_o : out std_logic_vector (0 to 6)
     );
 end bcd_to_7seg;
 
-architecture behav of bcd_to_7seg is
+architecture rtl of bcd_to_7seg is
 
 begin
 	

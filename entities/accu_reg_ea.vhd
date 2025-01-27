@@ -25,17 +25,16 @@ end accu_reg;
 
 -- architecture
 
-architecture behav of accu_reg is
+architecture rtl of accu_reg is
 
-    signal sum : signed(BITWIDTH-1+D downto 0) := to_signed(INIT_SUM, BITWIDTH+D);
-    signal next_sum : signed(BITWIDTH-1+D downto 0) := to_signed(INIT_SUM, BITWIDTH+D);
+    signal sum, next_sum : signed(BITWIDTH-1+D downto 0);
 
 begin
 
     reg_seq : process (clk_i, rst_i) is
     begin
         if rst_i = '1' then
-            sum <= (others => '0');
+            sum <= to_signed(INIT_SUM, BITWIDTH+D);
         elsif rising_edge(clk_i) then
             sum <= next_sum;
         end if;
@@ -44,4 +43,4 @@ begin
     next_sum <= sum + signed(data_i) when accu_strb_i = '1' else sum;
     data_o <= sum(BITWIDTH-1+D downto D);
 
-end architecture behav;
+end architecture rtl;

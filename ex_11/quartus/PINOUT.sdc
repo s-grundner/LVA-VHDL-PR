@@ -1,26 +1,50 @@
+## Generated SDC file "PINOUT.sdc"
+
+## Copyright (C) 2020  Intel Corporation. All rights reserved.
+## Your use of Intel Corporation's design tools, logic functions 
+## and other software and tools, and any partner logic 
+## functions, and any output files from any of the foregoing 
+## (including device programming or simulation files), and any 
+## associated documentation or information are expressly subject 
+## to the terms and conditions of the Intel Program License 
+## Subscription Agreement, the Intel Quartus Prime License Agreement,
+## the Intel FPGA IP License Agreement, or other applicable license
+## agreement, including, without limitation, that your use is for
+## the sole purpose of programming logic devices manufactured by
+## Intel and sold by Intel or its authorized distributors.  Please
+## refer to the applicable agreement for further details, at
+## https://fpgasoftware.intel.com/eula.
+
+
+## VENDOR  "Altera"
+## PROGRAM "Quartus Prime"
+## VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
+
+## DATE    "Mon Jan 27 19:26:40 2025"
+
+##
+## DEVICE  "5CSXFC6D6F31C6"
+##
+
+
 #**************************************************************
-# This .sdc file is created by Terasic Tool.
-# Users are recommended to modify this file to match users logic.
+# Time Information
 #**************************************************************
+
+set_time_format -unit ns -decimal_places 3
+
+
 
 #**************************************************************
 # Create Clock
 #**************************************************************
-create_clock -period "50.000000 MHz" [get_ports CLOCK2_50]
-create_clock -period "50.000000 MHz" [get_ports CLOCK3_50]
-create_clock -period "50.000000 MHz" [get_ports CLOCK4_50]
-create_clock -period "50.000000 MHz" [get_ports CLOCK_50]
 
-# for enhancing USB BlasterII to be reliable, 25MHz
-create_clock -name {altera_reserved_tck} -period 40 {altera_reserved_tck}
-set_input_delay -clock altera_reserved_tck -clock_fall 3 [get_ports altera_reserved_tdi]
-set_input_delay -clock altera_reserved_tck -clock_fall 3 [get_ports altera_reserved_tms]
-set_output_delay -clock altera_reserved_tck 3 [get_ports altera_reserved_tdo]
+create_clock -name {CLOCK_50} -period 20.000 -waveform { 0.000 10.000 } [get_ports { CLOCK_50 }]
+
 
 #**************************************************************
 # Create Generated Clock
 #**************************************************************
-derive_pll_clocks
 
 
 
@@ -33,8 +57,15 @@ derive_pll_clocks
 #**************************************************************
 # Set Clock Uncertainty
 #**************************************************************
-derive_clock_uncertainty
 
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {CLOCK_50}] -setup 0.170  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {CLOCK_50}] -hold 0.060  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {CLOCK_50}] -setup 0.170  
+set_clock_uncertainty -rise_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {CLOCK_50}] -hold 0.060  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {CLOCK_50}] -setup 0.170  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -rise_to [get_clocks {CLOCK_50}] -hold 0.060  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {CLOCK_50}] -setup 0.170  
+set_clock_uncertainty -fall_from [get_clocks {CLOCK_50}] -fall_to [get_clocks {CLOCK_50}] -hold 0.060  
 
 
 #**************************************************************
@@ -82,12 +113,4 @@ derive_clock_uncertainty
 #**************************************************************
 # Set Input Transition
 #**************************************************************
-
-
-
-#**************************************************************
-# Set Load
-#**************************************************************
-
-
 

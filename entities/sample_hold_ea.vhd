@@ -17,9 +17,9 @@ entity sample_hold is
     );
 end sample_hold;
 
-architecture behav of sample_hold is
+architecture rtl of sample_hold is
 
-    signal hold_val, next_hold_val : unsigned(ADC_RESOLUTION-1 downto 0) := (others => '0');
+    signal hold_val, next_hold_val : unsigned(ADC_RESOLUTION-1 downto 0);
 
 begin
 
@@ -35,4 +35,4 @@ begin
     next_hold_val <= val_i when strb_i = '1' else hold_val;
     hold_val_o <= hold_val;
 
-end architecture behav;
+end architecture rtl;

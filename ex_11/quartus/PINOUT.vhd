@@ -11,16 +11,13 @@ port
 (
 
     ------------ CLOCK ------------
-    CLOCK2_50       	:in    	std_logic;
-    CLOCK3_50       	:in    	std_logic;
-    CLOCK4_50       	:in    	std_logic;
     CLOCK_50        	:in    	std_logic;
 
     ------------ KEY ------------
     KEY             	:in    	std_logic_vector(3 downto 0);
 
     ------------ SW ------------
-    SW              	:in    	std_logic_vector(9 downto 0);
+    SW              	:in    	std_logic_vector(4 downto 0);
 
     ------------ Seg7 ------------
     HEX0            	:out   	std_logic_vector(6 downto 0);
@@ -31,7 +28,16 @@ port
     HEX5            	:out   	std_logic_vector(6 downto 0);
 
     ------------ GPIO, GPIO connect to GPIO Default ------------
-    GPIO            	:inout 	std_logic_vector(35 downto 0)
+    
+    X_SERVO_PWM   	    :out   	std_logic;
+    Y_SERVO_PWM   	    :out   	std_logic;
+    Z_SERVO_PWM   	    :out   	std_logic;
+
+    X_ADC_PWM   	    :out   	std_logic;
+    Y_ADC_PWM   	    :out   	std_logic;
+
+    Y_COMP       	    :in   	std_logic;
+    X_COMP       	    :in   	std_logic
 );
 
 end entity;
@@ -42,12 +48,19 @@ end entity;
 
 architecture rtl of PINOUT is
 
+    signal NKEY : std_logic_vector(3 downto 0);
+
 begin
 
-    tl_ent : entity work.tl(behav)
+    NKEY(0) <= not KEY(0);
+    NKEY(1) <= not KEY(1);
+    NKEY(2) <= not KEY(2);
+    NKEY(3) <= not KEY(3);
+
+    tl_ent : entity work.tl(rtl)
     port map(
         clk_i => CLOCK_50,      
-        rst_i => KEY(0),
+        rst_i => NKEY(0),
 
         sw_filter_en_async_i => SW(0),
         sw_dgb_en_async_i    => SW(1),
@@ -55,19 +68,19 @@ begin
         sw_mode_async_i      => SW(3),
         sw_z_axis_async_i    => SW(4),
 
-        btn_draw_k_async_i   => KEY(1),
-        btn_inc_async_i      => KEY(2),
-        btn_dec_async_i      => KEY(3),
+        btn_draw_k_async_i   => NKEY(1),
+        btn_inc_async_i      => NKEY(2),
+        btn_dec_async_i      => NKEY(3),
         
-        x_comp_async_i => GPIO(33),
-        y_comp_async_i => GPIO(32),
+        x_comp_async_i => X_COMP,
+        y_comp_async_i => Y_COMP,
 
-        x_adc_pwm_o => GPIO(35),
-        y_adc_pwm_o => GPIO(34),
+        x_adc_pwm_o => X_ADC_PWM,
+        y_adc_pwm_o => Y_ADC_PWM,
 
-        x_servo_pwm_o => GPIO(27),
-        y_servo_pwm_o => GPIO(26),
-        z_servo_pwm_o => GPIO(9),
+        x_servo_pwm_o => X_SERVO_PWM,
+        y_servo_pwm_o => Y_SERVO_PWM,
+        z_servo_pwm_o => Z_SERVO_PWM,
 
         x_seg_ones_o     => HEX0,
         x_seg_tens_o     => HEX1,
