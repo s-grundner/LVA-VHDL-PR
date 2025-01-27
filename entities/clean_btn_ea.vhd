@@ -14,13 +14,13 @@ entity clean_btn is
     );
 end clean_btn;
 
-architecture behav of clean_btn is
+architecture rtl of clean_btn is
 
     signal btn_sync : std_ulogic := '0';
 
 begin
 
-    sync_ent : entity work.sync(behav)
+    sync_ent : entity work.sync(rtl)
     generic map (
         N_DFF => DEFAULT_N_SYNC_DFF
     )
@@ -31,7 +31,7 @@ begin
         sig_o => btn_sync
     );
     
-    debouncer_ent : entity work.debouncer(behav)
+    debouncer_ent : entity work.debouncer(rtl)
     port map (
         clk_i => clk_i,
         rst_i => rst_i,

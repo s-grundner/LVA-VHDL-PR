@@ -16,29 +16,22 @@ entity tilt is
     );
 end tilt ;
 
-architecture behav of tilt is
+architecture rtl of tilt is
 
-    signal next_angle : unsigned(SERVO_RESOLUTION-1 downto 0) := to_unsigned(SERVO_MIN_ANGLE, SERVO_RESOLUTION);
-
+    signal ltd_angle : unsigned(SERVO_RESOLUTION-1 downto 0) := (others => '0');
+    constant ADC_TO_SERVO_OFS : unsigned(SERVO_RESOLUTION-1 downto 0) :=
+        SERVO_MIN_ANGLE - (SERVO_RANGE + ADC_MIN_ANGLE) / ADC_RANGE;
 begin
 
-    reg_seq : process(clk_i, rst_i) is
-    begin
-        if rst_i = '1' then
-            angle_o <= to_unsigned(SERVO_MIN_ANGLE, SERVO_RESOLUTION);
-        elsif rising_edge(clk_i) then
-            angle_o <= next_angle;
-        end if;
-    end process reg_seq;
+    angle_o <= ltd_angle;
 
     limit_tilt : process(adc_i) is
     begin
+        ltd_angle <= resize(SERVO_RANGE * adc_i + ADC_TO_SERVO_OFS, SERVO_RESOLUTION);
         if(adc_i < ADC_MIN_ANGLE) then
-            next_angle <= to_unsigned(SERVO_MIN_ANGLE, SERVO_RESOLUTION);
+            ltd_angle <= SERVO_MIN_ANGLE;
         elsif(adc_i > ADC_MAX_ANGLE) then
-            next_angle <= to_unsigned(SERVO_MAX_ANGLE, SERVO_RESOLUTION);
-        else
-            next_angle <= to_unsigned(SERVO_MIN_ANGLE + SERVO_RANGE * (to_integer(adc_i) - ADC_MIN_ANGLE) / ADC_RANGE, SERVO_RESOLUTION);
+            ltd_angle <= SERVO_MAX_ANGLE;
         end if;
     end process limit_tilt;
 

@@ -11,9 +11,6 @@
 		},
 		{
 			"path": "../packages"
-		},
-		{
-			"path": "../../../Downloads/Controller/Controller"
 		}
 	],
 	"settings": {}

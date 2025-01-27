@@ -9,3 +9,6 @@ ex_*/**/ModelSim.lnk
 ex_*/**/transcript
 ex_*/**/vsim.wlf
 ex_*/**/work/*
+*.bak
+db
+incremental_db

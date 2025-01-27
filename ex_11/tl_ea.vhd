@@ -44,33 +44,34 @@ end tl;
 
 -- ARCHITECTURE
 
-architecture behav of tl is
+architecture rtl of tl is
 
     -- Sync Signals
     signal filter_en_sync : std_ulogic := '0';
-    signal dbg_en_sync   : std_ulogic := '0';
-    signal dbg_axis_sync : std_ulogic := '0';
-    signal z_axis_sync   : std_ulogic := '0';
-	 signal draw_k_sync   : std_ulogic := '0';
+    signal dbg_en_sync    : std_ulogic := '0';
+    signal dbg_axis_sync  : std_ulogic := '0';
+    signal z_axis_sync    : std_ulogic := '0';
+	signal draw_k_sync    : std_ulogic := '0';
 
     signal dbg_val : unsigned(ADC_RESOLUTION-1 downto 0) := (others => '0');
     signal dbg_valid_strb : std_ulogic := '0';
 
-	 signal x_angle, y_angle, z_angle : unsigned(SERVO_RESOLUTION-1 downto 0) := (others => '0');
+	signal x_angle, y_angle, z_angle : unsigned(SERVO_RESOLUTION-1 downto 0) := (others => '0');
     signal x_tilt_angle, y_tilt_angle, z_tilt_angle : unsigned(SERVO_RESOLUTION-1 downto 0) := (others => '0');
-    signal x_cmd_angle,  y_cmd_angle,  z_cmd_angle  : unsigned(SERVO_RESOLUTION-1 downto 0) := (others => '0');
-    signal processing, start_strb, next_start_strb : std_ulogic := '0';
+    signal x_cmd_angle, y_cmd_angle, z_cmd_angle    : unsigned(SERVO_RESOLUTION-1 downto 0) := (others => '0');
+    signal processing, start_strb, next_start_strb  : std_ulogic := '0';
+    signal x_dbg_valid_strb, y_dbg_valid_strb       : std_ulogic := '0';
 
 begin
 
     -- SERVOS
 
-    z_tilt_angle <= to_unsigned(SERVO_MIN_ANGLE, SERVO_RESOLUTION) when z_axis_sync = '1' else to_unsigned(SERVO_MAX_ANGLE, SERVO_RESOLUTION);
+    z_tilt_angle <= SERVO_MIN_ANGLE when z_axis_sync = '1' else SERVO_MAX_ANGLE;
     x_angle <= x_cmd_angle when processing = '1' else x_tilt_angle;
-	 y_angle <= y_cmd_angle when processing = '1' else y_tilt_angle;
-	 z_angle <= z_cmd_angle when processing = '1' else z_tilt_angle;
-	 
-    servo_x_ent : entity work.servo(behav)
+	y_angle <= y_cmd_angle when processing = '1' else y_tilt_angle;
+	z_angle <= z_cmd_angle when processing = '1' else z_tilt_angle;
+
+    servo_x_ent : entity work.servo(rtl)
     port map (
         clk_i   => clk_i,
         rst_i   => rst_i,
@@ -78,7 +79,7 @@ begin
         pwm_o   => x_servo_pwm_o
     );
 
-    servo_y_ent : entity work.servo(behav)
+    servo_y_ent : entity work.servo(rtl)
     port map (
         clk_i   => clk_i,
         rst_i   => rst_i,
@@ -86,7 +87,7 @@ begin
         pwm_o   => y_servo_pwm_o
     );
 
-    servo_z_ent : entity work.servo(behav)
+    servo_z_ent : entity work.servo(rtl)
     port map (
         clk_i   => clk_i,
         rst_i   => rst_i,
@@ -96,10 +97,10 @@ begin
 
     -- BUTTONS
     
-    btn_ctrl_ent : entity work.btn_ctrl(behav)
+    btn_ctrl_ent : entity work.btn_ctrl(rtl)
         port map (
-            clk_i     => clk_i,
-            rst_i     => rst_i,
+            clk_i => clk_i,
+            rst_i => rst_i,
             sw_mode_async_i => sw_mode_async_i,
             btn_inc_async_i => btn_inc_async_i,
             btn_dec_async_i => btn_dec_async_i,
@@ -109,14 +110,17 @@ begin
 
     -- TILT AXES
 
-    tilt_x : entity work.tilt_axis(behav)
+    x_dbg_valid_strb <= dbg_valid_strb and dbg_axis_sync;
+    y_dbg_valid_strb <= dbg_valid_strb and not dbg_axis_sync;
+
+    tilt_x : entity work.tilt_axis(rtl)
         port map (
             clk_i            => clk_i,
             rst_i            => rst_i,
             filter_en_i      => filter_en_sync,
             dbg_en_i         => dbg_en_sync,
-            dbg_valid_strb_i => dbg_valid_strb and dbg_axis_sync,
             dbg_val_i        => dbg_val,
+            dbg_valid_strb_i => x_dbg_valid_strb,
             axis_comp_i      => x_comp_async_i,
             axis_angle_o     => x_tilt_angle,
             axis_adc_pwm_o   => x_adc_pwm_o,
@@ -125,14 +129,14 @@ begin
             seg_hundreds_o   => x_seg_hundreds_o
         );
 
-    tilt_y : entity work.tilt_axis(behav)
+    tilt_y : entity work.tilt_axis(rtl)
         port map (
             clk_i            => clk_i,
             rst_i            => rst_i,
             filter_en_i      => filter_en_sync,
             dbg_en_i         => dbg_en_sync,
-            dbg_valid_strb_i => dbg_valid_strb and not dbg_axis_sync,
             dbg_val_i        => dbg_val,
+            dbg_valid_strb_i => y_dbg_valid_strb,
             axis_comp_i      => y_comp_async_i,
             axis_angle_o     => y_tilt_angle,
             axis_adc_pwm_o   => y_adc_pwm_o,
@@ -143,7 +147,7 @@ begin
 
     -- COMMAND PROCESSOR
 
-    btn2strb : entity work.btn2strb(behav)
+    btn2strb : entity work.btn2strb(rtl)
         port map (
             clk_i => clk_i,
             rst_i => rst_i,
@@ -151,7 +155,7 @@ begin
             strb_o => start_strb
         );
             
-    cmd_proc_ent : entity work.cmd_proc(behav)
+    cmd_proc_ent : entity work.cmd_proc(rtl)
         generic map (
             D => 4
         )
@@ -167,7 +171,7 @@ begin
 
     -- SYNCHRONIZERS
 
-    dbg_axis_sync_ent : entity work.clean_btn(behav)
+    dbg_axis_sync_ent : entity work.clean_btn(rtl)
         port map (
             clk_i => clk_i,
             rst_i => rst_i,
@@ -175,7 +179,7 @@ begin
             btn_o => dbg_axis_sync
         );
 
-    sw_dbg_en_sync_ent : entity work.clean_btn(behav)
+    sw_dbg_en_sync_ent : entity work.clean_btn(rtl)
         port map (
             clk_i => clk_i,
             rst_i => rst_i,
@@ -183,7 +187,7 @@ begin
             btn_o => dbg_en_sync
         );
 
-    z_axis_sync_ent : entity work.clean_btn(behav)
+    z_axis_sync_ent : entity work.clean_btn(rtl)
         port map (
             clk_i => clk_i,
             rst_i => rst_i,
@@ -191,7 +195,7 @@ begin
             btn_o => z_axis_sync
         );
 
-    btn_filter_en_sync_ent : entity work.clean_btn(behav)
+    btn_filter_en_sync_ent : entity work.clean_btn(rtl)
         port map (
             clk_i => clk_i,
             rst_i => rst_i,
@@ -199,7 +203,7 @@ begin
             btn_o => filter_en_sync
         );
 
-    btn_k_sync_ent : entity work.clean_btn(behav)
+    btn_k_sync_ent : entity work.clean_btn(rtl)
         port map (
             clk_i => clk_i,
             rst_i => rst_i,
@@ -207,4 +211,4 @@ begin
             btn_o => draw_k_sync
         );
 
-end architecture behav;
+end architecture rtl;

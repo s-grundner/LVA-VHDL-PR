@@ -15,7 +15,7 @@ entity cmd_rom is
 end entity cmd_rom;
 
 
-architecture behav of cmd_rom is
+architecture rtl of cmd_rom is
     signal ROMMEM : TCOMMANDS := COMMANDSTOPROCESS;
 begin
 

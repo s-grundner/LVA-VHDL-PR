@@ -19,13 +19,13 @@ end entity pwm;
 
 -- architecture
 
-architecture behav of pwm is
+architecture rtl of pwm is
 
     signal cnt : unsigned(CNT_LEN-1 downto 0) := (others => '0');
-    signal sync_rst, next_pwm : std_ulogic := '0';
+    signal sync_rst : std_ulogic;
 
 begin
-    cnt_ent : entity work.counter(behav)
+    cnt_ent : entity work.counter(rtl)
         generic map (
             CNT_LEN => CNT_LEN
         )
@@ -39,4 +39,4 @@ begin
     pwm_o    <= '1' when cnt < on_cnt_val_i else '0';
     sync_rst <= '1' when cnt = period_cnt_val_i-1 else '0';
 
-end behav;
+end rtl;

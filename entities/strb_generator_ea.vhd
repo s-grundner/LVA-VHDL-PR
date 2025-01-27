@@ -19,7 +19,7 @@ end entity strb_generator;
 
 -- architecture
 
-architecture behav of strb_generator is
+architecture rtl of strb_generator is
 
     constant PS_SIZE : natural := natural(ceil(log2(real(PRESCALER))));
     signal next_strb : std_ulogic := '0';
@@ -28,7 +28,7 @@ architecture behav of strb_generator is
 
 begin
 
-    cnt_ent : entity work.counter(behav)
+    cnt_ent : entity work.counter(rtl)
     generic map (
         CNT_LEN => PS_SIZE
     )
@@ -51,4 +51,4 @@ begin
     next_strb <= '1' when cnt = PRESCALER-1 else '0'; 
     strb_o <= curr_strb;
 
-end behav;
+end rtl;

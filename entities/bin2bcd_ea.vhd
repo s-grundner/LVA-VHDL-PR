@@ -16,7 +16,7 @@ entity bin2bcd is
 	);
 end bin2bcd;
 
-architecture behav of bin2bcd is
+architecture rtl of bin2bcd is
 
 begin
 
@@ -65,4 +65,4 @@ begin
 		end loop;
 	end process encode_comb;       
 
-end behav;
+end rtl;

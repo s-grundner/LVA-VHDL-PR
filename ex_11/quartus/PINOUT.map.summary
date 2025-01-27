@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sun Jan 26 20:10:30 2025
+Analysis & Synthesis Status : Successful - Mon Jan 27 19:27:15 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : PINOUT
 Top-level Entity Name : PINOUT
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 305
-Total pins : 96
+Total registers : 449
+Total pins : 59
 Total virtual pins : 0
-Total block memory bits : 0
-Total DSP Blocks : 0
+Total block memory bits : 128
+Total DSP Blocks : 2
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

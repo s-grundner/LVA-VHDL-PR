@@ -30,7 +30,7 @@ end tilt_axis;
 
 -- architecture
 
-architecture behav of tilt_axis is
+architecture rtl of tilt_axis is
 
     signal adc_valid_strb, adc_valid_strb_filter : std_ulogic := '0';
     signal adc_val, adc_val_filter : unsigned(ADC_RESOLUTION-1 downto 0) := (others => '0');
@@ -40,7 +40,7 @@ architecture behav of tilt_axis is
 
 begin
 
-    comp_sync_ent : entity work.sync(behav)
+    comp_sync_ent : entity work.sync(rtl)
         generic map (
             N_DFF => DEFAULT_N_SYNC_DFF
         )
@@ -51,27 +51,22 @@ begin
             sig_o => comp_sync
         );
 
-    adc_ent : entity work.delta_adc(debug)
-        generic map (
-            ADC_RESOLUTION => ADC_RESOLUTION,
-            SAMPLING_PSC   => ADC_SAMPLING_PSC,
-            MAX_CNT_VAL    => ADC_MAX_VAL
-        )
+    adc_ent : entity work.delta_adc(debug_rtl)
         port map (
             clk_i => clk_i,
             rst_i => rst_i,
-            dbg_en_i   => dbg_en_i,
+            dbg_en_i  => dbg_en_i,
+            dbg_val_i => dbg_val_i,
             dbg_valid_strb_i => dbg_valid_strb_i,
-            dbg_val_i  => dbg_val_i,
-            comp_i     => comp_sync,
-            pwm_o      => axis_adc_pwm_o,
-            adc_val_o  => adc_val, 
+            comp_i    => comp_sync,
+            pwm_o     => axis_adc_pwm_o,
+            adc_val_o => adc_val, 
             adc_valid_strb_o => adc_valid_strb
         );
 
     -- FILTER
 
-    mov_avg_ent : entity work.moving_average_filter(behav)
+    mov_avg_ent : entity work.moving_average_filter(rtl)
         generic map (
             N => FILTER_ORDER,
             BITWIDTH => ADC_RESOLUTION
@@ -86,7 +81,7 @@ begin
             strb_data_valid_o => adc_valid_strb_filter
         );
 
-    sample_hold_ent : entity work.sample_hold(behav)
+    sample_hold_ent : entity work.sample_hold(rtl)
         port map (
             clk_i  => clk_i,
             rst_i  => rst_i,
@@ -95,7 +90,7 @@ begin
             hold_val_o => hold_val
         );    
 
-    tilt_ent : entity work.tilt(behav)
+    tilt_ent : entity work.tilt(rtl)
         port map (
             clk_i => clk_i,
             rst_i => rst_i,
@@ -105,7 +100,7 @@ begin
         
     -- DISPLAY
 
-    bin2bcd_ent : entity work.bin2bcd(behav)
+    bin2bcd_ent : entity work.bin2bcd(rtl)
         port map (
             binary_i => std_ulogic_vector(resize(hold_val, 16)),
             ones_o   => ones_bcd,
@@ -113,22 +108,22 @@ begin
             hundreds_o => hundreds_bcd
         );
 
-    seg_ones_ent : entity work.bcd_to_7seg(behav)
+    seg_ones_ent : entity work.bcd_to_7seg(rtl)
         port map (
             bcd_i => ones_bcd,
             led_o => seg_ones_o
         );
 
-    seg_tens_ent : entity work.bcd_to_7seg(behav)
+    seg_tens_ent : entity work.bcd_to_7seg(rtl)
         port map (
             bcd_i => tens_bcd,
             led_o => seg_tens_o
         );
     
-    seg_hundreds_ent : entity work.bcd_to_7seg(behav)
+    seg_hundreds_ent : entity work.bcd_to_7seg(rtl)
         port map (
             bcd_i => hundreds_bcd,
             led_o => seg_hundreds_o
         );
 
-end architecture behav;
+end architecture rtl;

@@ -15,14 +15,13 @@ entity debouncer is
     );
 end debouncer ;
 
-architecture behav of debouncer is
+architecture rtl of debouncer is
 
     constant DEBOUNCE_CNT_LEN : natural := natural(ceil(log2(real(DEBOUNCE_CNT_MAX))));
-    
     type fsm_state_type is (IDLE, DEBOUNCING);
     
-    signal curr_state, next_state : fsm_state_type := IDLE;
-    signal curr_sig, next_sig     : std_ulogic := '0';
+    signal curr_state, next_state : fsm_state_type;
+    signal curr_sig, next_sig : std_ulogic;
 
     signal sync_rst : std_ulogic := '0';
     signal strb     : std_ulogic := '0';
@@ -49,7 +48,7 @@ begin
         sync_rst   <= '1'; -- keep cnt at rst when not debouncing
         case curr_state is
             when IDLE =>
-				    next_sig <= sig_i;
+                next_sig <= sig_i;
                 if sig_i /= curr_sig then
                     next_state <= DEBOUNCING;
                 end if;
@@ -61,7 +60,7 @@ begin
         end case;
     end process fsm_comb;
 
-    strb_ent : entity work.strb_generator(behav)
+    strb_ent : entity work.strb_generator(rtl)
     generic map (
         PRESCALER => DEBOUNCE_CNT_MAX 
     )	

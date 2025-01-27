@@ -24,13 +24,13 @@ end moving_average_filter;
 
 -- architecture
 
-architecture behav of moving_average_filter is
+architecture rtl of moving_average_filter is
 
     type filter_reg_t is array (0 to 2**N-1) of signed(BITWIDTH-1 downto 0);
-    signal filter_reg      : filter_reg_t := (others => (others => '0'));
-    signal next_filter_reg : filter_reg_t := (others => (others => '0'));
-    signal sum, next_sum : signed(BITWIDTH-1+N downto 0) := (others => '0');
-    signal next_strobe : std_ulogic := '0';
+    signal filter_reg      : filter_reg_t;
+    signal next_filter_reg : filter_reg_t;
+    signal sum, next_sum : signed(BITWIDTH-1+N downto 0);
+    signal next_strobe : std_ulogic;
     
 begin
 
@@ -65,4 +65,4 @@ begin
     data_o <= data_i when filter_en_i = '1' else unsigned(sum(BITWIDTH-1+N downto N));
     strb_data_valid_o <= next_strobe;
 
-end architecture behav;
+end architecture rtl;

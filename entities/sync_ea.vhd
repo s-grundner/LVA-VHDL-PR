@@ -14,10 +14,10 @@ entity sync is
     );
 end sync;
 
-architecture behav of sync is
+architecture rtl of sync is
 
-    signal sync_chain : std_logic_vector(N_DFF-1 downto 0) := (others => '0');
-    signal next_sync_chain : std_logic_vector(N_DFF-1 downto 0) := (others => '0');
+    signal sync_chain : std_logic_vector(N_DFF-1 downto 0);
+    signal next_sync_chain : std_logic_vector(N_DFF-1 downto 0);
     
 begin
     

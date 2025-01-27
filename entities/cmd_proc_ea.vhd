@@ -23,20 +23,20 @@ entity cmd_proc is
     );
 end cmd_proc;
 
-architecture behav of cmd_proc is
+architecture rtl of cmd_proc is
 
     type fsm_state_type is (IDLE, DRAWING);
     signal fsm_state, next_fsm_state  : fsm_state_type;
-    signal curr_addr, next_addr       : unsigned(COMCNTBW-1 downto 0) := (others => '0');
-    signal curr_cmd                   : std_ulogic_vector(2*SERVO_RESOLUTION-1 downto 0) := (others => '0');
+    signal curr_addr, next_addr       : unsigned(COMCNTBW-1 downto 0);
+    signal curr_cmd                   : std_ulogic_vector(2*SERVO_RESOLUTION-1 downto 0);
     signal step_strb, micro_step_strb : std_ulogic := '0';
     signal sync_rst                   : std_ulogic := '0';
     signal dx, dy                     : signed(SERVO_RESOLUTION-1 downto 0);
 
 begin
 
-    x_angle_o <= unsigned(dx + to_signed(SERVO_MIN_ANGLE, SERVO_RESOLUTION));
-    y_angle_o <= unsigned(dy + to_signed(SERVO_MIN_ANGLE + SERVO_RANGE/2, SERVO_RESOLUTION)); -- angle (90 degree offset)
+    x_angle_o <= unsigned(dx + signed(SERVO_MIN_ANGLE));
+    y_angle_o <= unsigned(dy + signed(SERVO_MIN_ANGLE + SERVO_RANGE/2)); -- angle (90 degree offset)
 
     reg_seq : process (clk_i, rst_i) is
     begin
@@ -54,7 +54,7 @@ begin
         sync_rst       <= '0';
         next_fsm_state <= fsm_state;
         next_addr      <= curr_addr;
-        z_angle_o      <= to_unsigned(SERVO_MAX_ANGLE, SERVO_RESOLUTION);
+        z_angle_o      <= SERVO_MAX_ANGLE;
         drawing_o      <= '0';
 
         case fsm_state is
@@ -70,7 +70,7 @@ begin
                 if curr_addr >= NCOMMANDS-1 then
                     next_fsm_state <= IDLE;
                 elsif curr_addr >= 11 and curr_addr < NCOMMANDS-3 then
-                    z_angle_o <= to_unsigned(SERVO_MIN_ANGLE, SERVO_RESOLUTION);
+                    z_angle_o <= SERVO_MIN_ANGLE;
                 end if;
                 
                 if step_strb = '1' then
@@ -82,7 +82,7 @@ begin
         end case;
     end process fsm_comb;
 
-    accu_reg_dr_ent : entity work.accu_reg(behav)
+    accu_reg_dr_ent : entity work.accu_reg(rtl)
     generic map (
         D        => D,
         BITWIDTH => SERVO_RESOLUTION
@@ -95,7 +95,7 @@ begin
         data_o      => dx
     );
 
-    accu_reg_dtheta_ent : entity work.accu_reg(behav)
+    accu_reg_dtheta_ent : entity work.accu_reg(rtl)
     generic map (
         D        => D,
         BITWIDTH => SERVO_RESOLUTION
@@ -108,7 +108,7 @@ begin
         data_o      => dy
     );
 
-    step_strb_ent : entity work.strb_generator(behav)
+    step_strb_ent : entity work.strb_generator(rtl)
     generic map (
         PRESCALER => MICRO_STEP_TIME_PS*2**D -- Time for one step
     )
@@ -119,7 +119,7 @@ begin
         strb_o     => step_strb
     );
 
-    micro_step_strb_ent : entity work.strb_generator(behav)
+    micro_step_strb_ent : entity work.strb_generator(rtl)
     generic map (
         PRESCALER => MICRO_STEP_TIME_PS -- Time for one microstep
     )
@@ -130,7 +130,7 @@ begin
         strb_o     => micro_step_strb
     );
 
-    rom_ent : entity work.cmd_rom(behav)
+    rom_ent : entity work.cmd_rom(rtl)
     port map (
         clk_i  => clk_i,
         addr_i => curr_addr,

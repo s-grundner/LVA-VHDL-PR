@@ -1,17 +1,17 @@
-Fitter Status : Successful - Sun Jan 26 20:11:10 2025
+Fitter Status : Successful - Mon Jan 27 19:28:25 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : PINOUT
 Top-level Entity Name : PINOUT
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 254 / 41,910 ( < 1 % )
-Total registers : 349
-Total pins : 96 / 499 ( 19 % )
+Logic utilization (in ALMs) : 372 / 41,910 ( < 1 % )
+Total registers : 503
+Total pins : 59 / 499 ( 12 % )
 Total virtual pins : 0
-Total block memory bits : 0 / 5,662,720 ( 0 % )
-Total RAM Blocks : 0 / 553 ( 0 % )
-Total DSP Blocks : 0 / 112 ( 0 % )
+Total block memory bits : 128 / 5,662,720 ( < 1 % )
+Total RAM Blocks : 1 / 553 ( < 1 % )
+Total DSP Blocks : 2 / 112 ( 2 % )
 Total HSSI RX PCSs : 0 / 9 ( 0 % )
 Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )
 Total HSSI TX PCSs : 0 / 9 ( 0 % )
