@@ -1,5 +1,5 @@
 Fitter report for PINOUT
-Mon Jan 27 19:28:25 2025
+Mon Jan 27 21:51:25 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Mon Jan 27 19:28:25 2025       ;
+; Fitter Status                   ; Successful - Mon Jan 27 21:51:25 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; PINOUT                                      ;
 ; Top-level Entity Name           ; PINOUT                                      ;
@@ -157,14 +157,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.05        ;
+; Average used               ; 1.06        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.8%      ;
-;     Processor 3            ;   1.6%      ;
-;     Processor 4            ;   1.6%      ;
+;     Processor 2            ;   2.0%      ;
+;     Processor 3            ;   1.9%      ;
+;     Processor 4            ;   1.8%      ;
 +----------------------------+-------------+
 
 
@@ -2199,7 +2199,7 @@ Info (332111): Found 1 clocks
     Info (332111):   20.000     CLOCK_50
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:24
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:22
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:05
@@ -2213,7 +2213,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 2.16 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 2.18 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2221,10 +2221,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:07
 Info (144001): Generated suppressed messages file C:/Users/simon/source/vhdl_projects/ex_11/quartus/PINOUT.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 6622 megabytes
-    Info: Processing ended: Mon Jan 27 19:28:26 2025
-    Info: Elapsed time: 00:01:10
-    Info: Total CPU time (on all processors): 00:01:24
+    Info: Peak virtual memory: 6625 megabytes
+    Info: Processing ended: Mon Jan 27 21:51:26 2025
+    Info: Elapsed time: 00:01:14
+    Info: Total CPU time (on all processors): 00:01:19
 
 
 +----------------------------+
