@@ -13,6 +13,7 @@ set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 896
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
 
+
 #============================================================
 # CLOCK
 #============================================================
@@ -22,6 +23,9 @@ set_location_assignment PIN_AF14 -to CLOCK_50
 #============================================================
 # KEY
 #============================================================
+
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to KEY[0]
+
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[2]

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PINOUT
-Tue Feb 04 02:21:31 2025
+Tue Feb 04 02:28:51 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -108,7 +108,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Feb 04 02:21:31 2025       ;
+; Analysis & Synthesis Status     ; Successful - Tue Feb 04 02:28:51 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; PINOUT                                      ;
 ; Top-level Entity Name           ; PINOUT                                      ;
@@ -1274,7 +1274,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Feb 04 02:21:22 2025
+    Info: Processing started: Tue Feb 04 02:28:43 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PINOUT -c PINOUT
 Info (20032): Parallel compilation is enabled and will use up to 12 processors
 Info (12021): Found 2 design units, including 1 entities, in source file pinout.vhd
@@ -1407,9 +1407,9 @@ Info (21057): Implemented 785 device resources after synthesis - the final resou
     Info (21064): Implemented 16 RAM segments
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4972 megabytes
-    Info: Processing ended: Tue Feb 04 02:21:31 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 4973 megabytes
+    Info: Processing ended: Tue Feb 04 02:28:51 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:14
 
 
