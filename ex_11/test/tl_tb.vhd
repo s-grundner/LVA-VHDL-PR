@@ -5,12 +5,12 @@ use ieee.numeric_std.all;
 library work;
 use work.std_definitions.all;
 
-entity tb is
-end tb;
+entity tl_tb is
+end tl_tb;
 
-architecture arch of ent is
+architecture rtl of tl_tb is
 
-constant CLK_HALF_TB : time := 1 ns;
+constant CLK_HALF_TB : time := 10 ns;
 signal clk_tb : std_ulogic := '0';
 
 signal btn_rst    : std_ulogic := '0';
@@ -32,7 +32,7 @@ signal y_adc_pwm : std_ulogic := '0';
 
 begin
 
-	tl_ent : entity work.tl(behav)
+	tb_dut : entity work.tl(rtl)
 	port map(
 		clk_i => clk_tb,
 		rst_i => btn_rst,
@@ -63,7 +63,15 @@ begin
 
 	stimulus_proc : process is
 	begin
+		btn_rst <= '1';
+		wait for CLK_HALF_TB;
+		btn_rst <= '0';
+		wait for CLK_HALF_TB;
+
+		sw_dbg_en <= '1';
+		
+		wait for 2000 ms;
 
 	end process;
 
-end architecture ; -- arch
+end architecture;

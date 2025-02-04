@@ -4,14 +4,26 @@ vmap work work
 vcom -work work ../../packages/std_definitions.vhd
 vcom -work work ../../packages/Commands_p.vhd
 
+vcom -work work ../../entities/sync_ea.vhd
 vcom -work work ../../entities/counter_ea.vhd
 vcom -work work ../../entities/strb_generator_ea.vhd
+vcom -work work ../../entities/debouncer_ea.vhd
+vcom -work work ../../entities/clean_btn_ea.vhd
+vcom -work work ../../entities/accu_reg_ea.vhd
+vcom -work work ../../entities/bcd_to_7seg_ea.vhd
+vcom -work work ../../entities/bin2bcd_ea.vhd
+vcom -work work ../../entities/btn_ctrl_ea.vhd
+vcom -work work ../../entities/btn2strb.vhd
+vcom -work work ../../entities/cmd_rom_ea.vhd
+vcom -work work ../../entities/cmd_proc_ea.vhd
 vcom -work work ../../entities/pwm_ea.vhd
+vcom -work work ../../entities/delta_adc_ea.vhd
+vcom -work work ../../entities/moving_average_ea.vhd
+vcom -work work ../../entities/sample_hold_ea.vhd
 vcom -work work ../../entities/servo_ea.vhd
+vcom -work work ../../entities/tilt_ea.vhd
+vcom -work work ../../entities/tilt_axis_ea.vhd
 
-vcom -work work ../accu_reg_ea.vhd
-vcom -work work ../cmd_rom_ea.vhd
-vcom -work work ../cmd_proc_ea.vhd
 vcom -work work ../tl_ea.vhd
 
 vcom -work work ../test/tl_tb.vhd
@@ -22,14 +34,7 @@ vsim work.tl_tb
 
 # Top Level
 
-add wave -noupdate -group {TOP LEVEL} -radix unsigned /tl_tb/tb_dut/*
-add wave -noupdate -group {CMD PROC} -radix unsigned /tl_tb/tb_dut/cmd_proc_ent/*
-add wave -noupdate -group {CMD PROC DR} -radix decimal /tl_tb/tb_dut/cmd_proc_ent/accu_reg_dr_ent/*
-add wave -noupdate -group {CMD PROC DTHETA} -radix decimal /tl_tb/tb_dut/cmd_proc_ent/accu_reg_dtheta_ent/*
-
-add wave -noupdate -group {SERVO X} -radix unsigned /tl_tb/tb_dut/servo_x_ent/*
-add wave -noupdate -group {SERVO Y} -radix unsigned /tl_tb/tb_dut/servo_y_ent/*
-add wave -noupdate -group {SERVO Z} -radix unsigned /tl_tb/tb_dut/servo_z_ent/*
+add wave -r -noupdate -radix unsigned /tl_tb/tb_dut/*
 
 run 1000 ms
 

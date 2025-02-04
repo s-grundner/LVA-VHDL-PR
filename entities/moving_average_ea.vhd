@@ -62,7 +62,7 @@ begin
     end process comb_filter;
 
     -- Divide by shift right
-    data_o <= data_i when filter_en_i = '1' else unsigned(sum(BITWIDTH-1+N downto N));
+    data_o <= data_i when filter_en_i = '0' else unsigned(sum(BITWIDTH-1+N downto N));
     strb_data_valid_o <= next_strobe;
 
 end architecture rtl;

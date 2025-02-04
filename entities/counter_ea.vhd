@@ -20,7 +20,7 @@ end entity counter;
 
 architecture rtl of counter is
     
-    signal curr_cnt : unsigned(CNT_LEN-1 downto 0) := (others => '0');
+    signal curr_cnt : unsigned(CNT_LEN-1 downto 0);
     signal next_cnt : unsigned(CNT_LEN-1 downto 0);
 
 begin
