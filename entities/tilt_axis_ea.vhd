@@ -37,6 +37,7 @@ architecture rtl of tilt_axis is
     signal comp_sync : std_ulogic := '0';
     signal hold_val  : unsigned(ADC_RESOLUTION-1 downto 0) := (others => '0');
     signal ones_bcd, tens_bcd, hundreds_bcd : std_ulogic_vector(3 downto 0);
+    signal hold_val_bcd : std_ulogic_vector(15 downto 0);
 
 begin
 
@@ -100,9 +101,11 @@ begin
         
     -- DISPLAY
 
+    hold_val_bcd <= std_ulogic_vector(resize(hold_val, 16));
+
     bin2bcd_ent : entity work.bin2bcd(rtl)
         port map (
-            binary_i => std_ulogic_vector(resize(hold_val, 16)),
+            binary_i => hold_val_bcd,
             ones_o   => ones_bcd,
             tens_o   => tens_bcd,
             hundreds_o => hundreds_bcd

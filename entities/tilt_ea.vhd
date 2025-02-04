@@ -19,15 +19,17 @@ end tilt ;
 architecture rtl of tilt is
 
     signal ltd_angle : unsigned(SERVO_RESOLUTION-1 downto 0) := (others => '0');
-    constant ADC_TO_SERVO_OFS : unsigned(SERVO_RESOLUTION-1 downto 0) :=
-        SERVO_MIN_ANGLE - (SERVO_RANGE + ADC_MIN_ANGLE) / ADC_RANGE;
+    constant ADC_TO_SERVO_FACTOR : unsigned(SERVO_RESOLUTION-1 downto 0)
+        := resize(SERVO_RANGE / ADC_RANGE, SERVO_RESOLUTION);
+    constant ADC_TO_SERVO_OFS : unsigned(SERVO_RESOLUTION-1 downto 0)
+        := resize(SERVO_MIN_ANGLE - ADC_MIN_ANGLE * ADC_TO_SERVO_FACTOR, SERVO_RESOLUTION);
 begin
 
     angle_o <= ltd_angle;
 
     limit_tilt : process(adc_i) is
     begin
-        ltd_angle <= resize(SERVO_RANGE * adc_i + ADC_TO_SERVO_OFS, SERVO_RESOLUTION);
+        ltd_angle <= resize(ADC_TO_SERVO_FACTOR * adc_i + ADC_TO_SERVO_OFS, SERVO_RESOLUTION);
         if(adc_i < ADC_MIN_ANGLE) then
             ltd_angle <= SERVO_MIN_ANGLE;
         elsif(adc_i > ADC_MAX_ANGLE) then

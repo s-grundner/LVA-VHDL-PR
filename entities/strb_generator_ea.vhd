@@ -25,6 +25,7 @@ architecture rtl of strb_generator is
     signal next_strb : std_ulogic := '0';
     signal curr_strb : std_ulogic := '0';
     signal cnt       : unsigned(PS_SIZE-1 downto 0) := (others => '0');
+    signal cnt_reset : std_ulogic := '0';
 
 begin
 
@@ -35,7 +36,7 @@ begin
     port map (
         clk_i      => clk_i,
         rst_i      => rst_i,
-        sync_rst_i => curr_strb or sync_rst_i,
+        sync_rst_i => cnt_reset,
         cnt_o      => cnt
     );
 
@@ -48,6 +49,7 @@ begin
         end if;
     end process reg_seq;
 
+    cnt_reset <= curr_strb or sync_rst_i;
     next_strb <= '1' when cnt = PRESCALER-1 else '0'; 
     strb_o <= curr_strb;
 

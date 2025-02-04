@@ -44,7 +44,7 @@ begin
     begin
         if rst_i = '1' then
             curr_state    <= IDLE;
-            curr_register <= shift_right(REG_RANGE, 1); -- default is half of the range
+            curr_register <= REG_MIN_VAL + shift_right(REG_RANGE, 1); -- default is half of the range
         elsif rising_edge(clk_i) then
             curr_state    <= next_state;
             curr_register <= next_register;
