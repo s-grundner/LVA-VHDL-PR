@@ -2,7 +2,7 @@
 # Build by Terasic System Builder
 #============================================================
 
-set_global_assignment -name NUM_PARALLEL_PROCESSORS 12
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSXFC6D6F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY "PINOUT"

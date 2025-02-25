@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PINOUT
-Tue Feb 04 02:28:51 2025
+Tue Feb 25 10:07:02 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -108,7 +108,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Feb 04 02:28:51 2025       ;
+; Analysis & Synthesis Status     ; Successful - Tue Feb 25 10:07:02 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; PINOUT                                      ;
 ; Top-level Entity Name           ; PINOUT                                      ;
@@ -136,7 +136,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
 ; Top-level entity name                                                           ; PINOUT             ; PINOUT             ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Maximum processors allowed for parallel compilation                             ; 12                 ;                    ;
+; Maximum processors allowed for parallel compilation                             ; 4                  ;                    ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
@@ -221,22 +221,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 12          ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -245,38 +240,38 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path     ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                             ; Library ;
 +--------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-; PINOUT.vhd                           ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd              ;         ;
-; ../../packages/std_definitions.vhd   ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/packages/std_definitions.vhd          ;         ;
-; ../../packages/Commands_p.vhd        ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/packages/Commands_p.vhd               ;         ;
-; ../../entities/tilt_ea.vhd           ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/tilt_ea.vhd                  ;         ;
-; ../../entities/tilt_axis_ea.vhd      ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/tilt_axis_ea.vhd             ;         ;
-; ../../entities/sync_ea.vhd           ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/sync_ea.vhd                  ;         ;
-; ../../entities/strb_generator_ea.vhd ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/strb_generator_ea.vhd        ;         ;
-; ../../entities/servo_ea.vhd          ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/servo_ea.vhd                 ;         ;
-; ../../entities/sample_hold_ea.vhd    ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/sample_hold_ea.vhd           ;         ;
-; ../../entities/pwm_ea.vhd            ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/pwm_ea.vhd                   ;         ;
-; ../../entities/moving_average_ea.vhd ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/moving_average_ea.vhd        ;         ;
-; ../../entities/delta_adc_ea.vhd      ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/delta_adc_ea.vhd             ;         ;
-; ../../entities/debouncer_ea.vhd      ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/debouncer_ea.vhd             ;         ;
-; ../../entities/counter_ea.vhd        ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/counter_ea.vhd               ;         ;
-; ../../entities/cmd_rom_ea.vhd        ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/cmd_rom_ea.vhd               ;         ;
-; ../../entities/cmd_proc_ea.vhd       ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/cmd_proc_ea.vhd              ;         ;
-; ../../entities/clean_btn_ea.vhd      ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/clean_btn_ea.vhd             ;         ;
-; ../../entities/btn2strb.vhd          ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/btn2strb.vhd                 ;         ;
-; ../../entities/btn_ctrl_ea.vhd       ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/btn_ctrl_ea.vhd              ;         ;
-; ../../entities/bin2bcd_ea.vhd        ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/bin2bcd_ea.vhd               ;         ;
-; ../../entities/bcd_to_7seg_ea.vhd    ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/bcd_to_7seg_ea.vhd           ;         ;
-; ../../entities/accu_reg_ea.vhd       ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/entities/accu_reg_ea.vhd              ;         ;
-; ../tl_ea.vhd                         ; yes             ; User VHDL File               ; C:/Users/Smon/source/vhdl_projects/ex_11/tl_ea.vhd                       ;         ;
+; PINOUT.vhd                           ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd             ;         ;
+; ../../packages/std_definitions.vhd   ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/packages/std_definitions.vhd         ;         ;
+; ../../packages/Commands_p.vhd        ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/packages/Commands_p.vhd              ;         ;
+; ../../entities/tilt_ea.vhd           ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/tilt_ea.vhd                 ;         ;
+; ../../entities/tilt_axis_ea.vhd      ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/tilt_axis_ea.vhd            ;         ;
+; ../../entities/sync_ea.vhd           ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/sync_ea.vhd                 ;         ;
+; ../../entities/strb_generator_ea.vhd ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/strb_generator_ea.vhd       ;         ;
+; ../../entities/servo_ea.vhd          ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/servo_ea.vhd                ;         ;
+; ../../entities/sample_hold_ea.vhd    ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/sample_hold_ea.vhd          ;         ;
+; ../../entities/pwm_ea.vhd            ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/pwm_ea.vhd                  ;         ;
+; ../../entities/moving_average_ea.vhd ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/moving_average_ea.vhd       ;         ;
+; ../../entities/delta_adc_ea.vhd      ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/delta_adc_ea.vhd            ;         ;
+; ../../entities/debouncer_ea.vhd      ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/debouncer_ea.vhd            ;         ;
+; ../../entities/counter_ea.vhd        ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/counter_ea.vhd              ;         ;
+; ../../entities/cmd_rom_ea.vhd        ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/cmd_rom_ea.vhd              ;         ;
+; ../../entities/cmd_proc_ea.vhd       ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/cmd_proc_ea.vhd             ;         ;
+; ../../entities/clean_btn_ea.vhd      ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/clean_btn_ea.vhd            ;         ;
+; ../../entities/btn2strb.vhd          ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/btn2strb.vhd                ;         ;
+; ../../entities/btn_ctrl_ea.vhd       ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/btn_ctrl_ea.vhd             ;         ;
+; ../../entities/bin2bcd_ea.vhd        ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/bin2bcd_ea.vhd              ;         ;
+; ../../entities/bcd_to_7seg_ea.vhd    ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/bcd_to_7seg_ea.vhd          ;         ;
+; ../../entities/accu_reg_ea.vhd       ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/entities/accu_reg_ea.vhd             ;         ;
+; ../tl_ea.vhd                         ; yes             ; User VHDL File               ; C:/Users/simon/source/vhdl_projects/ex_11/tl_ea.vhd                      ;         ;
 ; altshift_taps.tdf                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift_taps.tdf ;         ;
 ; altdpram.inc                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc      ;         ;
 ; lpm_counter.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc   ;         ;
 ; lpm_compare.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc   ;         ;
 ; lpm_constant.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc  ;         ;
-; db/shift_taps_huv.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/Smon/source/vhdl_projects/ex_11/quartus/db/shift_taps_huv.tdf   ;         ;
-; db/altsyncram_tfc1.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Smon/source/vhdl_projects/ex_11/quartus/db/altsyncram_tfc1.tdf  ;         ;
-; db/cntr_uhf.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/Smon/source/vhdl_projects/ex_11/quartus/db/cntr_uhf.tdf         ;         ;
-; db/cntr_i1h.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/Smon/source/vhdl_projects/ex_11/quartus/db/cntr_i1h.tdf         ;         ;
+; db/shift_taps_huv.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/simon/source/vhdl_projects/ex_11/quartus/db/shift_taps_huv.tdf  ;         ;
+; db/altsyncram_tfc1.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/simon/source/vhdl_projects/ex_11/quartus/db/altsyncram_tfc1.tdf ;         ;
+; db/cntr_uhf.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/simon/source/vhdl_projects/ex_11/quartus/db/cntr_uhf.tdf        ;         ;
+; db/cntr_i1h.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/simon/source/vhdl_projects/ex_11/quartus/db/cntr_i1h.tdf        ;         ;
 +--------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
 
 
@@ -1264,7 +1259,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -1274,106 +1269,106 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Feb 04 02:28:43 2025
+    Info: Processing started: Tue Feb 25 10:06:05 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PINOUT -c PINOUT
-Info (20032): Parallel compilation is enabled and will use up to 12 processors
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file pinout.vhd
-    Info (12022): Found design unit 1: PINOUT-rtl File: C:/Users/Smon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd Line: 49
-    Info (12023): Found entity 1: PINOUT File: C:/Users/Smon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd Line: 9
-Info (12021): Found 1 design units, including 0 entities, in source file /users/smon/source/vhdl_projects/packages/std_definitions.vhd
-    Info (12022): Found design unit 1: std_definitions File: C:/Users/Smon/source/vhdl_projects/packages/std_definitions.vhd Line: 6
-Info (12021): Found 1 design units, including 0 entities, in source file /users/smon/source/vhdl_projects/packages/commands_p.vhd
-    Info (12022): Found design unit 1: commands File: C:/Users/Smon/source/vhdl_projects/packages/Commands_p.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/tilt_ea.vhd
-    Info (12022): Found design unit 1: tilt-rtl File: C:/Users/Smon/source/vhdl_projects/entities/tilt_ea.vhd Line: 19
-    Info (12023): Found entity 1: tilt File: C:/Users/Smon/source/vhdl_projects/entities/tilt_ea.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/tilt_axis_ea.vhd
-    Info (12022): Found design unit 1: tilt_axis-rtl File: C:/Users/Smon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 33
-    Info (12023): Found entity 1: tilt_axis File: C:/Users/Smon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/sync_ea.vhd
-    Info (12022): Found design unit 1: sync-rtl File: C:/Users/Smon/source/vhdl_projects/entities/sync_ea.vhd Line: 17
-    Info (12023): Found entity 1: sync File: C:/Users/Smon/source/vhdl_projects/entities/sync_ea.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/strb_generator_ea.vhd
-    Info (12022): Found design unit 1: strb_generator-rtl File: C:/Users/Smon/source/vhdl_projects/entities/strb_generator_ea.vhd Line: 22
-    Info (12023): Found entity 1: strb_generator File: C:/Users/Smon/source/vhdl_projects/entities/strb_generator_ea.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/servo_ea.vhd
-    Info (12022): Found design unit 1: servo-rtl File: C:/Users/Smon/source/vhdl_projects/entities/servo_ea.vhd Line: 21
-    Info (12023): Found entity 1: servo File: C:/Users/Smon/source/vhdl_projects/entities/servo_ea.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/sample_hold_ea.vhd
-    Info (12022): Found design unit 1: sample_hold-rtl File: C:/Users/Smon/source/vhdl_projects/entities/sample_hold_ea.vhd Line: 20
-    Info (12023): Found entity 1: sample_hold File: C:/Users/Smon/source/vhdl_projects/entities/sample_hold_ea.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/pwm_ea.vhd
-    Info (12022): Found design unit 1: pwm-rtl File: C:/Users/Smon/source/vhdl_projects/entities/pwm_ea.vhd Line: 22
-    Info (12023): Found entity 1: pwm File: C:/Users/Smon/source/vhdl_projects/entities/pwm_ea.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/moving_average_ea.vhd
-    Info (12022): Found design unit 1: moving_average_filter-rtl File: C:/Users/Smon/source/vhdl_projects/entities/moving_average_ea.vhd Line: 27
-    Info (12023): Found entity 1: moving_average_filter File: C:/Users/Smon/source/vhdl_projects/entities/moving_average_ea.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/delta_adc_ea.vhd
-    Info (12022): Found design unit 1: delta_adc-debug_rtl File: C:/Users/Smon/source/vhdl_projects/entities/delta_adc_ea.vhd Line: 29
-    Info (12023): Found entity 1: delta_adc File: C:/Users/Smon/source/vhdl_projects/entities/delta_adc_ea.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/debouncer_ea.vhd
-    Info (12022): Found design unit 1: debouncer-rtl File: C:/Users/Smon/source/vhdl_projects/entities/debouncer_ea.vhd Line: 18
-    Info (12023): Found entity 1: debouncer File: C:/Users/Smon/source/vhdl_projects/entities/debouncer_ea.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/counter_ea.vhd
-    Info (12022): Found design unit 1: counter-rtl File: C:/Users/Smon/source/vhdl_projects/entities/counter_ea.vhd Line: 21
-    Info (12023): Found entity 1: counter File: C:/Users/Smon/source/vhdl_projects/entities/counter_ea.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/cmd_rom_ea.vhd
-    Info (12022): Found design unit 1: cmd_rom-rtl File: C:/Users/Smon/source/vhdl_projects/entities/cmd_rom_ea.vhd Line: 18
-    Info (12023): Found entity 1: cmd_rom File: C:/Users/Smon/source/vhdl_projects/entities/cmd_rom_ea.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/cmd_proc_ea.vhd
-    Info (12022): Found design unit 1: cmd_proc-rtl File: C:/Users/Smon/source/vhdl_projects/entities/cmd_proc_ea.vhd Line: 26
-    Info (12023): Found entity 1: cmd_proc File: C:/Users/Smon/source/vhdl_projects/entities/cmd_proc_ea.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/clean_btn_ea.vhd
-    Info (12022): Found design unit 1: clean_btn-rtl File: C:/Users/Smon/source/vhdl_projects/entities/clean_btn_ea.vhd Line: 17
-    Info (12023): Found entity 1: clean_btn File: C:/Users/Smon/source/vhdl_projects/entities/clean_btn_ea.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/btn2strb.vhd
-    Info (12022): Found design unit 1: btn2strb-rtl File: C:/Users/Smon/source/vhdl_projects/entities/btn2strb.vhd Line: 13
-    Info (12023): Found entity 1: btn2strb File: C:/Users/Smon/source/vhdl_projects/entities/btn2strb.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/btn_ctrl_ea.vhd
-    Info (12022): Found design unit 1: btn_ctrl-rtl File: C:/Users/Smon/source/vhdl_projects/entities/btn_ctrl_ea.vhd Line: 31
-    Info (12023): Found entity 1: btn_ctrl File: C:/Users/Smon/source/vhdl_projects/entities/btn_ctrl_ea.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/bin2bcd_ea.vhd
-    Info (12022): Found design unit 1: bin2bcd-rtl File: C:/Users/Smon/source/vhdl_projects/entities/bin2bcd_ea.vhd Line: 19
-    Info (12023): Found entity 1: bin2bcd File: C:/Users/Smon/source/vhdl_projects/entities/bin2bcd_ea.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/bcd_to_7seg_ea.vhd
-    Info (12022): Found design unit 1: bcd_to_7seg-rtl File: C:/Users/Smon/source/vhdl_projects/entities/bcd_to_7seg_ea.vhd Line: 16
-    Info (12023): Found entity 1: bcd_to_7seg File: C:/Users/Smon/source/vhdl_projects/entities/bcd_to_7seg_ea.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/entities/accu_reg_ea.vhd
-    Info (12022): Found design unit 1: accu_reg-rtl File: C:/Users/Smon/source/vhdl_projects/entities/accu_reg_ea.vhd Line: 28
-    Info (12023): Found entity 1: accu_reg File: C:/Users/Smon/source/vhdl_projects/entities/accu_reg_ea.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /users/smon/source/vhdl_projects/ex_11/tl_ea.vhd
-    Info (12022): Found design unit 1: tl-rtl File: C:/Users/Smon/source/vhdl_projects/ex_11/tl_ea.vhd Line: 47
-    Info (12023): Found entity 1: tl File: C:/Users/Smon/source/vhdl_projects/ex_11/tl_ea.vhd Line: 10
+    Info (12022): Found design unit 1: PINOUT-rtl File: C:/Users/simon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd Line: 49
+    Info (12023): Found entity 1: PINOUT File: C:/Users/simon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd Line: 9
+Info (12021): Found 1 design units, including 0 entities, in source file /users/simon/source/vhdl_projects/packages/std_definitions.vhd
+    Info (12022): Found design unit 1: std_definitions File: C:/Users/simon/source/vhdl_projects/packages/std_definitions.vhd Line: 6
+Info (12021): Found 1 design units, including 0 entities, in source file /users/simon/source/vhdl_projects/packages/commands_p.vhd
+    Info (12022): Found design unit 1: commands File: C:/Users/simon/source/vhdl_projects/packages/Commands_p.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/tilt_ea.vhd
+    Info (12022): Found design unit 1: tilt-rtl File: C:/Users/simon/source/vhdl_projects/entities/tilt_ea.vhd Line: 19
+    Info (12023): Found entity 1: tilt File: C:/Users/simon/source/vhdl_projects/entities/tilt_ea.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/tilt_axis_ea.vhd
+    Info (12022): Found design unit 1: tilt_axis-rtl File: C:/Users/simon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 33
+    Info (12023): Found entity 1: tilt_axis File: C:/Users/simon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/sync_ea.vhd
+    Info (12022): Found design unit 1: sync-rtl File: C:/Users/simon/source/vhdl_projects/entities/sync_ea.vhd Line: 17
+    Info (12023): Found entity 1: sync File: C:/Users/simon/source/vhdl_projects/entities/sync_ea.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/strb_generator_ea.vhd
+    Info (12022): Found design unit 1: strb_generator-rtl File: C:/Users/simon/source/vhdl_projects/entities/strb_generator_ea.vhd Line: 22
+    Info (12023): Found entity 1: strb_generator File: C:/Users/simon/source/vhdl_projects/entities/strb_generator_ea.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/servo_ea.vhd
+    Info (12022): Found design unit 1: servo-rtl File: C:/Users/simon/source/vhdl_projects/entities/servo_ea.vhd Line: 21
+    Info (12023): Found entity 1: servo File: C:/Users/simon/source/vhdl_projects/entities/servo_ea.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/sample_hold_ea.vhd
+    Info (12022): Found design unit 1: sample_hold-rtl File: C:/Users/simon/source/vhdl_projects/entities/sample_hold_ea.vhd Line: 20
+    Info (12023): Found entity 1: sample_hold File: C:/Users/simon/source/vhdl_projects/entities/sample_hold_ea.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/pwm_ea.vhd
+    Info (12022): Found design unit 1: pwm-rtl File: C:/Users/simon/source/vhdl_projects/entities/pwm_ea.vhd Line: 22
+    Info (12023): Found entity 1: pwm File: C:/Users/simon/source/vhdl_projects/entities/pwm_ea.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/moving_average_ea.vhd
+    Info (12022): Found design unit 1: moving_average_filter-rtl File: C:/Users/simon/source/vhdl_projects/entities/moving_average_ea.vhd Line: 27
+    Info (12023): Found entity 1: moving_average_filter File: C:/Users/simon/source/vhdl_projects/entities/moving_average_ea.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/delta_adc_ea.vhd
+    Info (12022): Found design unit 1: delta_adc-debug_rtl File: C:/Users/simon/source/vhdl_projects/entities/delta_adc_ea.vhd Line: 29
+    Info (12023): Found entity 1: delta_adc File: C:/Users/simon/source/vhdl_projects/entities/delta_adc_ea.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/debouncer_ea.vhd
+    Info (12022): Found design unit 1: debouncer-rtl File: C:/Users/simon/source/vhdl_projects/entities/debouncer_ea.vhd Line: 18
+    Info (12023): Found entity 1: debouncer File: C:/Users/simon/source/vhdl_projects/entities/debouncer_ea.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/counter_ea.vhd
+    Info (12022): Found design unit 1: counter-rtl File: C:/Users/simon/source/vhdl_projects/entities/counter_ea.vhd Line: 21
+    Info (12023): Found entity 1: counter File: C:/Users/simon/source/vhdl_projects/entities/counter_ea.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/cmd_rom_ea.vhd
+    Info (12022): Found design unit 1: cmd_rom-rtl File: C:/Users/simon/source/vhdl_projects/entities/cmd_rom_ea.vhd Line: 18
+    Info (12023): Found entity 1: cmd_rom File: C:/Users/simon/source/vhdl_projects/entities/cmd_rom_ea.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/cmd_proc_ea.vhd
+    Info (12022): Found design unit 1: cmd_proc-rtl File: C:/Users/simon/source/vhdl_projects/entities/cmd_proc_ea.vhd Line: 26
+    Info (12023): Found entity 1: cmd_proc File: C:/Users/simon/source/vhdl_projects/entities/cmd_proc_ea.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/clean_btn_ea.vhd
+    Info (12022): Found design unit 1: clean_btn-rtl File: C:/Users/simon/source/vhdl_projects/entities/clean_btn_ea.vhd Line: 17
+    Info (12023): Found entity 1: clean_btn File: C:/Users/simon/source/vhdl_projects/entities/clean_btn_ea.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/btn2strb.vhd
+    Info (12022): Found design unit 1: btn2strb-rtl File: C:/Users/simon/source/vhdl_projects/entities/btn2strb.vhd Line: 13
+    Info (12023): Found entity 1: btn2strb File: C:/Users/simon/source/vhdl_projects/entities/btn2strb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/btn_ctrl_ea.vhd
+    Info (12022): Found design unit 1: btn_ctrl-rtl File: C:/Users/simon/source/vhdl_projects/entities/btn_ctrl_ea.vhd Line: 31
+    Info (12023): Found entity 1: btn_ctrl File: C:/Users/simon/source/vhdl_projects/entities/btn_ctrl_ea.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/bin2bcd_ea.vhd
+    Info (12022): Found design unit 1: bin2bcd-rtl File: C:/Users/simon/source/vhdl_projects/entities/bin2bcd_ea.vhd Line: 19
+    Info (12023): Found entity 1: bin2bcd File: C:/Users/simon/source/vhdl_projects/entities/bin2bcd_ea.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/bcd_to_7seg_ea.vhd
+    Info (12022): Found design unit 1: bcd_to_7seg-rtl File: C:/Users/simon/source/vhdl_projects/entities/bcd_to_7seg_ea.vhd Line: 16
+    Info (12023): Found entity 1: bcd_to_7seg File: C:/Users/simon/source/vhdl_projects/entities/bcd_to_7seg_ea.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/entities/accu_reg_ea.vhd
+    Info (12022): Found design unit 1: accu_reg-rtl File: C:/Users/simon/source/vhdl_projects/entities/accu_reg_ea.vhd Line: 28
+    Info (12023): Found entity 1: accu_reg File: C:/Users/simon/source/vhdl_projects/entities/accu_reg_ea.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/simon/source/vhdl_projects/ex_11/tl_ea.vhd
+    Info (12022): Found design unit 1: tl-rtl File: C:/Users/simon/source/vhdl_projects/ex_11/tl_ea.vhd Line: 47
+    Info (12023): Found entity 1: tl File: C:/Users/simon/source/vhdl_projects/ex_11/tl_ea.vhd Line: 10
 Info (12127): Elaborating entity "PINOUT" for the top level hierarchy
-Info (12129): Elaborating entity "tl" using architecture "A:rtl" for hierarchy "tl:tl_ent" File: C:/Users/Smon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd Line: 60
-Info (12129): Elaborating entity "servo" using architecture "A:rtl" for hierarchy "tl:tl_ent|servo:servo_x_ent" File: C:/Users/Smon/source/vhdl_projects/ex_11/tl_ea.vhd Line: 74
-Info (12129): Elaborating entity "pwm" using architecture "A:rtl" for hierarchy "tl:tl_ent|servo:servo_x_ent|pwm:pwm_ent" File: C:/Users/Smon/source/vhdl_projects/entities/servo_ea.vhd Line: 28
-Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|servo:servo_x_ent|pwm:pwm_ent|counter:cnt_ent" File: C:/Users/Smon/source/vhdl_projects/entities/pwm_ea.vhd Line: 28
-Info (12129): Elaborating entity "btn_ctrl" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent" File: C:/Users/Smon/source/vhdl_projects/ex_11/tl_ea.vhd Line: 100
-Info (12129): Elaborating entity "clean_btn" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent" File: C:/Users/Smon/source/vhdl_projects/entities/btn_ctrl_ea.vhd Line: 100
-Info (12129): Elaborating entity "sync" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|sync:sync_ent" File: C:/Users/Smon/source/vhdl_projects/entities/clean_btn_ea.vhd Line: 23
-Info (12129): Elaborating entity "debouncer" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|debouncer:debouncer_ent" File: C:/Users/Smon/source/vhdl_projects/entities/clean_btn_ea.vhd Line: 34
-Info (12129): Elaborating entity "strb_generator" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|debouncer:debouncer_ent|strb_generator:strb_ent" File: C:/Users/Smon/source/vhdl_projects/entities/debouncer_ea.vhd Line: 63
-Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|debouncer:debouncer_ent|strb_generator:strb_ent|counter:cnt_ent" File: C:/Users/Smon/source/vhdl_projects/entities/strb_generator_ea.vhd Line: 32
-Info (12129): Elaborating entity "tilt_axis" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x" File: C:/Users/Smon/source/vhdl_projects/ex_11/tl_ea.vhd Line: 116
-Info (12129): Elaborating entity "delta_adc" using architecture "A:debug_rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent" File: C:/Users/Smon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 55
-Info (12129): Elaborating entity "pwm" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|pwm:pwm_ent" File: C:/Users/Smon/source/vhdl_projects/entities/delta_adc_ea.vhd Line: 65
-Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|pwm:pwm_ent|counter:cnt_ent" File: C:/Users/Smon/source/vhdl_projects/entities/pwm_ea.vhd Line: 28
-Info (12129): Elaborating entity "strb_generator" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|strb_generator:sampling_strb_ent" File: C:/Users/Smon/source/vhdl_projects/entities/delta_adc_ea.vhd Line: 77
-Info (12129): Elaborating entity "moving_average_filter" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|moving_average_filter:mov_avg_ent" File: C:/Users/Smon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 70
-Info (12129): Elaborating entity "sample_hold" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|sample_hold:sample_hold_ent" File: C:/Users/Smon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 85
-Info (12129): Elaborating entity "tilt" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|tilt:tilt_ent" File: C:/Users/Smon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 94
-Info (12129): Elaborating entity "bin2bcd" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|bin2bcd:bin2bcd_ent" File: C:/Users/Smon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 106
-Info (12129): Elaborating entity "bcd_to_7seg" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|bcd_to_7seg:seg_ones_ent" File: C:/Users/Smon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 114
-Info (12129): Elaborating entity "btn2strb" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn2strb:btn2strb" File: C:/Users/Smon/source/vhdl_projects/ex_11/tl_ea.vhd Line: 150
-Info (12129): Elaborating entity "cmd_proc" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent" File: C:/Users/Smon/source/vhdl_projects/ex_11/tl_ea.vhd Line: 158
-Info (12129): Elaborating entity "accu_reg" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|accu_reg:accu_reg_dr_ent" File: C:/Users/Smon/source/vhdl_projects/entities/cmd_proc_ea.vhd Line: 85
-Info (12129): Elaborating entity "strb_generator" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|strb_generator:step_strb_ent" File: C:/Users/Smon/source/vhdl_projects/entities/cmd_proc_ea.vhd Line: 111
-Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|strb_generator:step_strb_ent|counter:cnt_ent" File: C:/Users/Smon/source/vhdl_projects/entities/strb_generator_ea.vhd Line: 32
-Info (12129): Elaborating entity "cmd_rom" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|cmd_rom:rom_ent" File: C:/Users/Smon/source/vhdl_projects/entities/cmd_proc_ea.vhd Line: 133
+Info (12129): Elaborating entity "tl" using architecture "A:rtl" for hierarchy "tl:tl_ent" File: C:/Users/simon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd Line: 60
+Info (12129): Elaborating entity "servo" using architecture "A:rtl" for hierarchy "tl:tl_ent|servo:servo_x_ent" File: C:/Users/simon/source/vhdl_projects/ex_11/tl_ea.vhd Line: 74
+Info (12129): Elaborating entity "pwm" using architecture "A:rtl" for hierarchy "tl:tl_ent|servo:servo_x_ent|pwm:pwm_ent" File: C:/Users/simon/source/vhdl_projects/entities/servo_ea.vhd Line: 28
+Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|servo:servo_x_ent|pwm:pwm_ent|counter:cnt_ent" File: C:/Users/simon/source/vhdl_projects/entities/pwm_ea.vhd Line: 28
+Info (12129): Elaborating entity "btn_ctrl" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent" File: C:/Users/simon/source/vhdl_projects/ex_11/tl_ea.vhd Line: 100
+Info (12129): Elaborating entity "clean_btn" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent" File: C:/Users/simon/source/vhdl_projects/entities/btn_ctrl_ea.vhd Line: 100
+Info (12129): Elaborating entity "sync" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|sync:sync_ent" File: C:/Users/simon/source/vhdl_projects/entities/clean_btn_ea.vhd Line: 23
+Info (12129): Elaborating entity "debouncer" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|debouncer:debouncer_ent" File: C:/Users/simon/source/vhdl_projects/entities/clean_btn_ea.vhd Line: 34
+Info (12129): Elaborating entity "strb_generator" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|debouncer:debouncer_ent|strb_generator:strb_ent" File: C:/Users/simon/source/vhdl_projects/entities/debouncer_ea.vhd Line: 63
+Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|debouncer:debouncer_ent|strb_generator:strb_ent|counter:cnt_ent" File: C:/Users/simon/source/vhdl_projects/entities/strb_generator_ea.vhd Line: 32
+Info (12129): Elaborating entity "tilt_axis" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x" File: C:/Users/simon/source/vhdl_projects/ex_11/tl_ea.vhd Line: 116
+Info (12129): Elaborating entity "delta_adc" using architecture "A:debug_rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent" File: C:/Users/simon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 55
+Info (12129): Elaborating entity "pwm" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|pwm:pwm_ent" File: C:/Users/simon/source/vhdl_projects/entities/delta_adc_ea.vhd Line: 65
+Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|pwm:pwm_ent|counter:cnt_ent" File: C:/Users/simon/source/vhdl_projects/entities/pwm_ea.vhd Line: 28
+Info (12129): Elaborating entity "strb_generator" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|strb_generator:sampling_strb_ent" File: C:/Users/simon/source/vhdl_projects/entities/delta_adc_ea.vhd Line: 77
+Info (12129): Elaborating entity "moving_average_filter" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|moving_average_filter:mov_avg_ent" File: C:/Users/simon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 70
+Info (12129): Elaborating entity "sample_hold" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|sample_hold:sample_hold_ent" File: C:/Users/simon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 85
+Info (12129): Elaborating entity "tilt" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|tilt:tilt_ent" File: C:/Users/simon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 94
+Info (12129): Elaborating entity "bin2bcd" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|bin2bcd:bin2bcd_ent" File: C:/Users/simon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 106
+Info (12129): Elaborating entity "bcd_to_7seg" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|bcd_to_7seg:seg_ones_ent" File: C:/Users/simon/source/vhdl_projects/entities/tilt_axis_ea.vhd Line: 114
+Info (12129): Elaborating entity "btn2strb" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn2strb:btn2strb" File: C:/Users/simon/source/vhdl_projects/ex_11/tl_ea.vhd Line: 150
+Info (12129): Elaborating entity "cmd_proc" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent" File: C:/Users/simon/source/vhdl_projects/ex_11/tl_ea.vhd Line: 158
+Info (12129): Elaborating entity "accu_reg" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|accu_reg:accu_reg_dr_ent" File: C:/Users/simon/source/vhdl_projects/entities/cmd_proc_ea.vhd Line: 85
+Info (12129): Elaborating entity "strb_generator" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|strb_generator:step_strb_ent" File: C:/Users/simon/source/vhdl_projects/entities/cmd_proc_ea.vhd Line: 111
+Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|strb_generator:step_strb_ent|counter:cnt_ent" File: C:/Users/simon/source/vhdl_projects/entities/strb_generator_ea.vhd Line: 32
+Info (12129): Elaborating entity "cmd_rom" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|cmd_rom:rom_ent" File: C:/Users/simon/source/vhdl_projects/entities/cmd_proc_ea.vhd Line: 133
 Info (286030): Timing-Driven Synthesis is running
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "tl:tl_ent|cmd_proc:cmd_proc_ent|cmd_rom:rom_ent|ROMMEM" is uninferred due to inappropriate RAM size File: C:/Users/Smon/source/vhdl_projects/entities/cmd_rom_ea.vhd Line: 19
+    Info (276004): RAM logic "tl:tl_ent|cmd_proc:cmd_proc_ent|cmd_rom:rom_ent|ROMMEM" is uninferred due to inappropriate RAM size File: C:/Users/simon/source/vhdl_projects/entities/cmd_rom_ea.vhd Line: 19
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276034): Inferred altshift_taps megafunction from the following design logic: "tl:tl_ent|tilt_axis:tilt_y|moving_average_filter:mov_avg_ent|filter_reg_rtl_0"
         Info (286033): Parameter NUMBER_OF_TAPS set to 1
@@ -1387,16 +1382,16 @@ Info (12133): Instantiated megafunction "tl:tl_ent|tilt_axis:tilt_y|moving_avera
     Info (12134): Parameter "WIDTH" = "16"
     Info (12134): Parameter "POWER_UP_STATE" = "DONT_CARE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_huv.tdf
-    Info (12023): Found entity 1: shift_taps_huv File: C:/Users/Smon/source/vhdl_projects/ex_11/quartus/db/shift_taps_huv.tdf Line: 29
+    Info (12023): Found entity 1: shift_taps_huv File: C:/Users/simon/source/vhdl_projects/ex_11/quartus/db/shift_taps_huv.tdf Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_tfc1.tdf
-    Info (12023): Found entity 1: altsyncram_tfc1 File: C:/Users/Smon/source/vhdl_projects/ex_11/quartus/db/altsyncram_tfc1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_tfc1 File: C:/Users/simon/source/vhdl_projects/ex_11/quartus/db/altsyncram_tfc1.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_uhf.tdf
-    Info (12023): Found entity 1: cntr_uhf File: C:/Users/Smon/source/vhdl_projects/ex_11/quartus/db/cntr_uhf.tdf Line: 26
+    Info (12023): Found entity 1: cntr_uhf File: C:/Users/simon/source/vhdl_projects/ex_11/quartus/db/cntr_uhf.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_i1h.tdf
-    Info (12023): Found entity 1: cntr_i1h File: C:/Users/Smon/source/vhdl_projects/ex_11/quartus/db/cntr_i1h.tdf Line: 28
+    Info (12023): Found entity 1: cntr_i1h File: C:/Users/simon/source/vhdl_projects/ex_11/quartus/db/cntr_i1h.tdf Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/Smon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd Line: 25
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/Smon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd Line: 28
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/simon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd Line: 25
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/simon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd Line: 28
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1407,9 +1402,9 @@ Info (21057): Implemented 785 device resources after synthesis - the final resou
     Info (21064): Implemented 16 RAM segments
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4973 megabytes
-    Info: Processing ended: Tue Feb 04 02:28:51 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 4926 megabytes
+    Info: Processing ended: Tue Feb 25 10:07:02 2025
+    Info: Elapsed time: 00:00:57
+    Info: Total CPU time (on all processors): 00:00:33
 
 

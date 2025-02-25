@@ -69,7 +69,13 @@ begin
 		wait for CLK_HALF_TB;
 
 		sw_dbg_en <= '1';
+
+		wait for 1 ms;
 		
+		btn_draw_k <= '1';
+		wait for 10*CLK_HALF_TB;
+		btn_draw_k <= '0';
+
 		wait for 2000 ms;
 
 	end process;

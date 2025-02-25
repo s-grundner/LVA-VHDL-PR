@@ -1,5 +1,5 @@
 Assembler report for PINOUT
-Tue Feb 04 02:29:27 2025
+Tue Feb 25 10:09:21 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Smon/source/vhdl_projects/ex_11/quartus/PINOUT.sof
+  5. Assembler Device Options: C:/Users/simon/source/vhdl_projects/ex_11/quartus/PINOUT.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Feb 04 02:29:27 2025 ;
+; Assembler Status      ; Successful - Tue Feb 25 10:09:21 2025 ;
 ; Revision Name         ; PINOUT                                ;
 ; Top-level Entity Name ; PINOUT                                ;
 ; Family                ; Cyclone V                             ;
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+-------------------------------------------------------------+
-; Assembler Generated Files                                   ;
-+-------------------------------------------------------------+
-; File Name                                                   ;
-+-------------------------------------------------------------+
-; C:/Users/Smon/source/vhdl_projects/ex_11/quartus/PINOUT.sof ;
-+-------------------------------------------------------------+
++--------------------------------------------------------------+
+; Assembler Generated Files                                    ;
++--------------------------------------------------------------+
+; File Name                                                    ;
++--------------------------------------------------------------+
+; C:/Users/simon/source/vhdl_projects/ex_11/quartus/PINOUT.sof ;
++--------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Smon/source/vhdl_projects/ex_11/quartus/PINOUT.sof ;
-+----------------+----------------------------------------------------------------------+
-; Option         ; Setting                                                              ;
-+----------------+----------------------------------------------------------------------+
-; JTAG usercode  ; 0x00BED04E                                                           ;
-; Checksum       ; 0x00BED04E                                                           ;
-+----------------+----------------------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/simon/source/vhdl_projects/ex_11/quartus/PINOUT.sof ;
++----------------+-----------------------------------------------------------------------+
+; Option         ; Setting                                                               ;
++----------------+-----------------------------------------------------------------------+
+; JTAG usercode  ; 0x00BECF38                                                            ;
+; Checksum       ; 0x00BECF38                                                            ;
++----------------+-----------------------------------------------------------------------+
 
 
 +--------------------+
@@ -78,13 +78,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Feb 04 02:29:22 2025
+    Info: Processing started: Tue Feb 25 10:08:57 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off PINOUT -c PINOUT
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4849 megabytes
-    Info: Processing ended: Tue Feb 04 02:29:27 2025
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Tue Feb 25 10:09:21 2025
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:12
 
 
