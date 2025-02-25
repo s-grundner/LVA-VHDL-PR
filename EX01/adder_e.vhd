@@ -1,0 +1,22 @@
+--------------------------------------------------------------------------------
+-- file: adder_e.vhd
+-- type: Entity
+-- author: Simon Grundner (k12136610)
+-- brief: Module declaration for the adder of task 2
+--------------------------------------------------------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- ENTITY
+
+entity adder is
+	generic (
+		BITWIDTH : natural := 4
+	);
+	port (	
+		operand_a_i : in std_ulogic_vector(BITWIDTH-1 downto 0);
+		operand_b_i : in std_ulogic_vector(BITWIDTH-1 downto 0);
+		result_o : out std_ulogic_vector(BITWIDTH downto 0) 
+	);
+end entity adder;

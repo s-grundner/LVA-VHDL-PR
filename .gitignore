@@ -1,18 +1,15 @@
+EX*/**/quartus_project/*
+EX*/**/quartus project/*
 
-devices/*
-
-ex_*/**/quartus_project/*
-ex_*/**/quartus project/*
-
-ex_*/**/modelsim.ini
-ex_*/**/ModelSim.lnk
-ex_*/**/transcript
-ex_*/**/vsim.wlf
-ex_*/**/work/*
+EX*/**/modelsim.ini
+EX*/**/ModelSim.lnk
+EX*/**/transcript
+EX*/**/vsim.wlf
+EX*/**/work
 *.bak
-db
-incremental_db
 *.rpt
 *.summary
 *.done
 *.qws
+db
+incremental_db

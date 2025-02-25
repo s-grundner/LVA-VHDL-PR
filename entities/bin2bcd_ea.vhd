@@ -1,9 +1,18 @@
+--------------------------------------------------------------------------------
+-- file: bin2bcd_ea.vhd
+-- type: Entity / Architecture
+-- author: Prof. Michael Lunglmayr
+-- brief: Binary to Binary Coded Decimal
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 library work;
 use work.std_definitions.all;
+
+-- ENTITY 
 
 entity bin2bcd is
 	port (
@@ -15,6 +24,8 @@ entity bin2bcd is
 		tenthousands_o  : out  std_ulogic_vector   (3 downto 0)
 	);
 end bin2bcd;
+
+-- ARCHITECTURE
 
 architecture rtl of bin2bcd is
 
