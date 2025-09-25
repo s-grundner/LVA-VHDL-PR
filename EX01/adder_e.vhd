@@ -1,5 +1,14 @@
+--------------------------------------------------------------------------------
+-- file: adder_e.vhd
+-- type: Entity
+-- author: Simon Grundner (k12136610)
+-- brief: Module declaration for the adder of task 2
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
+
+-- ENTITY
 
 entity adder is
 	generic (

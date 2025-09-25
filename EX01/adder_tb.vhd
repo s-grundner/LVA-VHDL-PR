@@ -1,3 +1,10 @@
+--------------------------------------------------------------------------------
+-- file: adder_tb.vhd
+-- type: Testbench
+-- author: Simon Grundner (k12136610)
+-- brief: Two Testbenches for the adder of task 2
+--------------------------------------------------------------------------------
+
 library ieee ;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -8,13 +15,15 @@ end entity adder_tb;
 --- 4-Bit Adder test
 
 architecture test_adder_4 of adder_tb is
+
 	constant tb_BITWIDTH  : natural := 4;
 	signal tb_operand_a_i : std_ulogic_vector(tb_BITWIDTH-1 downto 0);
 	signal tb_operand_b_i : std_ulogic_vector(tb_BITWIDTH-1 downto 0);
 	signal tb_result_o    : std_ulogic_vector(tb_BITWIDTH downto 0);
 	
 begin
-	dut : entity work.adder(behav)
+
+	dut : entity work.adder(rtl)
 		generic map (
 			BITWIDTH => tb_BITWIDTH
 		)
@@ -59,7 +68,7 @@ architecture test_adder_12 of adder_tb is
 	signal tb_result_o    : std_ulogic_vector(tb_BITWIDTH downto 0);
 	
 begin
-	dut : entity work.adder(behav)
+	dut : entity work.adder(rtl)
 		generic map (
 			BITWIDTH => tb_BITWIDTH
 		)

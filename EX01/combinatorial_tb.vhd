@@ -2,7 +2,7 @@
 -- file: combinatorial_tb.vhd
 -- type: Testbench
 -- author: Simon Grundner (k12136610)
--- brief: Testbench of the combinatorial circuit from exercise 1
+-- brief: Testbench of the combinatorial circuit for task 1
 --------------------------------------------------------------------------------
 
 -- ENTITY
@@ -18,7 +18,7 @@ architecture test_combinatorial of combinatorial_tb is
 	
 begin
 
-	dut : entity work.combinatorial(behav)
+	dut : entity work.combinatorial(rtl)
 		port map ( tb_operand_a_i, tb_operand_b_i, tb_and_o, tb_or_o );
 		
 	stimuli : process is

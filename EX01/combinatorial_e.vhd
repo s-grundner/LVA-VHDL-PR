@@ -1,9 +1,11 @@
 --------------------------------------------------------------------------------
--- file: combinatorialg_e.vhd
+-- file: combinatorial_e.vhd
 -- type: Entity
 -- author: Simon Grundner (k12136610)
--- brief: 
+-- brief: Module declaration of combinatorial circuit for task 1
 --------------------------------------------------------------------------------
+
+-- ENTITY
 
 entity combinatorial is
 	port (
