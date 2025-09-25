@@ -1,3 +1,9 @@
+--------------------------------------------------------------------------------
+-- file: bcd_to_7seg_ea.vhd
+-- author: s-grundner
+-- brief: Binary Coded Decimal to Seven Segment Encoder
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -6,6 +12,8 @@ library work;
 use work.std_definitions.all;
 use work.all;
 
+-- entity
+
 entity bcd_to_7seg is
     port (
 		bcd_i : in std_ulogic_vector(3 downto 0);
@@ -13,10 +21,10 @@ entity bcd_to_7seg is
     );
 end bcd_to_7seg;
 
-architecture rtl of bcd_to_7seg is
+-- architecture 
 
+architecture rtl of bcd_to_7seg is
 begin
-	
 	process(bcd_i)
 	begin
 		case bcd_i is              --gfedcba
@@ -39,5 +47,4 @@ begin
 			when others => led_o <= "1111111"; -- switch all off - negated logic
 		end case;
 	end process;
-
 end architecture;
