@@ -1,6 +1,7 @@
 --------------------------------------------------------------------------------
 -- file: bcd_to_7seg_ea.vhd
--- author: s-grundner
+-- type: Entity / Architecture
+-- author: Simon Grundner (k12136610)
 -- brief: Binary Coded Decimal to Seven Segment Encoder
 --------------------------------------------------------------------------------
 
@@ -12,7 +13,7 @@ library work;
 use work.std_definitions.all;
 use work.all;
 
--- entity
+-- ENTITY
 
 entity bcd_to_7seg is
     port (
@@ -21,7 +22,7 @@ entity bcd_to_7seg is
     );
 end bcd_to_7seg;
 
--- architecture 
+-- ARCHITECTURE 
 
 architecture rtl of bcd_to_7seg is
 begin

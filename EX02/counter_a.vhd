@@ -17,7 +17,7 @@ architecture rtl of counter is
 
 begin
     -- Register Process: Reset and Clock behavior
-    register_proc : process (rst_i, clk_i) is
+    register : process (rst_i, clk_i) is
     begin
         if rst_i = '1' then
             count <= 0;
@@ -28,13 +28,13 @@ begin
                 count <= count + 1;
             end if;
         end if;
-    end process register_proc;
+    end process register;
 
     -- Assign previously determined counter value
-    combinatorial_proc : process (counter_restart_strobe_i)
+    combinatorial : process (counter_restart_strobe_i)
     begin
         count_reset_flag <= counter_reset_strobe_i;
         counter_value_o <= count;
-    end process combinatorial_proc;
+    end process combinatorial;
 
 end rtl;

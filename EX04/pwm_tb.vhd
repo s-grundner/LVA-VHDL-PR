@@ -1,3 +1,10 @@
+--------------------------------------------------------------------------------
+-- file: pwm_tb.vhd
+-- type: Testbench
+-- author: Simon Grundner (k12136610)
+-- brief: PWM module testing
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
@@ -5,7 +12,7 @@ use ieee.numeric_std.all;
 entity pwm_tb is
 end entity pwm_tb;
 
-architecture behav of pwm_tb is
+architecture rtl of pwm_tb is
 
 	constant t_clk : time := 10 ns;
 	constant tb_COUNTER_LEN : natural := 4;
@@ -18,7 +25,7 @@ architecture behav of pwm_tb is
 
 begin
 
-	pwm_dut : entity work.pwm(behav)
+	pwm_dut : entity work.pwm(rtl)
 	generic map (
 		COUNTER_LEN => tb_COUNTER_LEN
 	)
@@ -52,4 +59,4 @@ begin
 		wait for 2000 ns;
 	end process;
 
-end behav;
+end rtl;

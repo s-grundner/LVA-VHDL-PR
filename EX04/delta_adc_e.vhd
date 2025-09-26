@@ -1,7 +1,15 @@
+--------------------------------------------------------------------------------
+-- file: delta_adc_e.vhd
+-- type: Entity
+-- author: Simon Grundner (k12136610)
+-- brief: Delta ADC module definition
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
 
+-- ENTITY
 
 entity delta_adc is
 	generic (

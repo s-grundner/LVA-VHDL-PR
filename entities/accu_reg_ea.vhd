@@ -1,3 +1,11 @@
+--------------------------------------------------------------------------------
+-- file: accu_reg_ea.vhd
+-- type: Entity / Architecture
+-- author: Simon Grundner (k12136610)
+-- brief: Accumulation Register Module. Sums data and returns the most
+--        significant bits 
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
@@ -5,7 +13,7 @@ use ieee.numeric_std.all;
 library work;
 use work.std_definitions.all;
 
--- entitiy
+-- ENTITIY
 
 entity accu_reg is
     generic (
@@ -23,7 +31,7 @@ entity accu_reg is
     );
 end accu_reg;
 
--- architecture
+-- ARCHITECTURE
 
 architecture rtl of accu_reg is
 

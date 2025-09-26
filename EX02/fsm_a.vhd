@@ -23,17 +23,17 @@ architecture rtl of fsm is
 
 begin
     -- Register Process: Reset and Clock behavior
-    reg_proc : process (clk_i, rst_i)
+    register : process (clk_i, rst_i)
     begin
         if rst_i = '1' then
             fsm_state <= START;
         elsif rising_edge(clk_i) then
             fsm_state <= next_fsm_state;
         end if;
-    end process reg_proc;
+    end process register;
 
     -- Process: Statemachine
-    fsm_comb : process (start_button_i, counter_value_i, fsm_state) is
+    fsm : process (start_button_i, counter_value_i, fsm_state) is
     begin
         -- Set default States
         next_fsm_state <= fsm_state;
@@ -63,6 +63,6 @@ begin
             when others => 
                 next_fsm_state <= START;
         end case;
-    end process fsm_comb;
+    end process fsm;
 
 end rtl;

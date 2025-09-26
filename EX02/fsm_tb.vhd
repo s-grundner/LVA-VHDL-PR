@@ -22,10 +22,10 @@ begin
     -- connect devices under test
     dut_counter : entity work.counter(rtl)
     port map (
-        clk_i					           => tb_clk,
-        rst_i 					         => tb_rst,
+        clk_i                    => tb_clk,
+        rst_i                    => tb_rst,
         counter_restart_strobe_i => tb_counter_restart_strobe,
-        counter_value_o      		 => tb_counter_value
+        counter_value_o          => tb_counter_value
     );
 
     dut_fsm : entity work.fsm(rtl)
@@ -47,8 +47,8 @@ begin
         wait for t_clk;
     end process clk_process;
 
-    -- Stimuli Process
-    stimuli : process
+    -- Stim Process
+    stim : process
     begin
 
         -- Initialize
@@ -84,6 +84,6 @@ begin
 
         wait for 800 ns; 
 
-    end process stimuli;
+    end process stim;
 
 end rtl;

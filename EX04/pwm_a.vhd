@@ -1,17 +1,26 @@
+--------------------------------------------------------------------------------
+-- file: pwm_a.vhd
+-- type: Architecture
+-- author: Simon Grundner (k12136610)
+-- brief: Delta ADC module implementation
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
 
-architecture behav of pwm is
+-- ARCHITECTURE
+
+architecture rtl of pwm is
 
 	signal count : unsigned(COUNTER_LEN-1 downto 0);
 	signal count_reset_flag : std_ulogic := '0';
 	signal next_pwm : std_ulogic;
 
 begin
-	-- counter for the PWM
 
-	counter_ent : entity work.counter(behav)
+	-- counter for the PWM
+	counter_ent : entity work.counter(rtl)
 		generic map (
 			COUNTER_LEN => COUNTER_LEN
 		)
@@ -24,14 +33,14 @@ begin
 	
 	-- PWM logic
 
-	reg_seq : process (clk_i, rst_i) is
+	register : process (clk_i, rst_i) is
 	begin
 		if rst_i = '1' then
 			PWM_o <= '0';
 		elsif rising_edge(clk_i) then	
 			PWM_o <= next_pwm;
 		end if;
-	end process reg_seq;
+	end process register;
 
 	pwm_comb : process (count, ON_counter_val_i) is
 	begin
@@ -51,4 +60,4 @@ begin
 		end if;
 	end process clr_comb;
 
-end behav;
+end rtl;

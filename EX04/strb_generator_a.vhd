@@ -1,9 +1,18 @@
+--------------------------------------------------------------------------------
+-- file: strb_generator_a.vhd
+-- type: Architecture
+-- author: Simon Grundner (k12136610)
+-- brief: strobe generator module implementation
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
 use ieee.math_real.all;
 
-architecture behav of strb_generator is
+-- ARCHITECTURE
+
+architecture rtl of strb_generator is
 
 	signal next_strobe : std_ulogic := '0';
 	signal curr_strobe : std_ulogic := '0';
@@ -11,7 +20,7 @@ architecture behav of strb_generator is
 
 begin
 
-	counter_ent : entity work.counter(behav)
+	counter_ent : entity work.counter(rtl)
 		generic map (
 			COUNTER_LEN => PRESCALER
 		)
@@ -41,4 +50,4 @@ begin
 
 	strb_o <= curr_strobe;
 
-end behav;
+end rtl;

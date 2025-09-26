@@ -1,3 +1,10 @@
+--------------------------------------------------------------------------------
+-- file: delta_adc_tb.vhd
+-- type: Testbench
+-- author: Simon Grundner (k12136610)
+-- brief: Delta ADC module testing
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
@@ -5,7 +12,7 @@ use ieee.numeric_std.all;
 entity delta_adc_tb is
 end entity delta_adc_tb;
 
-architecture behav of delta_adc_tb is
+architecture rtl of delta_adc_tb is
 
 	constant t_clk 			 : time := 10 ns;
 	constant tb_BITWIDTH 	 : natural := 4;
@@ -26,7 +33,7 @@ begin
 		tb_clk <= not tb_clk;
 	end process;
 
-	delta_adc_dut : entity work.delta_adc(behav)
+	delta_adc_dut : entity work.delta_adc(rtl)
 		generic map (
 			BITWIDTH => tb_BITWIDTH,
 			SAMPLING_PSC => tb_SAMPLING_PSC
@@ -66,4 +73,4 @@ begin
 
 	end process;
 
-end behav;
+end rtl;

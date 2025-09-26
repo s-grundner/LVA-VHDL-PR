@@ -1,6 +1,15 @@
+--------------------------------------------------------------------------------
+-- file: counter_e.vhd
+-- type: Entity
+-- author: Simon Grundner (k12136610)
+-- brief: Counter module definition
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
+
+-- ENTITY
 
 entity counter is
     generic (

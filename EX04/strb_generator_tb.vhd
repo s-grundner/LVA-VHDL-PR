@@ -1,3 +1,10 @@
+--------------------------------------------------------------------------------
+-- file: strb_generator_tb.vhd
+-- type: Testbench
+-- author: Simon Grundner (k12136610)
+-- brief: strobe generator module testing
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
@@ -5,7 +12,7 @@ use ieee.numeric_std.all;
 entity strb_generator_tb is
 end entity strb_generator_tb;
 
-architecture behav of strb_generator_tb is
+architecture rtl of strb_generator_tb is
 
 	constant tb_PRESCALER : natural := 10;
 	constant t_clk : time := 10 ns;
@@ -16,7 +23,7 @@ architecture behav of strb_generator_tb is
 
 begin
 
-	strb_dut : entity work.strb_generator(behav)
+	strb_dut : entity work.strb_generator(rtl)
 		generic map (
 			PRESCALER => tb_PRESCALER
 		)
@@ -42,4 +49,4 @@ begin
 		wait for 2000 ns;
 	end process stimulus;
 
-end behav;
+end rtl;

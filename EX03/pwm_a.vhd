@@ -1,15 +1,24 @@
+--------------------------------------------------------------------------------
+-- file: pwm_a.vhd
+-- type: Architecture
+-- author: Simon Grundner (k12136610)
+-- brief: PWM module implementation
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
 
-architecture behav of pwm is
+-- ARCHITECTURE
+
+architecture rtl of pwm is
 
 	signal count : unsigned(COUNTER_LEN-1 downto 0);
 	signal count_reset_flag : std_ulogic := '0';
 
 begin
 
-	reg_proc : process (rst_i, clk_i) is
+	register : process (rst_i, clk_i) is
 	begin
 		if rst_i = '1' then
 			count <= (others => '0');
@@ -19,24 +28,24 @@ begin
 				count <= (others => '0');
 			end if;
 		end if;
-	end process reg_proc;
+	end process register;
 
-	pwm_proc : process (count, ON_counter_val_i) is
+	pwm : process (count, ON_counter_val_i) is
 	begin
 		if count < ON_counter_val_i then
 			PWM_pin_o <= '1';
 		else
 			PWM_pin_o <= '0';
 		end if;
-	end process pwm_proc;
+	end process pwm;
 
-	rst_proc : process (count, Period_counter_val_i) is
+	sync_reset : process (count, Period_counter_val_i) is
 	begin
 		if count = Period_counter_val_i-1 then
 			count_reset_flag <= '1';
 		else 
 			count_reset_flag <= '0';
 		end if;
-	end process rst_proc;
+	end process sync_reset;
 	
-end behav;
+end rtl;

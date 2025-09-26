@@ -1,3 +1,10 @@
+--------------------------------------------------------------------------------
+-- file: pwm_tb.vhd
+-- type: Testbench
+-- author: Simon Grundner (k12136610)
+-- brief: PWM module testcases: 50MHz, max counter 15, on time counter 4
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
@@ -5,7 +12,7 @@ use ieee.numeric_std.all;
 entity pwm_tb is
 end pwm_tb;
 
-architecture behav of pwm_tb is
+architecture rtl of pwm_tb is
 	
 	constant t_clk : time := 20 ns;
 	constant tb_COUNTER_LEN : natural := 4;
@@ -17,7 +24,7 @@ architecture behav of pwm_tb is
 	signal tb_PWM_pin 				: std_ulogic := '0';
 begin
 
-	pwm_dut : entity work.pwm(behav)
+	pwm_dut : entity work.pwm(rtl)
 	generic map (
 		COUNTER_LEN => tb_COUNTER_LEN
 	)
@@ -53,4 +60,4 @@ begin
 		wait for 2000 ns;
 
 	end process stimuli;
-end behav;
+end rtl;

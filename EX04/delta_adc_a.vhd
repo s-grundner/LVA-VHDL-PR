@@ -1,8 +1,17 @@
+--------------------------------------------------------------------------------
+-- file: delta_adc_a.vhd
+-- type: Architecture
+-- author: Simon Grundner (k12136610)
+-- brief: Delta ADC module implementation
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
 
-architecture behav of delta_adc is
+-- ARCHITECTURE
+
+architecture rtl of delta_adc is
 
 	constant MAX_COUNTER_VAL : unsigned(BITWIDTH-1 downto 0) := (others => '1');
 
@@ -12,7 +21,7 @@ architecture behav of delta_adc is
 
 begin
 
-	pwm_ent : entity work.pwm(behav)
+	pwm_ent : entity work.pwm(rtl)
 		generic map (
 			COUNTER_LEN => BITWIDTH
 		)
@@ -24,7 +33,7 @@ begin
 			PWM_o => PWM_o
 		);
 	
-	sampling_strobe_ent : entity work.strb_generator(behav)
+	sampling_strobe_ent : entity work.strb_generator(rtl)
 		generic map (
 			PRESCALER => SAMPLING_PSC
 		)
@@ -34,14 +43,14 @@ begin
 			strb_o => sampling_strobe
 		);
 
-	reg_seq : process(clk_i, rst_i) is
+	register : process(clk_i, rst_i) is
 	begin
 		if rst_i = '1' then
 			ADC_Value_o <= (others => '0');
 		elsif rising_edge(clk_i) then
 			ADC_Value_o <= ON_counter_val;
 		end if;
-	end process reg_seq;
+	end process register;
 
 	adc_comb : process (sampling_strobe, Comparator_i) is
 	begin
@@ -65,4 +74,4 @@ begin
 		end if;
 	end process validate_comb;
 
-end behav;
+end rtl;
