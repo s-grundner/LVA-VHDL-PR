@@ -18,23 +18,23 @@ architecture rtl of counter is
 
 begin
 
-	register : process (clk_i, rst_i) is
+	cnt_reg : process (clk_i, rst_i) is
     begin
         if rst_i = '1' then
             curr_cnt <= (others => '0');
         elsif rising_edge(clk_i) then
             curr_cnt <= next_cnt;
         end if;
-    end process register;
+    end process cnt_reg;
 
-    counting : process (curr_cnt, counter_rst_strobe_i) is
+    rst_comb : process (curr_cnt, counter_rst_strobe_i) is
     begin
         if counter_rst_strobe_i = '1' then
             next_cnt <= (others => '0');
         else
             next_cnt <= curr_cnt + 1;
         end if;
-    end process counting;
+    end process rst_comb;
 
     counter_o <= curr_cnt;
 

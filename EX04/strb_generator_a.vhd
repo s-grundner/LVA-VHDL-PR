@@ -31,14 +31,14 @@ begin
 			counter_o => strb_counter
 		);
 
-	reg_seq : process (clk_i, rst_i) is
+	strb_reg : process (clk_i, rst_i) is
 	begin
 		if rst_i = '1' then
 			curr_strobe <= '0';
 		elsif rising_edge(clk_i) then
 			curr_strobe <= next_strobe;
 		end if;
-	end process reg_seq;
+	end process strb_reg;
 
 	strb_comb : process (strb_counter) is
 	begin

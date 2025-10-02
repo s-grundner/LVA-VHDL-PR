@@ -1,0 +1,40 @@
+{$\space$\par}
+\section{Counter}
+
+\begin{center}
+    \includegraphics[width=0.75\linewidth]{4_CNT.png}
+\end{center}
+
+\textbf{Entity}\hrulefill
+
+\input{code/cnt_e}
+
+\textbf{Architecture}\hrulefill
+
+{$\space$\par}
+
+Signale
+
+\begin{minted}{vhdl}
+signal curr_cnt : unsigned(COUNTER_LEN-1 downto 0) := (others => '0');
+signal next_cnt : unsigned(COUNTER_LEN-1 downto 0);
+\end{minted}
+
+\newpage
+{$\space$\par}
+
+(1) \mintinline{vhdl}{reg_seq : process (clk_i, rst_i)} 
+
+\begin{quote}
+    Der sequenzielle Prozess bestimmt das Clock- und Reset-Verhalten. Bei der steigenden Flanke wird der momentanen Counter-Wert \mintinline{vhdl}{curr_cnt} dem nächsten, kombinatorisch ermittelten Counter-Wert \mintinline{vhdl}{next_cnt} zugewiesen. Beim Reset wird der Counter-Ausgang auf \mintinline{vhdl}{0} gesetzt. 
+\end{quote}
+
+(2) \mintinline{vhdl}{cnt_comb : process (curr_cnt, counter_rst_strobe_i)}
+
+\begin{quote}
+    Hier erfolgt die kombinatorische Inkrementierung des Counters. \mintinline{vhdl}{next_cnt} hat den Zustand \mintinline{vhdl}{curr_cnt + 1}, falls \mintinline{vhdl}{counter_rst_strobe_i} gerade nicht \mintinline{vhdl}{'1'} ist. In diesem Falle wird \mintinline{vhdl}{next_cnt} synchron auf \mintinline{vhdl}{0} gesetzt.
+\end{quote}
+
+Die Simulation für den Counter ist in Vorherigen Übungen bereits mehrmals durchgeführt worden.
+
+\newpage

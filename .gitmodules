@@ -1,6 +1,0 @@
-[submodule "EX01/docs/overleaf"]
-	path = EX01/overleaf
-	url = https://git@git.overleaf.com/68d4751662627231f15e760e
-[submodule "EX02/68d59bdaa5d65c5eaa9fe7a7"]
-	path = EX02/overleaf
-	url = https://git@git.overleaf.com/68d59bdaa5d65c5eaa9fe7a7

@@ -1,15 +1,15 @@
 vlib work
 vmap work work
 
-vcom -work work counter_e.vhd
-vcom -work work counter_a.vhd
-vcom -work work pwm_e.vhd
-vcom -work work pwm_a.vhd
-vcom -work work strb_generator_e.vhd
-vcom -work work strb_generator_a.vhd
-vcom -work work delta_adc_e.vhd
-vcom -work work delta_adc_a.vhd
-vcom -work work delta_adc_tb.vhd
+vcom -work work ../counter_e.vhd
+vcom -work work ../counter_a.vhd
+vcom -work work ../pwm_e.vhd
+vcom -work work ../pwm_a.vhd
+vcom -work work ../strb_generator_e.vhd
+vcom -work work ../strb_generator_a.vhd
+vcom -work work ../delta_adc_e.vhd
+vcom -work work ../delta_adc_a.vhd
+vcom -work work ../test/delta_adc_tb.vhd
 
 vsim work.delta_adc_tb
 

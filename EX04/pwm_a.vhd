@@ -33,14 +33,14 @@ begin
 	
 	-- PWM logic
 
-	register : process (clk_i, rst_i) is
+	pwm_reg : process (clk_i, rst_i) is
 	begin
 		if rst_i = '1' then
 			PWM_o <= '0';
 		elsif rising_edge(clk_i) then	
 			PWM_o <= next_pwm;
 		end if;
-	end process register;
+	end process pwm_reg;
 
 	pwm_comb : process (count, ON_counter_val_i) is
 	begin

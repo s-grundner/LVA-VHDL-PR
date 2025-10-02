@@ -18,7 +18,7 @@ architecture rtl of pwm is
 
 begin
 
-	register : process (rst_i, clk_i) is
+	cnt_reg : process (rst_i, clk_i) is
 	begin
 		if rst_i = '1' then
 			count <= (others => '0');
@@ -28,24 +28,24 @@ begin
 				count <= (others => '0');
 			end if;
 		end if;
-	end process register;
+	end process cnt_reg;
 
-	pwm : process (count, ON_counter_val_i) is
+	pwm_comb : process (count, ON_counter_val_i) is
 	begin
 		if count < ON_counter_val_i then
 			PWM_pin_o <= '1';
 		else
 			PWM_pin_o <= '0';
 		end if;
-	end process pwm;
+	end process pwm_comb;
 
-	sync_reset : process (count, Period_counter_val_i) is
+	sync_reset_comb : process (count, Period_counter_val_i) is
 	begin
 		if count = Period_counter_val_i-1 then
 			count_reset_flag <= '1';
 		else 
 			count_reset_flag <= '0';
 		end if;
-	end process sync_reset;
+	end process sync_reset_comb;
 	
 end rtl;

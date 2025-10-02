@@ -1,0 +1,65 @@
+{$\space$\par}
+\section{Delta ADC}
+
+\begin{center}
+    \includegraphics[width=1\linewidth]{1_ADC.png}
+\end{center}
+
+\textbf{Entity}\hrulefill
+
+\input{code/adc_e}
+
+\textbf{Architecture}\hrulefill
+
+{$\space$\par}
+
+Die ADC-Architektur verwendet die im Weiteren beschriebenen Entities PWM und Sampling-Strobe-Generator. Ansonsten wird er ADC durch drei weitere Prozesse beschrieben.
+
+\newpage
+{$\space$\par}
+
+Signale
+
+\begin{minted}{vhdl}
+constant MAX_COUNTER_VAL : unsigned(BITWIDTH-1 downto 0) := (others => '1');
+signal ON_counter_val : unsigned(BITWIDTH-1 downto 0) := (others => '0');
+signal sampling_strobe : std_ulogic := '0';
+signal prev_comp : std_logic := '0';
+\end{minted} 
+
+{$\space$\par}
+
+(1) \mintinline{vhdl}{reg_seq : process (clk_i, rst_i)} 
+
+\begin{quote}
+    Der sequenzielle Prozess bestimmt das Clock- und Reset-Verhalten. Bei der steigenden Flanke wird dem ADC-Ausgang der nächste, kombinatorisch bestimmte ADC-Zustand zugewiesen, welcher gleichzeitig der Duty-Cycle Counter-Wert \mintinline{vhdl}{ON_counter_val} des PWM-Generators ist. Beim Reset wird der ADC-Ausgang auf \mintinline{vhdl}{'0'} gesetzt. 
+\end{quote}
+
+(2) \mintinline{vhdl}{adc_comb : process (sampling_strobe, Comparator_i)}
+
+\begin{quote}
+    Hier wird die kombinatorik beschrieben, welche zur Bestimmung des ADC-Wertes notwendig ist. Unter Vorraussetzung, dass die \mintinline{vhdl}{sampling_strobe} auf \mintinline{vhdl}{'1'} ist, gilt folgendes: Falls der vom Komparator gelieferte Eingangswert \mintinline{vhdl}{Comparator_i} auf \mintinline{vhdl}{'1'} ist, wird der Arbeitszyklus um 1 inkrementiert, sonst dekrementiert. Außerdem wird mit jeder \mintinline{vhdl}{sampling_strobe} der momentane Komparator-Zustand gespeichert, welches für die Validierung des ADC-Wertes Relevant ist. 
+\end{quote}
+
+(3) \mintinline{vhdl}{validate_comb : process (Comparator_i, prev_comp)}
+
+\begin{quote}
+    Der ADC verfügt über einen \mintinline{vhdl}{ADC_valid_strb_o} Ausgang, welcher signalisiert ob der tatsächliche ADC Wert am Ausgang anliegt, also der Einschwingvorgang beendet ist. In dieser Implementierung liegt dieser Zustand, vor falls sich der Komparator-Wert umkehrt. Ist also der Komparator-Wert schon seit einigen Sampling-Perioden auf \mintinline{vhdl}{'1'} und wird plötzlich \mintinline{vhdl}{'0'} (und umgekehrt), so hat der PWM-Mittelwert in der letzten Sampling-Periode den Analogen Wert erreicht und am ADC-Ausgang liegt näherungsweise der richtige Wert vor. 
+\end{quote}
+
+
+\subsection*{Simulation}
+
+\textbf{ADC-Test} \hrulefill
+
+{$\space$\par}
+
+Hier wird der Komparator-Input Emuliert, indem er im Stimulus Prozess nach einer gewissen Zeit auf 1 gesetzt wird. Während dieset Zeit ist zusehen, wie der Duty-Cycle des PWm Signals zunimmt und wie erwartet mit dem Umschalten des Komparator Eingangs wieder Abnimmt. In der Sampling Periode kurz nach dem Umschalten ist auch zu erkennen wie die ADC-Valid-Strobe high wird.
+
+\begin{center}
+    \includegraphics[width=1\linewidth]{SIM_ADC1.png}
+\end{center}
+
+Hier wäre der ADC-Wert 1101.
+
+\newpage

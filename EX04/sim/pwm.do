@@ -1,11 +1,11 @@
 vlib work
 vmap work work
 
-vcom -work work counter_e.vhd
-vcom -work work counter_a.vhd
-vcom -work work pwm_e.vhd
-vcom -work work pwm_a.vhd
-vcom -work work pwm_tb.vhd
+vcom -work work ../counter_e.vhd
+vcom -work work ../counter_a.vhd
+vcom -work work ../pwm_e.vhd
+vcom -work work ../pwm_a.vhd
+vcom -work work ../test/pwm_tb.vhd
 
 vsim work.pwm_tb
 

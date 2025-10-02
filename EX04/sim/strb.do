@@ -1,11 +1,11 @@
 vlib work
 vmap work work
 
-vcom -work work counter_e.vhd
-vcom -work work counter_a.vhd
-vcom -work work strb_generator_e.vhd
-vcom -work work strb_generator_a.vhd
-vcom -work work strb_generator_tb.vhd
+vcom -work work ../counter_e.vhd
+vcom -work work ../counter_a.vhd
+vcom -work work ../strb_generator_e.vhd
+vcom -work work ../strb_generator_a.vhd
+vcom -work work ../test/strb_generator_tb.vhd
 
 vsim work.strb_generator_tb
 
