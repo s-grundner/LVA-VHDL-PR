@@ -1,0 +1,85 @@
+name: Build LaTeX documents
+on:
+  push:
+    branches:
+      - '*'
+
+permissions:
+  contents: write
+
+env:
+  MATRICULATION_NUMBER: k12136610
+  EXERCISES: "EX01,EX02,EX03"
+
+jobs:
+  generate_matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      exercises: ${{ steps.set-matrix.outputs.exercises }}
+      exercises_list: ${{ steps.set-matrix.outputs.exercises_list }}
+    steps:
+    - name: Generate exercise matrix
+      id: set-matrix
+      run: |
+        # Convert comma-separated string to JSON array for matrix
+        exercises=$(echo '${{ env.EXERCISES }}' | jq -Rc 'split(",")')
+        echo "exercises=$exercises" >> $GITHUB_OUTPUT
+        # Also keep the original string for the commit message
+        echo "exercises_list=${{ env.EXERCISES }}" >> $GITHUB_OUTPUT
+
+  build_latex:
+    needs: generate_matrix
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        exercise: ${{ fromJson(needs.generate_matrix.outputs.exercises) }}
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@v4
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@v4
+      with:
+        root_file: main-report.tex
+        working_directory: ${{ matrix.exercise }}/latex
+      env:
+        TEXINPUTS: ".:.//:./..///:"
+    - name: Upload PDF as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ matrix.exercise }}-pdf
+        path: ${{ matrix.exercise }}/latex/main-report.pdf
+
+  commit_pdfs:
+    needs: [generate_matrix, build_latex]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@v4
+    - name: Download all PDFs
+      uses: actions/download-artifact@v4
+      with:
+        path: artifacts
+    - name: Organize and commit PDFs
+      run: |
+        # configure git
+        git config user.name "s-grundner"
+        git config user.email "s-grundner@users.noreply.github.com"
+        
+        # create docs directory
+        mkdir -p docs
+        
+        # copy all PDFs to docs with proper naming (dynamic based on EXERCISES variable)
+        IFS=',' read -ra EXERCISES_ARRAY <<< "${{ needs.generate_matrix.outputs.exercises_list }}"
+        for exercise in "${EXERCISES_ARRAY[@]}"; do
+          if [ -f "artifacts/${exercise}-pdf/main-report.pdf" ]; then
+            cp "artifacts/${exercise}-pdf/main-report.pdf" "docs/${exercise}-${{ env.MATRICULATION_NUMBER }}.pdf"
+            echo "Copied ${exercise} PDF"
+          else
+            echo "Warning: ${exercise} PDF not found"
+          fi
+        done
+        
+        # commit all PDFs in a single commit
+        git add docs/*.pdf
+        git commit -m "[github actions] update LaTeX reports (${{ needs.generate_matrix.outputs.exercises_list }})"
+        git push
