@@ -9,7 +9,7 @@ permissions:
 
 env:
   MATRICULATION_NUMBER: k12136610
-  EXERCISES: "EX01,EX02,EX03"
+  EXERCISES: "EX01,EX02,EX03,EX04"
 
 jobs:
   generate_matrix:
@@ -81,5 +81,5 @@ jobs:
         
         # commit all PDFs in a single commit
         git add docs/*.pdf
-        git commit -m "[github actions] update LaTeX reports (${{ needs.generate_matrix.outputs.exercises_list }})"
+        git commit -m "🤖 [ACTION] update LaTeX reports (${{ needs.generate_matrix.outputs.exercises_list }})"
         git push
