@@ -1,22 +1,29 @@
+--------------------------------------------------------------------------------
+-- file: counter_ea.vhd
+-- type: Entity / Architecture
+-- author: Simon Grundner (k12136610)
+-- brief: Counter module implementation
+--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
 
--- entitiy
+-- ENTITIY
 
 entity counter is
     generic (
         CNT_LEN : natural
     );
     port (
-        clk_i 	   : in std_ulogic;
-        rst_i 	   : in std_ulogic;
-		sync_rst_i : in std_ulogic;
-        cnt_o 	   : out unsigned(CNT_LEN-1 downto 0)
+        clk_i      : in std_ulogic;
+        rst_i      : in std_ulogic;
+        sync_rst_i : in std_ulogic;
+        cnt_o      : out unsigned(CNT_LEN-1 downto 0)
     );
 end entity counter;
 
--- architecture
+-- ARCHITECTURE
 
 architecture rtl of counter is
     
@@ -25,14 +32,14 @@ architecture rtl of counter is
 
 begin
 
-	reg_seq : process (clk_i, rst_i) is
+    cnt_reg : process (clk_i, rst_i) is
     begin
         if rst_i = '1' then
             curr_cnt <= (others => '0');
         elsif rising_edge(clk_i) then
             curr_cnt <= next_cnt;
         end if;
-    end process reg_seq;
+    end process cnt_reg;
 
     next_cnt <= (others => '0') when sync_rst_i = '1' else curr_cnt + 1;
     cnt_o <= curr_cnt;

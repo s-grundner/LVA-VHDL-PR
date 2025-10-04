@@ -1,37 +1,51 @@
+\newpage
 \subsection{Module Implementation}
 
-The code can be found in the attachments.
+The code can be found in the attachments. The ports of the modules are taken from the
+block diagram in figure \ref{fig:delay}. The in- and output can be determined from the
+arrow directions.
 
-\textbf{Entity}
+\subsubsection{Counter-Architecture:}
 
-The ports of the modules are taken from the block diagram in figure \ref{fig:delay}. The in- and output can be determined from the arrow directions.
+The counter value is stored in a register. Each clock cycle, the register contents
+are loaded with a the next, combinatorially determined value. The next value is either
+the incremented counter value or $0$, if a synchronous reset strobe is set.
 
-\textbf{Architectures}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/cntRTL.png}
+    \caption{Block Diagram of the Counter Module}
+    \label{fig:cnt-rtl}
+\end{figure}
 
-\textit{Counter-Architecture:}
+\subsubsection{Statemachine-Architecture}
 
-\begin{quote}
-    The counter architecture consists of a signal, which is used to increment the actual counter output. A register process handles the reset and clock behaviour: On reset, the counter output is set to $0$. On each rising edge of the clock signal, the sychronous counter reset strobe is checked. If the strobe is set, the counter is set to $0$, else the counter is incremented by one.
-\end{quote}
+The functionality of the statemachine is described by two processes: One
+register process describes the clock and reset behaviour. Here, the state
+variable is updated every clock cycle. Another combinatorial process
+determines the next state. Here the counter period can be set by editing
+the \lstinline{MAX_COUNT} constant.
 
-\textit{Statemachine-Architecture}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/fsmRTL.png}
+    \caption{Block Diagram of the FSM Module}
+    \label{fig:fsm-rtl}
+\end{figure}
 
-\begin{quote}
-    The functionality of the statemachine is described by two processes: One register process describes the clock and reset behaviour. Here, the state variable is updated every clock cycle. Another combinatorial process determines the next state. Here the counter period can be set by editing the \lstinline{MAX_COUNT} constant.
-\end{quote}
+\newpage
+
+\subsection{Simulation}
 
 \textbf{Test-Bench}
 
-Before the stimulus process a clock oscillation is emulated and a reset is performed. To test the module implementations, two scenarios are tested:
+Before the stimulus process a clock oscillation is emulated and a reset is
+performed. To test the module implementations, two scenarios are tested:
 
 \begin{itemize}
     \item Pressing the start button at different timestamps
     \item Performing a synchronous reset
 \end{itemize}
-
-\newpage
-
-\subsection{Simulation}
 
 \textbf{Start Button Stimulus}
 

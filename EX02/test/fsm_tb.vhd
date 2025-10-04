@@ -5,37 +5,28 @@
 -- brief: Finite state machine testbench
 --------------------------------------------------------------------------------
 
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all; 
+
 entity fsm_tb is
 end fsm_tb;
 
 architecture rtl of fsm_tb is
 
     -- Testbench Signals, connections in Blockdiagram
-    signal tb_clk, tb_rst			      	: bit;
-    signal tb_start_button, tb_led 		: bit;
-    signal tb_counter_restart_strobe 	: bit;
-    signal tb_counter_value 			    : natural;
-
+    signal tb_clk, tb_rst            : std_ulogic;
+    signal tb_start_button, tb_led   : std_ulogic;
     constant t_clk : time := 10 ns;
 
 begin
     -- connect devices under test
-    dut_counter : entity work.counter(rtl)
+    dut_tl : entity work.top_level(rtl)
     port map (
-        clk_i                    => tb_clk,
-        rst_i                    => tb_rst,
-        counter_restart_strobe_i => tb_counter_restart_strobe,
-        counter_value_o          => tb_counter_value
-    );
-
-    dut_fsm : entity work.fsm(rtl)
-    port map (
-        clk_i                    => tb_clk,
-        rst_i                    => tb_rst,
-        start_button_i           => tb_start_button,
-        counter_value_i          => tb_counter_value,
-        counter_restart_strobe_o => tb_counter_restart_strobe,
-        led_o                  	 => tb_led
+        clk_i          => tb_clk,
+        rst_i          => tb_rst,
+        start_button_i => tb_start_button,
+        led_o          => tb_led
     );
 
     -- Clock Process: 50 MHz
