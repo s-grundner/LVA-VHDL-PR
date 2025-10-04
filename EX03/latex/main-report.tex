@@ -146,19 +146,24 @@
 %% 
 \usepackage{amsfonts, amsmath}
 \usepackage{subfigure}
-\usepackage{listings}
+\usepackage{listings, lstautogobble}
 \usepackage{caption}
+\usepackage{euler}
 
 \captionsetup{
     margin=10pt,
     font=small,
-    labelfont=bf,
     justification=raggedleft
 }
 \lstset{
-    language=vhdl
+    language=vhdl,
+    autogobble=true,
+    basicstyle=\ttfamily\footnotesize,
+    numbers=left,
+    numberstyle=\tiny,
+    tabsize=4,
+    captionpos=b
 }
-\captionsetup[lstlisting]{position=above}
 \newcommand{\vhdl}[1]{\lstinline!#1!}
 
 %% 

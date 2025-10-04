@@ -13,39 +13,23 @@ use ieee.numeric_std.all;
 
 architecture rtl of pwm is
 
-	signal count : unsigned(COUNTER_LEN-1 downto 0);
-	signal count_reset_flag : std_ulogic := '0';
+	signal cnt : unsigned(CNT_LEN-1 downto 0) := (others => '0');
+	signal sync_rst : std_ulogic;
 
 begin
 
-	cnt_reg : process (rst_i, clk_i) is
-	begin
-		if rst_i = '1' then
-			count <= (others => '0');
-		elsif rising_edge(clk_i) then
-			count <= count + 1;
-			if count_reset_flag = '1' then
-				count <= (others => '0');
-			end if;
-		end if;
-	end process cnt_reg;
-
-	pwm_comb : process (count, ON_counter_val_i) is
-	begin
-		if count < ON_counter_val_i then
-			PWM_pin_o <= '1';
-		else
-			PWM_pin_o <= '0';
-		end if;
-	end process pwm_comb;
-
-	sync_reset_comb : process (count, Period_counter_val_i) is
-	begin
-		if count = Period_counter_val_i-1 then
-			count_reset_flag <= '1';
-		else 
-			count_reset_flag <= '0';
-		end if;
-	end process sync_reset_comb;
+	cnt_ent : entity work.counter(rtl)
+		generic map (
+			CNT_LEN => CNT_LEN
+		)
+		port map (
+			clk_i => clk_i,
+			rst_i => rst_i,
+			sync_rst_i => sync_rst,
+			cnt_o => cnt
+		);
 	
+	pwm_o <= '1' when cnt < on_cnt_val_i else '0';
+	sync_rst <= '1' when cnt = period_cnt_val_i-1 else '0';
+
 end rtl;

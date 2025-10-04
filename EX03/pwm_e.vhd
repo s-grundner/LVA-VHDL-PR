@@ -12,14 +12,14 @@ use ieee.numeric_std.all;
 -- ENTITY
 
 entity pwm is
-    generic(
-        COUNTER_LEN : natural
-    );
-    port (
-        clk_i                : in std_ulogic;
-        rst_i                : in std_ulogic;
-        Period_counter_val_i : in unsigned (COUNTER_LEN-1 downto 0);
-        ON_counter_val_i     : in unsigned (COUNTER_LEN-1 downto 0);
-        PWM_pin_o            : out std_ulogic
-    );
+	generic(
+		CNT_LEN : natural := 4
+	);
+	port (
+		clk_i            : in std_ulogic;
+		rst_i            : in std_ulogic;
+		period_cnt_val_i : in unsigned(CNT_LEN-1 downto 0);
+		on_cnt_val_i     : in unsigned(CNT_LEN-1 downto 0);
+		pwm_o            : out std_ulogic
+	);
 end entity pwm;

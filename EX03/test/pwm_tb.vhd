@@ -15,25 +15,25 @@ end pwm_tb;
 architecture rtl of pwm_tb is
 	
 	constant t_clk : time := 20 ns;
-	constant tb_COUNTER_LEN : natural := 4;
+	constant tb_CNT_LEN : natural := 4;
 
-	signal tb_clk 					: std_ulogic := '0';
-	signal tb_rst 					: std_ulogic := '0';
-	signal tb_Period_counter_val 	: unsigned(tb_COUNTER_LEN-1 downto 0) := "0000";
-	signal tb_ON_counter_val		: unsigned(tb_COUNTER_LEN-1 downto 0) := "0000";
-	signal tb_PWM_pin 				: std_ulogic := '0';
+	signal tb_clk            : std_ulogic := '0';
+	signal tb_rst            : std_ulogic := '0';
+	signal tb_period_cnt_val : unsigned(tb_CNT_LEN-1 downto 0) := "0000";
+	signal tb_on_cnt_val     : unsigned(tb_CNT_LEN-1 downto 0) := "0000";
+	signal tb_pwm            : std_ulogic := '0';
 begin
 
 	pwm_dut : entity work.pwm(rtl)
 	generic map (
-		COUNTER_LEN => tb_COUNTER_LEN
+		CNT_LEN => tb_CNT_LEN
 	)
 	port map (
-		clk_i 				 => tb_clk,
-		rst_i 				 => tb_rst,
-		Period_counter_val_i => tb_Period_counter_val,
-		ON_counter_val_i 	 => tb_ON_counter_val,
-		PWM_pin_o 			 => tb_PWM_pin
+		clk_i            => tb_clk,
+		rst_i            => tb_rst,
+		period_cnt_val_i => tb_period_cnt_val,
+		on_cnt_val_i     => tb_on_cnt_val,
+		pwm_o            => tb_pwm
 	);
 
 	clk_proc : process -- 50 MHz
@@ -54,8 +54,8 @@ begin
 
 		-- Test case
 
-		tb_Period_counter_val <= "1111";
-		tb_ON_counter_val <= "0100";
+		tb_period_cnt_val <= "1111";
+		tb_on_cnt_val <= "0100";
 
 		wait for 2000 ns;
 

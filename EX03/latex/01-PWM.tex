@@ -1,8 +1,10 @@
 \subsection{Model Implementation}
 
-\begin{center}
-    \includegraphics[width=0.7\linewidth]{images/PWM-Arch.png}
-\end{center}
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=0.6\linewidth]{images/PWM-Arch.png}
+	\caption{PWM Architecture}
+\end{figure}
 
 The PWM generator uses a counter to count up to the specified period. When the
 counter value is less than the duty cycle, the output signal is high and
@@ -10,13 +12,13 @@ otherwise low. The counter resets when it reaches the period value. As the
 counter only consist of one register process as seen in EX02 and the PWM module
 only adds combinatorics to the output, no state-machine is needed.
 
-The \textit{Counter} is implemented as following process:
+The \textit{counter} is reused from EX02 and is instantiated:
 
 \lstinputlisting[
 	caption={Counter process},
 	label={lst:cnt},
 	firstline=21,
-	lastline=31
+	lastline=30,
 ]{../pwm_a.vhd}
 
 \newpage
@@ -26,8 +28,9 @@ The ``<''-Block is implemented as following process:
 \lstinputlisting[
 	caption={PWM Output process},
 	label={lst:pwm},
-	firstline=33,
-	lastline=40
+	firstline=32,
+	lastline=32,
+	numbers=none
 ]{../pwm_a.vhd}
 
 The ``=''-Block is implemented as following process:
@@ -35,11 +38,11 @@ The ``=''-Block is implemented as following process:
 \lstinputlisting[
 	caption={Counter Reset process},
 	label={lst:rst},
-	firstline=42,
-	lastline=49
+	firstline=33,
+	lastline=33,
+	numbers=none
 ]{../pwm_a.vhd}
 
-\newpage
 \subsection{Simulation}
 
 Waveforms of various period and duty cycle values are shown below.
