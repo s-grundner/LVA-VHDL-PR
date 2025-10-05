@@ -39,7 +39,7 @@
 %% 
 %% Document class: This is a koma-script article.
 %% 
-\documentclass[a4paper,oneside,11pt,ngerman,english]{scrartcl}
+\documentclass[a4paper,oneside,10pt,ngerman,english]{scrartcl}
 %% 
 %% The comma-separated list in square brackets are class options.
 %% Useful options that you might want to use:
@@ -144,22 +144,11 @@
 %% This is the place where you can load additional packages. If you want to load
 %% a package `biblatex', you would use the command `\usepackage{biblatex}'.
 %% 
-\usepackage{amsfonts, amsmath}
-\usepackage{subfigure}
-\usepackage{listings}
-\usepackage{caption}
 
-\captionsetup{
-    margin=10pt,
-    font=small,
-    labelfont=bf,
-    justification=raggedleft
-}
-\lstset{
-    language=vhdl
-}
-\captionsetup[lstlisting]{position=above}
-\newcommand{\vhdl}[1]{\lstinline!#1!}
+\usepackage{todonotes}
+\usepackage{import}
+\usepackage{amsfonts}
+\usepackage{subfigure}
 
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -171,16 +160,16 @@
 %% 
 
 %% Command \title{title}: sets the title of your report
-\title{04 - Delta ADC}
+\title{Space for your report title}
 
 %% Command \titleshort{short title}: sets an abbreviated version of the report title for page heads
 %\titleshort{Optional space for your abbreviated title}
 
 %% Command \subtitle{subtitle}: sets the subtitle for seminar/technical reports (not used for theses)
-\subtitle{Hardwaredesign PR - Exercise 04\\%
+\subtitle{Technical Report\\%
     \usekomafont{subtitlesmall}%
     \hfill\\%
-    Semester 2024W\\
+    Optional space for mentioning e.g.\ your research lab\\
     \hfill\\%
 }
 
@@ -190,7 +179,7 @@
 %%   information), use \authormail{}, \authorweb{}, \authorphone{} and \authorfax{} to add contact
 %%   information)
 \author{%
-    Simon Grundner
+    Firstname1 Lastname1 \and Firstname2 Lastname2 \and Firstname3 Lastname3
     \affiliation{Institute for Signal Processing}
     \authornewline
     \authormail{k12136610@students.jku.at}
@@ -202,10 +191,10 @@
 %\date{2020-04-09}
 
 %% Command \partnerlogo{filename}: use filename as partnerlogo, filename may be blank to disable the logo
-\partnerlogo{logos/isp}
+\partnerlogo{logos/iic.png}
 
 %% Command \revisionblock{text}: set the document revision block on the title page
-%\revisionblock{Space for your revision block, acknowledgements, etc.}
+% \revisionblock{Space for your revision block, acknowledgements, etc.}
 
 %% Command \reportnumber{number}: set the report number
 %\reportnumber{Space for your report number}
@@ -214,10 +203,10 @@
 \setbottommark{Simon Grundner, k12136610}
 
 %% Command \abstract{text}: set the document abstract on the title page
-%\abstract{Space for your (short) abstract.}
+% \abstract{Space for your (short) abstract.}
 
 %% Command \keywords{text}: set the document keywords
-\keywords{Delta ADC, PWM, Strobe Signals}
+\keywords{Servo Driver, Programming the FPGA Dev-Board, LED Blink Project, VHDL Packages}
 
 
 %% Finally, print the title page using the above information:
@@ -233,11 +222,6 @@
 %% Print the table of contents
 \tableofcontents
 
-%% Make sure to start the list of acronyms on a new odd page (odd is only relevant in twoside layout)
-%\cleardoubleoddpage
-%% Include list of acronyms (optional and often not necessary)
-%\import{./}{acronyms}
-
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -246,13 +230,12 @@
 %% Add your report sections ...
 %% 
 
-\section{Delta ADC}\label{section:adc}
+\lstset{
+    language=vhdl
+}
 
-\input{tasks/task1}
-\input{1_ADC}
-\input{2_STRB}
-\input{3_PWM}
-\input{4_CNT}
+\input{1_Servo.tex}
+\input{2_Blink.tex}
 
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

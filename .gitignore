@@ -1,6 +1,3 @@
-EX*/**/quartus_project/*
-EX*/**/quartus project/*
-
 EX*/**/modelsim.ini
 EX*/**/ModelSim.lnk
 EX*/**/transcript
@@ -13,3 +10,4 @@ EX*/**/work
 *.qws
 db
 incremental_db
+output_files

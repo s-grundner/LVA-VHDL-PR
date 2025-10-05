@@ -2,8 +2,9 @@
 -- file: pwm_ea.vhd
 -- type: Entity / Architecture
 -- author: Simon Grundner (k12136610)
--- brief: PWM module declaration
+-- brief: PWM Module
 --------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
@@ -18,8 +19,8 @@ entity pwm is
         clk_i            : in std_ulogic;
         rst_i            : in std_ulogic;
         period_cnt_val_i : in unsigned(CNT_LEN-1 downto 0);
-        on_cnt_val_i 	 : in unsigned(CNT_LEN-1 downto 0);
-        pwm_o 			 : out std_ulogic
+        on_cnt_val_i     : in unsigned(CNT_LEN-1 downto 0);
+        pwm_o            : out std_ulogic
     );
 end entity pwm;
 
@@ -31,6 +32,7 @@ architecture rtl of pwm is
     signal sync_rst : std_ulogic;
 
 begin
+    
     cnt_ent : entity work.counter(rtl)
         generic map (
             CNT_LEN => CNT_LEN

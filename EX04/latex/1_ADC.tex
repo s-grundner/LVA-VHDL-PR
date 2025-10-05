@@ -1,80 +1,70 @@
-\section{Delta ADC}
+\subsection{ADC Module Implementation}
 
 \begin{center}
     \includegraphics[width=1\linewidth]{images/1_ADC.png}
 \end{center}
 
-\textbf{Entity}\hrulefill
-
-% \input{code/adc_e}
-
-\textbf{Architecture}\hrulefill
-
-Die ADC-Architektur verwendet die im Weiteren beschriebenen Entities PWM und
-Sampling-Strobe-Generator. Ansonsten wird er ADC durch drei weitere Prozesse
-beschrieben.
-
 \newpage
+\textbf{Entity}
 
-Signale
+\lstinputlisting[firstline=14,lastline=27]{../delta_adc_e.vhd}
 
-\begin{lstlisting}
-constant MAX_COUNTER_VAL : unsigned(BITWIDTH-1 downto 0) := (others => '1');
-signal ON_counter_val : unsigned(BITWIDTH-1 downto 0) := (others => '0');
-signal sampling_strobe : std_ulogic := '0';
-signal prev_comp : std_logic := '0';
-\end{lstlisting} 
+\textbf{Architecture}
 
-(1) \lstinline{reg_seq : process (clk_i, rst_i)} 
+The ADC uses a PWM Module and a Sampling-Strobe-Generator. Other than that it
+is described by three processes.
+
+\textbf{Signals}
+
+\lstinputlisting[firstline=16,lastline=19,gobble=auto]{../delta_adc_a.vhd}
+
+(1) \lstinline{adc_reg : process (clk_i, rst_i)} 
 
 \begin{quote}
-    Der sequenzielle Prozess bestimmt das Clock- und Reset-Verhalten. Bei der
-    steigenden Flanke wird dem ADC-Ausgang der nächste, kombinatorisch
-    bestimmte ADC-Zustand zugewiesen, welcher gleichzeitig der Duty-Cycle
-    Counter-Wert \lstinline{ON_counter_val} des PWM-Generators ist. Beim Reset
-    wird der ADC-Ausgang auf \lstinline{'0'} gesetzt. 
+    The register process determines the clock and reset behavior. On the rising
+    edge the next combinatorially determined ADC state is assigned to the ADC
+    output, which is the duty cycle counter value \lstinline{ON_counter_val} of
+    the PWM generator. On reset, the ADC output is set to \lstinline{'0'}.
 \end{quote}
 
 (2) \lstinline{adc_comb : process (sampling_strobe, Comparator_i)}
 
 \begin{quote}
-    Hier wird die kombinatorik beschrieben, welche zur Bestimmung des
-    ADC-Wertes notwendig ist. Unter Vorraussetzung, dass die
-    \lstinline{sampling_strobe} auf \lstinline{'1'} ist, gilt folgendes: Falls
-    der vom Komparator gelieferte Eingangswert \lstinline{Comparator_i} auf
-    \lstinline{'1'} ist, wird der Arbeitszyklus um 1 inkrementiert, sonst
-    dekrementiert. Außerdem wird mit jeder \lstinline{sampling_strobe} der
-    momentane Komparator-Zustand gespeichert, welches für die Validierung des
-    ADC-Wertes Relevant ist. 
+    The combinatorial logic necessary for determining the ADC value is described
+    here. Assuming that the \lstinline{sampling_strobe} is \lstinline{'1'}, the
+    following applies: If the input value \lstinline{Comparator_i} delivered by
+    the comparator is \lstinline{'1'}, the duty cycle is incremented by 1, otherwise
+    it is decremented. Additionally, with each \lstinline{sampling_strobe}, the
+    current comparator state is stored, which is relevant for the validation of the
+    ADC value.
 \end{quote}
 
 (3) \lstinline{validate_comb : process (Comparator_i, prev_comp)}
 
 \begin{quote}
-    Der ADC verfügt über einen \lstinline{ADC_valid_strb_o} Ausgang, welcher
-    signalisiert ob der tatsächliche ADC Wert am Ausgang anliegt, also der
-    Einschwingvorgang beendet ist. In dieser Implementierung liegt dieser
-    Zustand, vor falls sich der Komparator-Wert umkehrt. Ist also der
-    Komparator-Wert schon seit einigen Sampling-Perioden auf \lstinline{'1'}
-    und wird plötzlich \lstinline{'0'} (und umgekehrt), so hat der
-    PWM-Mittelwert in der letzten Sampling-Periode den Analogen Wert erreicht
-    und am ADC-Ausgang liegt näherungsweise der richtige Wert vor. 
+    The ADC has an \lstinline{ADC_valid_strb_o} output, which indicates whether
+    the actual ADC value is present at the output, meaning the settling process
+    is complete. In this implementation, this state occurs if the comparator
+    value reverses. If the comparator value has been \lstinline{'1'} for several
+    sampling periods and suddenly becomes \lstinline{'0'} (and vice versa), then the
+    PWM average value in the last sampling period has reached the analog value,
+    and the correct value is approximately present at the ADC output. 
 \end{quote}
-
+    
 \subsection*{Simulation}
 
-\textbf{ADC-Test} \hrulefill
+\textbf{ADC-Test}
 
-Hier wird der Komparator-Input Emuliert, indem er im Stimulus Prozess nach
-einer gewissen Zeit auf 1 gesetzt wird. Während dieset Zeit ist zusehen, wie
-der Duty-Cycle des PWm Signals zunimmt und wie erwartet mit dem Umschalten des
-Komparator Eingangs wieder Abnimmt. In der Sampling Periode kurz nach dem
-Umschalten ist auch zu erkennen wie die ADC-Valid-Strobe high wird.
+Here, the comparator input is emulated by setting it to 1 in the stimulus process after
+a certain time. During this time, you can see how the duty cycle of the PWM signal
+increases and, as expected, decreases again with the switching of the comparator input.
+In the sampling period shortly after the switch, it can also be seen how the ADC valid
+strobe goes high. 
 
 \begin{center}
     \includegraphics[width=1\linewidth]{images/SIM_ADC1.png}
 \end{center}
 
-Hier wäre der ADC-Wert 1101.
+In this waveform, the ADC value would be 1101.
 
 \newpage

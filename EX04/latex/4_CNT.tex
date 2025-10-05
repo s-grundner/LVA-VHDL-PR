@@ -1,42 +1,5 @@
-\section{Counter}
+\subsection{Counter Module Implementation}
 
-\begin{center}
-    \includegraphics[width=0.75\linewidth]{images/4_CNT.png}
-\end{center}
-
-\textbf{Entity}\hrulefill
-
-%\input{code/cnt_e}
-
-\textbf{Architecture}\hrulefill
-
-Signale
-
-\begin{lstlisting}
-signal curr_cnt : unsigned(COUNTER_LEN-1 downto 0) := (others => '0');
-signal next_cnt : unsigned(COUNTER_LEN-1 downto 0);
-\end{lstlisting}
-
-\newpage
-
-(1) \lstinline{reg_seq : process (clk_i, rst_i)} 
-
-\begin{quote}
-    Der sequenzielle Prozess bestimmt das Clock- und Reset-Verhalten. Bei der
-    steigenden Flanke wird der momentanen Counter-Wert \lstinline{curr_cnt} dem
-    nächsten, kombinatorisch ermittelten Counter-Wert \lstinline{next_cnt}
-    zugewiesen. Beim Reset wird der Counter-Ausgang auf \lstinline{0} gesetzt. 
-\end{quote}
-
-(2) \lstinline{cnt_comb : process (curr_cnt, counter_rst_strobe_i)}
-
-\begin{quote}
-    Hier erfolgt die kombinatorische Inkrementierung des Counters.
-    \lstinline{next_cnt} hat den Zustand \lstinline{curr_cnt + 1}, falls
-    \lstinline{counter_rst_strobe_i} gerade nicht \lstinline{'1'} ist. In
-    diesem Falle wird \lstinline{next_cnt} synchron auf \lstinline{0} gesetzt.
-\end{quote}
-
-Die Simulation für den Counter ist in Vorherigen Übungen bereits mehrmals durchgeführt worden.
+The counter is implemented as in the previous exercise 2.
 
 \newpage
