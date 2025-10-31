@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSXFC6D6F31) Path("C:/Users/simon/source/vhdl_projects/ex_11/quartus/") File("PINOUT.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSXFC6D6F31) Path("D:/repos-jku/VHDL-PR/ex_11/quartus/") File("PINOUT.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

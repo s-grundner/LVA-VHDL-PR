@@ -63,7 +63,7 @@ begin
         rst_i => NKEY(0),
 
         sw_filter_en_async_i => SW(0),
-        sw_dgb_en_async_i    => SW(1),
+        sw_dbg_en_async_i    => SW(1),
         sw_dbg_axis_async_i  => SW(2),
         sw_mode_async_i      => SW(3),
         sw_z_axis_async_i    => SW(4),

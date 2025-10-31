@@ -15,7 +15,7 @@ entity tl is
         rst_i : in std_ulogic;
 
         sw_filter_en_async_i : in std_ulogic;
-        sw_dgb_en_async_i    : in std_ulogic;
+        sw_dbg_en_async_i    : in std_ulogic;
         sw_dbg_axis_async_i  : in std_ulogic;
         sw_z_axis_async_i    : in std_ulogic;
         btn_draw_k_async_i   : in std_ulogic;
@@ -55,10 +55,10 @@ architecture rtl of tl is
     signal z_axis_sync    : std_ulogic := '0';
 	signal draw_k_sync    : std_ulogic := '0';
 
-    signal dbg_val : unsigned(ADC_RESOLUTION-1 downto 0) := (others => '0');
+    signal dbg_val        : unsigned(ADC_RESOLUTION-1 downto 0) := (others => '0');
     signal dbg_valid_strb : std_ulogic := '0';
 
-	signal x_angle, y_angle, z_angle : unsigned(SERVO_RESOLUTION-1 downto 0) := (others => '0');
+	signal x_angle, y_angle, z_angle                : unsigned(SERVO_RESOLUTION-1 downto 0) := (others => '0');
     signal x_tilt_angle, y_tilt_angle, z_tilt_angle : unsigned(SERVO_RESOLUTION-1 downto 0) := (others => '0');
     signal x_cmd_angle, y_cmd_angle, z_cmd_angle    : unsigned(SERVO_RESOLUTION-1 downto 0) := (others => '0');
     signal processing, start_strb, next_start_strb  : std_ulogic := '0';
@@ -185,7 +185,7 @@ begin
         port map (
             clk_i => clk_i,
             rst_i => rst_i,
-            btn_i => sw_dgb_en_async_i,
+            btn_i => sw_dbg_en_async_i,
             btn_o => dbg_en_sync
         );
 
