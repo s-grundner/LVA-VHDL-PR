@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PINOUT
-Tue Feb 25 10:07:02 2025
+Thu Oct 23 08:57:27 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -108,7 +108,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Feb 25 10:07:02 2025       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct 23 08:57:27 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; PINOUT                                      ;
 ; Top-level Entity Name           ; PINOUT                                      ;
@@ -280,14 +280,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 383            ;
+; Estimate of Logic utilization (ALMs needed) ; 387            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 661            ;
+; Combinational ALUT usage for logic          ; 663            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 85             ;
-;     -- 5 input functions                    ; 90             ;
-;     -- 4 input functions                    ; 67             ;
-;     -- <=3 input functions                  ; 419            ;
+;     -- 6 input functions                    ; 91             ;
+;     -- 5 input functions                    ; 60             ;
+;     -- 4 input functions                    ; 65             ;
+;     -- <=3 input functions                  ; 447            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 458            ;
 ;                                             ;                ;
@@ -299,8 +299,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 474            ;
-; Total fan-out                               ; 4204           ;
-; Average fan-out                             ; 3.35           ;
+; Total fan-out                               ; 4190           ;
+; Average fan-out                             ; 3.33           ;
 +---------------------------------------------+----------------+
 
 
@@ -309,8 +309,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                           ; Entity Name           ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |PINOUT                                         ; 661 (0)             ; 458 (0)                   ; 128               ; 2          ; 59   ; 0            ; |PINOUT                                                                                                                                                       ; PINOUT                ; work         ;
-;    |tl:tl_ent|                                  ; 661 (36)            ; 458 (0)                   ; 128               ; 2          ; 0    ; 0            ; |PINOUT|tl:tl_ent                                                                                                                                             ; tl                    ; work         ;
+; |PINOUT                                         ; 663 (0)             ; 458 (0)                   ; 128               ; 2          ; 59   ; 0            ; |PINOUT                                                                                                                                                       ; PINOUT                ; work         ;
+;    |tl:tl_ent|                                  ; 663 (36)            ; 458 (0)                   ; 128               ; 2          ; 0    ; 0            ; |PINOUT|tl:tl_ent                                                                                                                                             ; tl                    ; work         ;
 ;       |btn2strb:btn2strb|                       ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|btn2strb:btn2strb                                                                                                                           ; btn2strb              ; work         ;
 ;       |btn_ctrl:btn_ctrl_ent|                   ; 89 (30)             ; 67 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|btn_ctrl:btn_ctrl_ent                                                                                                                       ; btn_ctrl              ; work         ;
 ;          |clean_btn:dec_clean_ent|              ; 20 (0)              ; 19 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:dec_clean_ent                                                                                               ; clean_btn             ; work         ;
@@ -361,10 +361,10 @@ https://fpgasoftware.intel.com/eula.
 ;             |counter:cnt_ent|                   ; 20 (20)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|cmd_proc:cmd_proc_ent|strb_generator:micro_step_strb_ent|counter:cnt_ent                                                                    ; counter               ; work         ;
 ;          |strb_generator:step_strb_ent|         ; 30 (6)              ; 25 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|cmd_proc:cmd_proc_ent|strb_generator:step_strb_ent                                                                                          ; strb_generator        ; work         ;
 ;             |counter:cnt_ent|                   ; 24 (24)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|cmd_proc:cmd_proc_ent|strb_generator:step_strb_ent|counter:cnt_ent                                                                          ; counter               ; work         ;
-;       |servo:servo_x_ent|                       ; 46 (2)              ; 40 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_x_ent                                                                                                                           ; servo                 ; work         ;
+;       |servo:servo_x_ent|                       ; 47 (3)              ; 40 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_x_ent                                                                                                                           ; servo                 ; work         ;
 ;          |pwm:pwm_ent|                          ; 44 (24)             ; 20 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_x_ent|pwm:pwm_ent                                                                                                               ; pwm                   ; work         ;
 ;             |counter:cnt_ent|                   ; 20 (20)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_x_ent|pwm:pwm_ent|counter:cnt_ent                                                                                               ; counter               ; work         ;
-;       |servo:servo_y_ent|                       ; 22 (2)              ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_y_ent                                                                                                                           ; servo                 ; work         ;
+;       |servo:servo_y_ent|                       ; 23 (3)              ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_y_ent                                                                                                                           ; servo                 ; work         ;
 ;          |pwm:pwm_ent|                          ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_y_ent|pwm:pwm_ent                                                                                                               ; pwm                   ; work         ;
 ;       |servo:servo_z_ent|                       ; 11 (2)              ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_z_ent                                                                                                                           ; servo                 ; work         ;
 ;          |pwm:pwm_ent|                          ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_z_ent|pwm:pwm_ent                                                                                                               ; pwm                   ; work         ;
@@ -547,7 +547,7 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 458   ;
-; Number of registers using Synchronous Clear  ; 206   ;
+; Number of registers using Synchronous Clear  ; 232   ;
 ; Number of registers using Synchronous Load   ; 33    ;
 ; Number of registers using Asynchronous Clear ; 422   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -561,14 +561,14 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                         ; Fan out ;
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; tl:tl_ent|servo:servo_x_ent|on_cnt_val[6]                                                                                                                 ; 2       ;
 ; tl:tl_ent|servo:servo_x_ent|on_cnt_val[11]                                                                                                                ; 2       ;
 ; tl:tl_ent|servo:servo_x_ent|on_cnt_val[10]                                                                                                                ; 2       ;
+; tl:tl_ent|servo:servo_x_ent|on_cnt_val[6]                                                                                                                 ; 2       ;
 ; tl:tl_ent|servo:servo_x_ent|on_cnt_val[12]                                                                                                                ; 2       ;
 ; tl:tl_ent|servo:servo_x_ent|on_cnt_val[15]                                                                                                                ; 2       ;
-; tl:tl_ent|servo:servo_y_ent|on_cnt_val[6]                                                                                                                 ; 2       ;
 ; tl:tl_ent|servo:servo_y_ent|on_cnt_val[11]                                                                                                                ; 2       ;
 ; tl:tl_ent|servo:servo_y_ent|on_cnt_val[10]                                                                                                                ; 2       ;
+; tl:tl_ent|servo:servo_y_ent|on_cnt_val[6]                                                                                                                 ; 2       ;
 ; tl:tl_ent|servo:servo_y_ent|on_cnt_val[12]                                                                                                                ; 2       ;
 ; tl:tl_ent|servo:servo_y_ent|on_cnt_val[15]                                                                                                                ; 2       ;
 ; tl:tl_ent|servo:servo_z_ent|on_cnt_val[12]                                                                                                                ; 5       ;
@@ -600,8 +600,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|servo:servo_x_ent|on_cnt_val[14]                 ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|servo:servo_y_ent|on_cnt_val[14]                 ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |PINOUT|tl:tl_ent|servo:servo_x_ent|on_cnt_val[14]                 ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |PINOUT|tl:tl_ent|servo:servo_y_ent|on_cnt_val[14]                 ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|on_cnt_val[2] ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|delta_adc:adc_ent|on_cnt_val[7] ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[1]           ;
@@ -1224,24 +1224,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR               ; 65                          ;
 ;     CLR SCLR          ; 202                         ;
 ;     ENA               ; 6                           ;
-;     ENA CLR           ; 118                         ;
-;     ENA CLR SCLR      ; 4                           ;
+;     ENA CLR           ; 92                          ;
+;     ENA CLR SCLR      ; 30                          ;
 ;     ENA CLR SLD       ; 33                          ;
 ;     plain             ; 30                          ;
-; arriav_lcell_comb     ; 672                         ;
+; arriav_lcell_comb     ; 674                         ;
 ;     arith             ; 340                         ;
 ;         0 data inputs ; 3                           ;
 ;         1 data inputs ; 266                         ;
 ;         2 data inputs ; 68                          ;
 ;         3 data inputs ; 3                           ;
-;     normal            ; 308                         ;
+;     normal            ; 310                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 25                          ;
-;         2 data inputs ; 23                          ;
-;         3 data inputs ; 17                          ;
-;         4 data inputs ; 67                          ;
-;         5 data inputs ; 90                          ;
-;         6 data inputs ; 85                          ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 43                          ;
+;         4 data inputs ; 65                          ;
+;         5 data inputs ; 60                          ;
+;         6 data inputs ; 91                          ;
 ;     shared            ; 24                          ;
 ;         0 data inputs ; 2                           ;
 ;         3 data inputs ; 22                          ;
@@ -1259,7 +1259,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -1269,7 +1269,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Feb 25 10:06:05 2025
+    Info: Processing started: Thu Oct 23 08:56:56 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PINOUT -c PINOUT
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file pinout.vhd
@@ -1390,21 +1390,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cntr
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_i1h.tdf
     Info (12023): Found entity 1: cntr_i1h File: C:/Users/simon/source/vhdl_projects/ex_11/quartus/db/cntr_i1h.tdf Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/simon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd Line: 25
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/simon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd Line: 28
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/simon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd Line: 25
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/simon/source/vhdl_projects/ex_11/quartus/PINOUT.vhd Line: 28
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 785 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 787 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 47 output pins
-    Info (21061): Implemented 708 logic cells
+    Info (21061): Implemented 710 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4926 megabytes
-    Info: Processing ended: Tue Feb 25 10:07:02 2025
-    Info: Elapsed time: 00:00:57
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Peak virtual memory: 4909 megabytes
+    Info: Processing ended: Thu Oct 23 08:57:27 2025
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:44
 
 

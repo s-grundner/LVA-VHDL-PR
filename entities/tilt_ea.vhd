@@ -31,9 +31,9 @@ begin
     begin
         ltd_angle <= resize(ADC_TO_SERVO_FACTOR * adc_i + ADC_TO_SERVO_OFS, SERVO_RESOLUTION);
         if(adc_i < ADC_MIN_ANGLE) then
-            ltd_angle <= SERVO_MIN_ANGLE;
-        elsif(adc_i > ADC_MAX_ANGLE) then
             ltd_angle <= SERVO_MAX_ANGLE;
+        elsif(adc_i > ADC_MAX_ANGLE) then
+            ltd_angle <= SERVO_MIN_ANGLE;
         end if;
     end process limit_tilt;
 
