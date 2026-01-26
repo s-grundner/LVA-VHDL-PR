@@ -55,9 +55,12 @@ begin
         if dbg_en_i = '1' and dbg_valid_strb_i = '1' then
             next_on_cnt_val <= dbg_val_i;
         elsif dbg_en_i = '0' and sampling_strb = '1' then
-            next_on_cnt_val <= on_cnt_val - 1;
-            if comp_i = '1' then
-                next_on_cnt_val <= on_cnt_val + 1;
+            if on_cnt_val > ADC_MAX_VAL or on_cnt_val < ADC_MIN_VAL then
+                if comp_i = '1' then
+                    next_on_cnt_val <= on_cnt_val + 1;
+                else
+                    next_on_cnt_val <= on_cnt_val - 1;
+                end if;
             end if;
         end if;
     end process adc_comb;
