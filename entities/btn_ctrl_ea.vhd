@@ -71,7 +71,7 @@ begin
                 dbg_valid_strb_o <= '1';
                 if btn_inc = '1' then
                     if curr_register > REG_MAX_VAL - step_size then
-                        next_register <= REG_MAX_VAL - 1;
+                        next_register <= REG_MAX_VAL;
                     else
                         next_register <= curr_register + step_size;
                     end if;
