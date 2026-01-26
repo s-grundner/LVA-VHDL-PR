@@ -1,20 +1,19 @@
 vlib work
 vmap work work
 
-vcom -work work ../packages/std_definitions.vhd
-vcom -work work ../packages/servo_pkg.vhd
+vcom -work work ../../packages/std_definitions.vhd
 
-vcom -work work ../bcd_to_7seg_ea.vhd
-vcom -work work ../bin2bcd_ea.vhd
+vcom -work work ../../entities/bcd_to_7seg_ea.vhd
+vcom -work work ../../entities/bin2bcd_ea.vhd
 
-vcom -work work ../counter_ea.vhd
-vcom -work work ../pwm_ea.vhd
-vcom -work work ../strb_generator_ea.vhd
-vcom -work work ../delta_adc_ea.vhd
-vcom -work work ../sample_hold_ea.vhd
-vcom -work work ../servo_ea.vhd
-vcom -work work ../sync_ea.vhd
-vcom -work work ../tilt_ea.vhd
+vcom -work work ../../entities/counter_ea.vhd
+vcom -work work ../../entities/pwm_ea.vhd
+vcom -work work ../../entities/strb_generator_ea.vhd
+vcom -work work ../../entities/delta_adc_ea.vhd
+vcom -work work ../../entities/sample_hold_ea.vhd
+vcom -work work ../../entities/servo_ea.vhd
+vcom -work work ../../entities/sync_ea.vhd
+vcom -work work ../../entities/tilt_ea.vhd
 vcom -work work ../top_level_ea.vhd
 
 vcom -work work ../test/top_level_tb.vhd

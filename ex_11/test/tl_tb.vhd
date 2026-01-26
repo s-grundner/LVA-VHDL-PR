@@ -64,19 +64,13 @@ begin
 	stimulus_proc : process is
 	begin
 		btn_rst <= '1';
-		wait for CLK_HALF_TB;
+		wait for 20*CLK_HALF_TB;
 		btn_rst <= '0';
-		wait for CLK_HALF_TB;
+		wait for 20*CLK_HALF_TB;
 
-		sw_dbg_en <= '1';
-
-		wait for 1 ms;
-		
-		btn_draw_k <= '1';
-		wait for 10*CLK_HALF_TB;
-		btn_draw_k <= '0';
-
-		wait for 2000 ms;
+		x_comp <= '1';
+		sw_dbg_en <= '0';
+		wait for 5000 ms;
 
 	end process;
 

@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu Oct 23 08:59:04 2025
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Fitter Status : Successful - Mon Jan 26 14:55:46 2026
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 Revision Name : PINOUT
 Top-level Entity Name : PINOUT
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 385 / 41,910 ( < 1 % )
-Total registers : 531
+Logic utilization (in ALMs) : 381 / 41,910 ( < 1 % )
+Total registers : 530
 Total pins : 59 / 499 ( 12 % )
 Total virtual pins : 0
 Total block memory bits : 128 / 5,662,720 ( < 1 % )
