@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PINOUT
-Mon Jan 26 14:53:25 2026
+Wed Mar  4 11:59:08 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -108,7 +108,7 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jan 26 14:53:25 2026           ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar  4 11:59:08 2026           ;
 ; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; PINOUT                                          ;
 ; Top-level Entity Name           ; PINOUT                                          ;
@@ -240,38 +240,38 @@ on the Quartus Prime software download page.
 +--------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path     ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ; Library ;
 +--------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
-; PINOUT.vhd                           ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/ex_11/quartus/PINOUT.vhd                  ;         ;
-; ../../packages/std_definitions.vhd   ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/packages/std_definitions.vhd              ;         ;
-; ../../packages/Commands_p.vhd        ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/packages/Commands_p.vhd                   ;         ;
-; ../../entities/tilt_ea.vhd           ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/tilt_ea.vhd                      ;         ;
-; ../../entities/tilt_axis_ea.vhd      ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/tilt_axis_ea.vhd                 ;         ;
-; ../../entities/sync_ea.vhd           ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/sync_ea.vhd                      ;         ;
-; ../../entities/strb_generator_ea.vhd ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/strb_generator_ea.vhd            ;         ;
-; ../../entities/servo_ea.vhd          ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/servo_ea.vhd                     ;         ;
-; ../../entities/sample_hold_ea.vhd    ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/sample_hold_ea.vhd               ;         ;
-; ../../entities/pwm_ea.vhd            ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/pwm_ea.vhd                       ;         ;
-; ../../entities/moving_average_ea.vhd ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/moving_average_ea.vhd            ;         ;
-; ../../entities/delta_adc_ea.vhd      ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/delta_adc_ea.vhd                 ;         ;
-; ../../entities/debouncer_ea.vhd      ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/debouncer_ea.vhd                 ;         ;
-; ../../entities/counter_ea.vhd        ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/counter_ea.vhd                   ;         ;
-; ../../entities/cmd_rom_ea.vhd        ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/cmd_rom_ea.vhd                   ;         ;
-; ../../entities/cmd_proc_ea.vhd       ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/cmd_proc_ea.vhd                  ;         ;
-; ../../entities/clean_btn_ea.vhd      ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/clean_btn_ea.vhd                 ;         ;
-; ../../entities/btn2strb.vhd          ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/btn2strb.vhd                     ;         ;
-; ../../entities/btn_ctrl_ea.vhd       ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/btn_ctrl_ea.vhd                  ;         ;
-; ../../entities/bin2bcd_ea.vhd        ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/bin2bcd_ea.vhd                   ;         ;
-; ../../entities/bcd_to_7seg_ea.vhd    ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/bcd_to_7seg_ea.vhd               ;         ;
-; ../../entities/accu_reg_ea.vhd       ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/entities/accu_reg_ea.vhd                  ;         ;
-; ../tl_ea.vhd                         ; yes             ; User VHDL File               ; /home/simon/Uni/LVA-VHDL-PR/ex_11/tl_ea.vhd                           ;         ;
+; PINOUT.vhd                           ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/ex_11/quartus/PINOUT.vhd                      ;         ;
+; ../../packages/std_definitions.vhd   ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/packages/std_definitions.vhd                  ;         ;
+; ../../packages/Commands_p.vhd        ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/packages/Commands_p.vhd                       ;         ;
+; ../../entities/tilt_ea.vhd           ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/tilt_ea.vhd                          ;         ;
+; ../../entities/tilt_axis_ea.vhd      ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/tilt_axis_ea.vhd                     ;         ;
+; ../../entities/sync_ea.vhd           ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/sync_ea.vhd                          ;         ;
+; ../../entities/strb_generator_ea.vhd ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/strb_generator_ea.vhd                ;         ;
+; ../../entities/servo_ea.vhd          ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/servo_ea.vhd                         ;         ;
+; ../../entities/sample_hold_ea.vhd    ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/sample_hold_ea.vhd                   ;         ;
+; ../../entities/pwm_ea.vhd            ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/pwm_ea.vhd                           ;         ;
+; ../../entities/moving_average_ea.vhd ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/moving_average_ea.vhd                ;         ;
+; ../../entities/delta_adc_ea.vhd      ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/delta_adc_ea.vhd                     ;         ;
+; ../../entities/debouncer_ea.vhd      ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/debouncer_ea.vhd                     ;         ;
+; ../../entities/counter_ea.vhd        ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/counter_ea.vhd                       ;         ;
+; ../../entities/cmd_rom_ea.vhd        ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/cmd_rom_ea.vhd                       ;         ;
+; ../../entities/cmd_proc_ea.vhd       ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/cmd_proc_ea.vhd                      ;         ;
+; ../../entities/clean_btn_ea.vhd      ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/clean_btn_ea.vhd                     ;         ;
+; ../../entities/btn2strb.vhd          ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/btn2strb.vhd                         ;         ;
+; ../../entities/btn_ctrl_ea.vhd       ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/btn_ctrl_ea.vhd                      ;         ;
+; ../../entities/bin2bcd_ea.vhd        ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/bin2bcd_ea.vhd                       ;         ;
+; ../../entities/bcd_to_7seg_ea.vhd    ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/bcd_to_7seg_ea.vhd                   ;         ;
+; ../../entities/accu_reg_ea.vhd       ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/entities/accu_reg_ea.vhd                      ;         ;
+; ../tl_ea.vhd                         ; yes             ; User VHDL File               ; /home/simon/Uni/VHDL-PR/ex_11/tl_ea.vhd                               ;         ;
 ; altshift_taps.tdf                    ; yes             ; Megafunction                 ; /opt/intelFPGA/25.1/quartus/libraries/megafunctions/altshift_taps.tdf ;         ;
 ; altdpram.inc                         ; yes             ; Megafunction                 ; /opt/intelFPGA/25.1/quartus/libraries/megafunctions/altdpram.inc      ;         ;
 ; lpm_counter.inc                      ; yes             ; Megafunction                 ; /opt/intelFPGA/25.1/quartus/libraries/megafunctions/lpm_counter.inc   ;         ;
 ; lpm_compare.inc                      ; yes             ; Megafunction                 ; /opt/intelFPGA/25.1/quartus/libraries/megafunctions/lpm_compare.inc   ;         ;
 ; lpm_constant.inc                     ; yes             ; Megafunction                 ; /opt/intelFPGA/25.1/quartus/libraries/megafunctions/lpm_constant.inc  ;         ;
-; db/shift_taps_huv.tdf                ; yes             ; Auto-Generated Megafunction  ; /home/simon/Uni/LVA-VHDL-PR/ex_11/quartus/db/shift_taps_huv.tdf       ;         ;
-; db/altsyncram_tfc1.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/simon/Uni/LVA-VHDL-PR/ex_11/quartus/db/altsyncram_tfc1.tdf      ;         ;
-; db/cntr_uhf.tdf                      ; yes             ; Auto-Generated Megafunction  ; /home/simon/Uni/LVA-VHDL-PR/ex_11/quartus/db/cntr_uhf.tdf             ;         ;
-; db/cntr_i1h.tdf                      ; yes             ; Auto-Generated Megafunction  ; /home/simon/Uni/LVA-VHDL-PR/ex_11/quartus/db/cntr_i1h.tdf             ;         ;
+; db/shift_taps_huv.tdf                ; yes             ; Auto-Generated Megafunction  ; /home/simon/Uni/VHDL-PR/ex_11/quartus/db/shift_taps_huv.tdf           ;         ;
+; db/altsyncram_tfc1.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/simon/Uni/VHDL-PR/ex_11/quartus/db/altsyncram_tfc1.tdf          ;         ;
+; db/cntr_uhf.tdf                      ; yes             ; Auto-Generated Megafunction  ; /home/simon/Uni/VHDL-PR/ex_11/quartus/db/cntr_uhf.tdf                 ;         ;
+; db/cntr_i1h.tdf                      ; yes             ; Auto-Generated Megafunction  ; /home/simon/Uni/VHDL-PR/ex_11/quartus/db/cntr_i1h.tdf                 ;         ;
 +--------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
 
 
@@ -280,14 +280,14 @@ on the Quartus Prime software download page.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 383            ;
+; Estimate of Logic utilization (ALMs needed) ; 419            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 661            ;
+; Combinational ALUT usage for logic          ; 721            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 85             ;
-;     -- 5 input functions                    ; 90             ;
-;     -- 4 input functions                    ; 67             ;
-;     -- <=3 input functions                  ; 419            ;
+;     -- 6 input functions                    ; 97             ;
+;     -- 5 input functions                    ; 110            ;
+;     -- 4 input functions                    ; 69             ;
+;     -- <=3 input functions                  ; 445            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 458            ;
 ;                                             ;                ;
@@ -299,8 +299,8 @@ on the Quartus Prime software download page.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 474            ;
-; Total fan-out                               ; 4204           ;
-; Average fan-out                             ; 3.35           ;
+; Total fan-out                               ; 4426           ;
+; Average fan-out                             ; 3.37           ;
 +---------------------------------------------+----------------+
 
 
@@ -309,10 +309,10 @@ on the Quartus Prime software download page.
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                           ; Entity Name           ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |PINOUT                                         ; 661 (0)             ; 458 (0)                   ; 128               ; 2          ; 59   ; 0            ; |PINOUT                                                                                                                                                       ; PINOUT                ; work         ;
-;    |tl:tl_ent|                                  ; 661 (36)            ; 458 (0)                   ; 128               ; 2          ; 0    ; 0            ; |PINOUT|tl:tl_ent                                                                                                                                             ; tl                    ; work         ;
+; |PINOUT                                         ; 721 (0)             ; 458 (0)                   ; 128               ; 2          ; 59   ; 0            ; |PINOUT                                                                                                                                                       ; PINOUT                ; work         ;
+;    |tl:tl_ent|                                  ; 721 (36)            ; 458 (0)                   ; 128               ; 2          ; 0    ; 0            ; |PINOUT|tl:tl_ent                                                                                                                                             ; tl                    ; work         ;
 ;       |btn2strb:btn2strb|                       ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|btn2strb:btn2strb                                                                                                                           ; btn2strb              ; work         ;
-;       |btn_ctrl:btn_ctrl_ent|                   ; 89 (30)             ; 67 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|btn_ctrl:btn_ctrl_ent                                                                                                                       ; btn_ctrl              ; work         ;
+;       |btn_ctrl:btn_ctrl_ent|                   ; 83 (24)             ; 67 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|btn_ctrl:btn_ctrl_ent                                                                                                                       ; btn_ctrl              ; work         ;
 ;          |clean_btn:dec_clean_ent|              ; 20 (0)              ; 19 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:dec_clean_ent                                                                                               ; clean_btn             ; work         ;
 ;             |debouncer:debouncer_ent|           ; 19 (2)              ; 16 (2)                    ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:dec_clean_ent|debouncer:debouncer_ent                                                                       ; debouncer             ; work         ;
 ;                |strb_generator:strb_ent|        ; 17 (4)              ; 14 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:dec_clean_ent|debouncer:debouncer_ent|strb_generator:strb_ent                                               ; strb_generator        ; work         ;
@@ -353,7 +353,7 @@ on the Quartus Prime software download page.
 ;             |strb_generator:strb_ent|           ; 17 (4)              ; 14 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|clean_btn:z_axis_sync_ent|debouncer:debouncer_ent|strb_generator:strb_ent                                                                   ; strb_generator        ; work         ;
 ;                |counter:cnt_ent|                ; 13 (13)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|clean_btn:z_axis_sync_ent|debouncer:debouncer_ent|strb_generator:strb_ent|counter:cnt_ent                                                   ; counter               ; work         ;
 ;          |sync:sync_ent|                        ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|clean_btn:z_axis_sync_ent|sync:sync_ent                                                                                                     ; sync                  ; work         ;
-;       |cmd_proc:cmd_proc_ent|                   ; 173 (40)            ; 131 (7)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|cmd_proc:cmd_proc_ent                                                                                                                       ; cmd_proc              ; work         ;
+;       |cmd_proc:cmd_proc_ent|                   ; 183 (50)            ; 131 (7)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|cmd_proc:cmd_proc_ent                                                                                                                       ; cmd_proc              ; work         ;
 ;          |accu_reg:accu_reg_dr_ent|             ; 24 (24)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|cmd_proc:cmd_proc_ent|accu_reg:accu_reg_dr_ent                                                                                              ; accu_reg              ; work         ;
 ;          |accu_reg:accu_reg_dtheta_ent|         ; 24 (24)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|cmd_proc:cmd_proc_ent|accu_reg:accu_reg_dtheta_ent                                                                                          ; accu_reg              ; work         ;
 ;          |cmd_rom:rom_ent|                      ; 30 (30)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|cmd_proc:cmd_proc_ent|cmd_rom:rom_ent                                                                                                       ; cmd_rom               ; work         ;
@@ -361,19 +361,19 @@ on the Quartus Prime software download page.
 ;             |counter:cnt_ent|                   ; 20 (20)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|cmd_proc:cmd_proc_ent|strb_generator:micro_step_strb_ent|counter:cnt_ent                                                                    ; counter               ; work         ;
 ;          |strb_generator:step_strb_ent|         ; 30 (6)              ; 25 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|cmd_proc:cmd_proc_ent|strb_generator:step_strb_ent                                                                                          ; strb_generator        ; work         ;
 ;             |counter:cnt_ent|                   ; 24 (24)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|cmd_proc:cmd_proc_ent|strb_generator:step_strb_ent|counter:cnt_ent                                                                          ; counter               ; work         ;
-;       |servo:servo_x_ent|                       ; 46 (2)              ; 40 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_x_ent                                                                                                                           ; servo                 ; work         ;
+;       |servo:servo_x_ent|                       ; 45 (1)              ; 40 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_x_ent                                                                                                                           ; servo                 ; work         ;
 ;          |pwm:pwm_ent|                          ; 44 (24)             ; 20 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_x_ent|pwm:pwm_ent                                                                                                               ; pwm                   ; work         ;
 ;             |counter:cnt_ent|                   ; 20 (20)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_x_ent|pwm:pwm_ent|counter:cnt_ent                                                                                               ; counter               ; work         ;
-;       |servo:servo_y_ent|                       ; 22 (2)              ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_y_ent                                                                                                                           ; servo                 ; work         ;
+;       |servo:servo_y_ent|                       ; 21 (1)              ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_y_ent                                                                                                                           ; servo                 ; work         ;
 ;          |pwm:pwm_ent|                          ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_y_ent|pwm:pwm_ent                                                                                                               ; pwm                   ; work         ;
 ;       |servo:servo_z_ent|                       ; 11 (2)              ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_z_ent                                                                                                                           ; servo                 ; work         ;
 ;          |pwm:pwm_ent|                          ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|servo:servo_z_ent|pwm:pwm_ent                                                                                                               ; pwm                   ; work         ;
-;       |tilt_axis:tilt_x|                        ; 102 (0)             ; 61 (0)                    ; 0                 ; 1          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x                                                                                                                            ; tilt_axis             ; work         ;
+;       |tilt_axis:tilt_x|                        ; 131 (0)             ; 61 (0)                    ; 0                 ; 1          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x                                                                                                                            ; tilt_axis             ; work         ;
 ;          |bcd_to_7seg:seg_hundreds_ent|         ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|bcd_to_7seg:seg_hundreds_ent                                                                                               ; bcd_to_7seg           ; work         ;
 ;          |bcd_to_7seg:seg_ones_ent|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|bcd_to_7seg:seg_ones_ent                                                                                                   ; bcd_to_7seg           ; work         ;
 ;          |bcd_to_7seg:seg_tens_ent|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|bcd_to_7seg:seg_tens_ent                                                                                                   ; bcd_to_7seg           ; work         ;
-;          |bin2bcd:bin2bcd_ent|                  ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|bin2bcd:bin2bcd_ent                                                                                                        ; bin2bcd               ; work         ;
-;          |delta_adc:adc_ent|                    ; 49 (10)             ; 38 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent                                                                                                          ; delta_adc             ; work         ;
+;          |bin2bcd:bin2bcd_ent|                  ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|bin2bcd:bin2bcd_ent                                                                                                        ; bin2bcd               ; work         ;
+;          |delta_adc:adc_ent|                    ; 74 (35)             ; 38 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent                                                                                                          ; delta_adc             ; work         ;
 ;             |pwm:pwm_ent|                       ; 15 (7)              ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|pwm:pwm_ent                                                                                              ; pwm                   ; work         ;
 ;                |counter:cnt_ent|                ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|pwm:pwm_ent|counter:cnt_ent                                                                              ; counter               ; work         ;
 ;             |strb_generator:sampling_strb_ent|  ; 24 (4)              ; 21 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|strb_generator:sampling_strb_ent                                                                         ; strb_generator        ; work         ;
@@ -381,13 +381,13 @@ on the Quartus Prime software download page.
 ;          |moving_average_filter:mov_avg_ent|    ; 12 (12)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|moving_average_filter:mov_avg_ent                                                                                          ; moving_average_filter ; work         ;
 ;          |sample_hold:sample_hold_ent|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|sample_hold:sample_hold_ent                                                                                                ; sample_hold           ; work         ;
 ;          |sync:comp_sync_ent|                   ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|sync:comp_sync_ent                                                                                                         ; sync                  ; work         ;
-;          |tilt:tilt_ent|                        ; 12 (12)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|tilt:tilt_ent                                                                                                              ; tilt                  ; work         ;
-;       |tilt_axis:tilt_y|                        ; 84 (0)              ; 40 (0)                    ; 128               ; 1          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y                                                                                                                            ; tilt_axis             ; work         ;
+;          |tilt:tilt_ent|                        ; 15 (15)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|tilt:tilt_ent                                                                                                              ; tilt                  ; work         ;
+;       |tilt_axis:tilt_y|                        ; 113 (0)             ; 40 (0)                    ; 128               ; 1          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y                                                                                                                            ; tilt_axis             ; work         ;
 ;          |bcd_to_7seg:seg_hundreds_ent|         ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|bcd_to_7seg:seg_hundreds_ent                                                                                               ; bcd_to_7seg           ; work         ;
 ;          |bcd_to_7seg:seg_ones_ent|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|bcd_to_7seg:seg_ones_ent                                                                                                   ; bcd_to_7seg           ; work         ;
 ;          |bcd_to_7seg:seg_tens_ent|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|bcd_to_7seg:seg_tens_ent                                                                                                   ; bcd_to_7seg           ; work         ;
-;          |bin2bcd:bin2bcd_ent|                  ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|bin2bcd:bin2bcd_ent                                                                                                        ; bin2bcd               ; work         ;
-;          |delta_adc:adc_ent|                    ; 15 (10)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|delta_adc:adc_ent                                                                                                          ; delta_adc             ; work         ;
+;          |bin2bcd:bin2bcd_ent|                  ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|bin2bcd:bin2bcd_ent                                                                                                        ; bin2bcd               ; work         ;
+;          |delta_adc:adc_ent|                    ; 40 (35)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|delta_adc:adc_ent                                                                                                          ; delta_adc             ; work         ;
 ;             |pwm:pwm_ent|                       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|delta_adc:adc_ent|pwm:pwm_ent                                                                                              ; pwm                   ; work         ;
 ;          |moving_average_filter:mov_avg_ent|    ; 28 (12)             ; 21 (11)                   ; 128               ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|moving_average_filter:mov_avg_ent                                                                                          ; moving_average_filter ; work         ;
 ;             |altshift_taps:filter_reg_rtl_0|    ; 16 (0)              ; 10 (0)                    ; 128               ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|moving_average_filter:mov_avg_ent|altshift_taps:filter_reg_rtl_0                                                           ; altshift_taps         ; work         ;
@@ -397,7 +397,7 @@ on the Quartus Prime software download page.
 ;                   |cntr_uhf:cntr1|              ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|moving_average_filter:mov_avg_ent|altshift_taps:filter_reg_rtl_0|shift_taps_huv:auto_generated|cntr_uhf:cntr1              ; cntr_uhf              ; work         ;
 ;          |sample_hold:sample_hold_ent|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|sample_hold:sample_hold_ent                                                                                                ; sample_hold           ; work         ;
 ;          |sync:comp_sync_ent|                   ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|sync:comp_sync_ent                                                                                                         ; sync                  ; work         ;
-;          |tilt:tilt_ent|                        ; 12 (12)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|tilt:tilt_ent                                                                                                              ; tilt                  ; work         ;
+;          |tilt:tilt_ent|                        ; 15 (15)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|tilt:tilt_ent                                                                                                              ; tilt                  ; work         ;
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -547,11 +547,11 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 458   ;
-; Number of registers using Synchronous Clear  ; 206   ;
-; Number of registers using Synchronous Load   ; 33    ;
+; Number of registers using Synchronous Clear  ; 232   ;
+; Number of registers using Synchronous Load   ; 27    ;
 ; Number of registers using Asynchronous Clear ; 422   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 161   ;
+; Number of registers using Clock Enable       ; 151   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -572,12 +572,12 @@ Encoding Type:  One-Hot
 ; tl:tl_ent|servo:servo_y_ent|on_cnt_val[12]                                                                                                                ; 2       ;
 ; tl:tl_ent|servo:servo_y_ent|on_cnt_val[15]                                                                                                                ; 2       ;
 ; tl:tl_ent|servo:servo_z_ent|on_cnt_val[12]                                                                                                                ; 5       ;
-; tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[6]                                                                                                          ; 4       ;
-; tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[5]                                                                                                          ; 4       ;
-; tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[4]                                                                                                          ; 4       ;
-; tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[3]                                                                                                          ; 4       ;
-; tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[2]                                                                                                          ; 4       ;
-; tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[0]                                                                                                          ; 4       ;
+; tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[6]                                                                                                          ; 5       ;
+; tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[5]                                                                                                          ; 5       ;
+; tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[4]                                                                                                          ; 5       ;
+; tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[3]                                                                                                          ; 5       ;
+; tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[2]                                                                                                          ; 5       ;
+; tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[0]                                                                                                          ; 5       ;
 ; tl:tl_ent|tilt_axis:tilt_y|moving_average_filter:mov_avg_ent|altshift_taps:filter_reg_rtl_0|shift_taps_huv:auto_generated|dffe6                           ; 16      ;
 ; tl:tl_ent|tilt_axis:tilt_y|moving_average_filter:mov_avg_ent|altshift_taps:filter_reg_rtl_0|shift_taps_huv:auto_generated|cntr_i1h:cntr5|counter_reg_bit2 ; 1       ;
 ; tl:tl_ent|tilt_axis:tilt_y|moving_average_filter:mov_avg_ent|altshift_taps:filter_reg_rtl_0|shift_taps_huv:auto_generated|cntr_i1h:cntr5|counter_reg_bit1 ; 1       ;
@@ -600,13 +600,13 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|servo:servo_x_ent|on_cnt_val[0]                  ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|servo:servo_y_ent|on_cnt_val[17]                 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|on_cnt_val[1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|delta_adc:adc_ent|on_cnt_val[0] ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|servo:servo_x_ent|on_cnt_val[14]                 ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|servo:servo_y_ent|on_cnt_val[17]                 ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|on_cnt_val[2] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|tilt_axis:tilt_y|delta_adc:adc_ent|on_cnt_val[5] ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[7]           ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|servo:servo_x_ent|on_cnt_val[10]                 ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|servo:servo_y_ent|on_cnt_val[12]                 ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|servo:servo_x_ent|on_cnt_val[6]                  ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|servo:servo_y_ent|on_cnt_val[6]                  ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |PINOUT|tl:tl_ent|btn_ctrl:btn_ctrl_ent|curr_register[0]           ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |PINOUT|tl:tl_ent|btn_ctrl:btn_ctrl_ent|Selector0                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
@@ -1221,27 +1221,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 458                         ;
-;     CLR               ; 65                          ;
+;     CLR               ; 75                          ;
 ;     CLR SCLR          ; 202                         ;
 ;     ENA               ; 6                           ;
-;     ENA CLR           ; 118                         ;
-;     ENA CLR SCLR      ; 4                           ;
-;     ENA CLR SLD       ; 33                          ;
+;     ENA CLR           ; 88                          ;
+;     ENA CLR SCLR      ; 30                          ;
+;     ENA CLR SLD       ; 27                          ;
 ;     plain             ; 30                          ;
-; arriav_lcell_comb     ; 672                         ;
-;     arith             ; 340                         ;
+; arriav_lcell_comb     ; 732                         ;
+;     arith             ; 356                         ;
 ;         0 data inputs ; 3                           ;
-;         1 data inputs ; 266                         ;
-;         2 data inputs ; 68                          ;
+;         1 data inputs ; 296                         ;
+;         2 data inputs ; 54                          ;
 ;         3 data inputs ; 3                           ;
-;     normal            ; 308                         ;
+;     normal            ; 352                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 25                          ;
+;         1 data inputs ; 29                          ;
 ;         2 data inputs ; 23                          ;
-;         3 data inputs ; 17                          ;
-;         4 data inputs ; 67                          ;
-;         5 data inputs ; 90                          ;
-;         6 data inputs ; 85                          ;
+;         3 data inputs ; 23                          ;
+;         4 data inputs ; 69                          ;
+;         5 data inputs ; 110                         ;
+;         6 data inputs ; 97                          ;
 ;     shared            ; 24                          ;
 ;         0 data inputs ; 2                           ;
 ;         3 data inputs ; 22                          ;
@@ -1250,7 +1250,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.22                        ;
+; Average LUT depth     ; 2.31                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1259,7 +1259,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1269,106 +1269,106 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Mon Jan 26 14:52:49 2026
+    Info: Processing started: Wed Mar  4 11:58:51 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PINOUT -c PINOUT
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file PINOUT.vhd
-    Info (12022): Found design unit 1: PINOUT-rtl File: /home/simon/Uni/LVA-VHDL-PR/ex_11/quartus/PINOUT.vhd Line: 49
-    Info (12023): Found entity 1: PINOUT File: /home/simon/Uni/LVA-VHDL-PR/ex_11/quartus/PINOUT.vhd Line: 9
-Info (12021): Found 1 design units, including 0 entities, in source file /home/simon/Uni/LVA-VHDL-PR/packages/std_definitions.vhd
-    Info (12022): Found design unit 1: std_definitions File: /home/simon/Uni/LVA-VHDL-PR/packages/std_definitions.vhd Line: 6
-Info (12021): Found 1 design units, including 0 entities, in source file /home/simon/Uni/LVA-VHDL-PR/packages/Commands_p.vhd
-    Info (12022): Found design unit 1: commands File: /home/simon/Uni/LVA-VHDL-PR/packages/Commands_p.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/tilt_ea.vhd
-    Info (12022): Found design unit 1: tilt-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/tilt_ea.vhd Line: 19
-    Info (12023): Found entity 1: tilt File: /home/simon/Uni/LVA-VHDL-PR/entities/tilt_ea.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/tilt_axis_ea.vhd
-    Info (12022): Found design unit 1: tilt_axis-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/tilt_axis_ea.vhd Line: 33
-    Info (12023): Found entity 1: tilt_axis File: /home/simon/Uni/LVA-VHDL-PR/entities/tilt_axis_ea.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/sync_ea.vhd
-    Info (12022): Found design unit 1: sync-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/sync_ea.vhd Line: 17
-    Info (12023): Found entity 1: sync File: /home/simon/Uni/LVA-VHDL-PR/entities/sync_ea.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/strb_generator_ea.vhd
-    Info (12022): Found design unit 1: strb_generator-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/strb_generator_ea.vhd Line: 22
-    Info (12023): Found entity 1: strb_generator File: /home/simon/Uni/LVA-VHDL-PR/entities/strb_generator_ea.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/servo_ea.vhd
-    Info (12022): Found design unit 1: servo-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/servo_ea.vhd Line: 21
-    Info (12023): Found entity 1: servo File: /home/simon/Uni/LVA-VHDL-PR/entities/servo_ea.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/sample_hold_ea.vhd
-    Info (12022): Found design unit 1: sample_hold-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/sample_hold_ea.vhd Line: 20
-    Info (12023): Found entity 1: sample_hold File: /home/simon/Uni/LVA-VHDL-PR/entities/sample_hold_ea.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/pwm_ea.vhd
-    Info (12022): Found design unit 1: pwm-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/pwm_ea.vhd Line: 22
-    Info (12023): Found entity 1: pwm File: /home/simon/Uni/LVA-VHDL-PR/entities/pwm_ea.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/moving_average_ea.vhd
-    Info (12022): Found design unit 1: moving_average_filter-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/moving_average_ea.vhd Line: 27
-    Info (12023): Found entity 1: moving_average_filter File: /home/simon/Uni/LVA-VHDL-PR/entities/moving_average_ea.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/delta_adc_ea.vhd
-    Info (12022): Found design unit 1: delta_adc-debug_rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/delta_adc_ea.vhd Line: 29
-    Info (12023): Found entity 1: delta_adc File: /home/simon/Uni/LVA-VHDL-PR/entities/delta_adc_ea.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/debouncer_ea.vhd
-    Info (12022): Found design unit 1: debouncer-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/debouncer_ea.vhd Line: 18
-    Info (12023): Found entity 1: debouncer File: /home/simon/Uni/LVA-VHDL-PR/entities/debouncer_ea.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/counter_ea.vhd
-    Info (12022): Found design unit 1: counter-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/counter_ea.vhd Line: 21
-    Info (12023): Found entity 1: counter File: /home/simon/Uni/LVA-VHDL-PR/entities/counter_ea.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/cmd_rom_ea.vhd
-    Info (12022): Found design unit 1: cmd_rom-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/cmd_rom_ea.vhd Line: 18
-    Info (12023): Found entity 1: cmd_rom File: /home/simon/Uni/LVA-VHDL-PR/entities/cmd_rom_ea.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/cmd_proc_ea.vhd
-    Info (12022): Found design unit 1: cmd_proc-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/cmd_proc_ea.vhd Line: 26
-    Info (12023): Found entity 1: cmd_proc File: /home/simon/Uni/LVA-VHDL-PR/entities/cmd_proc_ea.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/clean_btn_ea.vhd
-    Info (12022): Found design unit 1: clean_btn-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/clean_btn_ea.vhd Line: 17
-    Info (12023): Found entity 1: clean_btn File: /home/simon/Uni/LVA-VHDL-PR/entities/clean_btn_ea.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/btn2strb.vhd
-    Info (12022): Found design unit 1: btn2strb-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/btn2strb.vhd Line: 13
-    Info (12023): Found entity 1: btn2strb File: /home/simon/Uni/LVA-VHDL-PR/entities/btn2strb.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/btn_ctrl_ea.vhd
-    Info (12022): Found design unit 1: btn_ctrl-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/btn_ctrl_ea.vhd Line: 31
-    Info (12023): Found entity 1: btn_ctrl File: /home/simon/Uni/LVA-VHDL-PR/entities/btn_ctrl_ea.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/bin2bcd_ea.vhd
-    Info (12022): Found design unit 1: bin2bcd-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/bin2bcd_ea.vhd Line: 19
-    Info (12023): Found entity 1: bin2bcd File: /home/simon/Uni/LVA-VHDL-PR/entities/bin2bcd_ea.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/bcd_to_7seg_ea.vhd
-    Info (12022): Found design unit 1: bcd_to_7seg-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/bcd_to_7seg_ea.vhd Line: 16
-    Info (12023): Found entity 1: bcd_to_7seg File: /home/simon/Uni/LVA-VHDL-PR/entities/bcd_to_7seg_ea.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/entities/accu_reg_ea.vhd
-    Info (12022): Found design unit 1: accu_reg-rtl File: /home/simon/Uni/LVA-VHDL-PR/entities/accu_reg_ea.vhd Line: 28
-    Info (12023): Found entity 1: accu_reg File: /home/simon/Uni/LVA-VHDL-PR/entities/accu_reg_ea.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/LVA-VHDL-PR/ex_11/tl_ea.vhd
-    Info (12022): Found design unit 1: tl-rtl File: /home/simon/Uni/LVA-VHDL-PR/ex_11/tl_ea.vhd Line: 47
-    Info (12023): Found entity 1: tl File: /home/simon/Uni/LVA-VHDL-PR/ex_11/tl_ea.vhd Line: 10
+    Info (12022): Found design unit 1: PINOUT-rtl File: /home/simon/Uni/VHDL-PR/ex_11/quartus/PINOUT.vhd Line: 49
+    Info (12023): Found entity 1: PINOUT File: /home/simon/Uni/VHDL-PR/ex_11/quartus/PINOUT.vhd Line: 9
+Info (12021): Found 1 design units, including 0 entities, in source file /home/simon/Uni/VHDL-PR/packages/std_definitions.vhd
+    Info (12022): Found design unit 1: std_definitions File: /home/simon/Uni/VHDL-PR/packages/std_definitions.vhd Line: 6
+Info (12021): Found 1 design units, including 0 entities, in source file /home/simon/Uni/VHDL-PR/packages/Commands_p.vhd
+    Info (12022): Found design unit 1: commands File: /home/simon/Uni/VHDL-PR/packages/Commands_p.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/tilt_ea.vhd
+    Info (12022): Found design unit 1: tilt-rtl File: /home/simon/Uni/VHDL-PR/entities/tilt_ea.vhd Line: 19
+    Info (12023): Found entity 1: tilt File: /home/simon/Uni/VHDL-PR/entities/tilt_ea.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/tilt_axis_ea.vhd
+    Info (12022): Found design unit 1: tilt_axis-rtl File: /home/simon/Uni/VHDL-PR/entities/tilt_axis_ea.vhd Line: 33
+    Info (12023): Found entity 1: tilt_axis File: /home/simon/Uni/VHDL-PR/entities/tilt_axis_ea.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/sync_ea.vhd
+    Info (12022): Found design unit 1: sync-rtl File: /home/simon/Uni/VHDL-PR/entities/sync_ea.vhd Line: 17
+    Info (12023): Found entity 1: sync File: /home/simon/Uni/VHDL-PR/entities/sync_ea.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/strb_generator_ea.vhd
+    Info (12022): Found design unit 1: strb_generator-rtl File: /home/simon/Uni/VHDL-PR/entities/strb_generator_ea.vhd Line: 22
+    Info (12023): Found entity 1: strb_generator File: /home/simon/Uni/VHDL-PR/entities/strb_generator_ea.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/servo_ea.vhd
+    Info (12022): Found design unit 1: servo-rtl File: /home/simon/Uni/VHDL-PR/entities/servo_ea.vhd Line: 21
+    Info (12023): Found entity 1: servo File: /home/simon/Uni/VHDL-PR/entities/servo_ea.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/sample_hold_ea.vhd
+    Info (12022): Found design unit 1: sample_hold-rtl File: /home/simon/Uni/VHDL-PR/entities/sample_hold_ea.vhd Line: 20
+    Info (12023): Found entity 1: sample_hold File: /home/simon/Uni/VHDL-PR/entities/sample_hold_ea.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/pwm_ea.vhd
+    Info (12022): Found design unit 1: pwm-rtl File: /home/simon/Uni/VHDL-PR/entities/pwm_ea.vhd Line: 22
+    Info (12023): Found entity 1: pwm File: /home/simon/Uni/VHDL-PR/entities/pwm_ea.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/moving_average_ea.vhd
+    Info (12022): Found design unit 1: moving_average_filter-rtl File: /home/simon/Uni/VHDL-PR/entities/moving_average_ea.vhd Line: 27
+    Info (12023): Found entity 1: moving_average_filter File: /home/simon/Uni/VHDL-PR/entities/moving_average_ea.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/delta_adc_ea.vhd
+    Info (12022): Found design unit 1: delta_adc-debug_rtl File: /home/simon/Uni/VHDL-PR/entities/delta_adc_ea.vhd Line: 29
+    Info (12023): Found entity 1: delta_adc File: /home/simon/Uni/VHDL-PR/entities/delta_adc_ea.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/debouncer_ea.vhd
+    Info (12022): Found design unit 1: debouncer-rtl File: /home/simon/Uni/VHDL-PR/entities/debouncer_ea.vhd Line: 18
+    Info (12023): Found entity 1: debouncer File: /home/simon/Uni/VHDL-PR/entities/debouncer_ea.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/counter_ea.vhd
+    Info (12022): Found design unit 1: counter-rtl File: /home/simon/Uni/VHDL-PR/entities/counter_ea.vhd Line: 21
+    Info (12023): Found entity 1: counter File: /home/simon/Uni/VHDL-PR/entities/counter_ea.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/cmd_rom_ea.vhd
+    Info (12022): Found design unit 1: cmd_rom-rtl File: /home/simon/Uni/VHDL-PR/entities/cmd_rom_ea.vhd Line: 18
+    Info (12023): Found entity 1: cmd_rom File: /home/simon/Uni/VHDL-PR/entities/cmd_rom_ea.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/cmd_proc_ea.vhd
+    Info (12022): Found design unit 1: cmd_proc-rtl File: /home/simon/Uni/VHDL-PR/entities/cmd_proc_ea.vhd Line: 26
+    Info (12023): Found entity 1: cmd_proc File: /home/simon/Uni/VHDL-PR/entities/cmd_proc_ea.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/clean_btn_ea.vhd
+    Info (12022): Found design unit 1: clean_btn-rtl File: /home/simon/Uni/VHDL-PR/entities/clean_btn_ea.vhd Line: 17
+    Info (12023): Found entity 1: clean_btn File: /home/simon/Uni/VHDL-PR/entities/clean_btn_ea.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/btn2strb.vhd
+    Info (12022): Found design unit 1: btn2strb-rtl File: /home/simon/Uni/VHDL-PR/entities/btn2strb.vhd Line: 13
+    Info (12023): Found entity 1: btn2strb File: /home/simon/Uni/VHDL-PR/entities/btn2strb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/btn_ctrl_ea.vhd
+    Info (12022): Found design unit 1: btn_ctrl-rtl File: /home/simon/Uni/VHDL-PR/entities/btn_ctrl_ea.vhd Line: 31
+    Info (12023): Found entity 1: btn_ctrl File: /home/simon/Uni/VHDL-PR/entities/btn_ctrl_ea.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/bin2bcd_ea.vhd
+    Info (12022): Found design unit 1: bin2bcd-rtl File: /home/simon/Uni/VHDL-PR/entities/bin2bcd_ea.vhd Line: 19
+    Info (12023): Found entity 1: bin2bcd File: /home/simon/Uni/VHDL-PR/entities/bin2bcd_ea.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/bcd_to_7seg_ea.vhd
+    Info (12022): Found design unit 1: bcd_to_7seg-rtl File: /home/simon/Uni/VHDL-PR/entities/bcd_to_7seg_ea.vhd Line: 16
+    Info (12023): Found entity 1: bcd_to_7seg File: /home/simon/Uni/VHDL-PR/entities/bcd_to_7seg_ea.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/entities/accu_reg_ea.vhd
+    Info (12022): Found design unit 1: accu_reg-rtl File: /home/simon/Uni/VHDL-PR/entities/accu_reg_ea.vhd Line: 28
+    Info (12023): Found entity 1: accu_reg File: /home/simon/Uni/VHDL-PR/entities/accu_reg_ea.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Uni/VHDL-PR/ex_11/tl_ea.vhd
+    Info (12022): Found design unit 1: tl-rtl File: /home/simon/Uni/VHDL-PR/ex_11/tl_ea.vhd Line: 47
+    Info (12023): Found entity 1: tl File: /home/simon/Uni/VHDL-PR/ex_11/tl_ea.vhd Line: 10
 Info (12127): Elaborating entity "PINOUT" for the top level hierarchy
-Info (12129): Elaborating entity "tl" using architecture "A:rtl" for hierarchy "tl:tl_ent" File: /home/simon/Uni/LVA-VHDL-PR/ex_11/quartus/PINOUT.vhd Line: 60
-Info (12129): Elaborating entity "servo" using architecture "A:rtl" for hierarchy "tl:tl_ent|servo:servo_x_ent" File: /home/simon/Uni/LVA-VHDL-PR/ex_11/tl_ea.vhd Line: 74
-Info (12129): Elaborating entity "pwm" using architecture "A:rtl" for hierarchy "tl:tl_ent|servo:servo_x_ent|pwm:pwm_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/servo_ea.vhd Line: 28
-Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|servo:servo_x_ent|pwm:pwm_ent|counter:cnt_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/pwm_ea.vhd Line: 28
-Info (12129): Elaborating entity "btn_ctrl" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent" File: /home/simon/Uni/LVA-VHDL-PR/ex_11/tl_ea.vhd Line: 100
-Info (12129): Elaborating entity "clean_btn" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/btn_ctrl_ea.vhd Line: 100
-Info (12129): Elaborating entity "sync" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|sync:sync_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/clean_btn_ea.vhd Line: 23
-Info (12129): Elaborating entity "debouncer" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|debouncer:debouncer_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/clean_btn_ea.vhd Line: 34
-Info (12129): Elaborating entity "strb_generator" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|debouncer:debouncer_ent|strb_generator:strb_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/debouncer_ea.vhd Line: 63
-Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|debouncer:debouncer_ent|strb_generator:strb_ent|counter:cnt_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/strb_generator_ea.vhd Line: 32
-Info (12129): Elaborating entity "tilt_axis" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x" File: /home/simon/Uni/LVA-VHDL-PR/ex_11/tl_ea.vhd Line: 116
-Info (12129): Elaborating entity "delta_adc" using architecture "A:debug_rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/tilt_axis_ea.vhd Line: 55
-Info (12129): Elaborating entity "pwm" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|pwm:pwm_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/delta_adc_ea.vhd Line: 66
-Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|pwm:pwm_ent|counter:cnt_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/pwm_ea.vhd Line: 28
-Info (12129): Elaborating entity "strb_generator" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|strb_generator:sampling_strb_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/delta_adc_ea.vhd Line: 78
-Info (12129): Elaborating entity "moving_average_filter" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|moving_average_filter:mov_avg_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/tilt_axis_ea.vhd Line: 70
-Info (12129): Elaborating entity "sample_hold" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|sample_hold:sample_hold_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/tilt_axis_ea.vhd Line: 85
-Info (12129): Elaborating entity "tilt" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|tilt:tilt_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/tilt_axis_ea.vhd Line: 94
-Info (12129): Elaborating entity "bin2bcd" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|bin2bcd:bin2bcd_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/tilt_axis_ea.vhd Line: 106
-Info (12129): Elaborating entity "bcd_to_7seg" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|bcd_to_7seg:seg_ones_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/tilt_axis_ea.vhd Line: 114
-Info (12129): Elaborating entity "btn2strb" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn2strb:btn2strb" File: /home/simon/Uni/LVA-VHDL-PR/ex_11/tl_ea.vhd Line: 150
-Info (12129): Elaborating entity "cmd_proc" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent" File: /home/simon/Uni/LVA-VHDL-PR/ex_11/tl_ea.vhd Line: 158
-Info (12129): Elaborating entity "accu_reg" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|accu_reg:accu_reg_dr_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/cmd_proc_ea.vhd Line: 85
-Info (12129): Elaborating entity "strb_generator" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|strb_generator:step_strb_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/cmd_proc_ea.vhd Line: 111
-Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|strb_generator:step_strb_ent|counter:cnt_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/strb_generator_ea.vhd Line: 32
-Info (12129): Elaborating entity "cmd_rom" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|cmd_rom:rom_ent" File: /home/simon/Uni/LVA-VHDL-PR/entities/cmd_proc_ea.vhd Line: 133
+Info (12129): Elaborating entity "tl" using architecture "A:rtl" for hierarchy "tl:tl_ent" File: /home/simon/Uni/VHDL-PR/ex_11/quartus/PINOUT.vhd Line: 60
+Info (12129): Elaborating entity "servo" using architecture "A:rtl" for hierarchy "tl:tl_ent|servo:servo_x_ent" File: /home/simon/Uni/VHDL-PR/ex_11/tl_ea.vhd Line: 74
+Info (12129): Elaborating entity "pwm" using architecture "A:rtl" for hierarchy "tl:tl_ent|servo:servo_x_ent|pwm:pwm_ent" File: /home/simon/Uni/VHDL-PR/entities/servo_ea.vhd Line: 28
+Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|servo:servo_x_ent|pwm:pwm_ent|counter:cnt_ent" File: /home/simon/Uni/VHDL-PR/entities/pwm_ea.vhd Line: 28
+Info (12129): Elaborating entity "btn_ctrl" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent" File: /home/simon/Uni/VHDL-PR/ex_11/tl_ea.vhd Line: 100
+Info (12129): Elaborating entity "clean_btn" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent" File: /home/simon/Uni/VHDL-PR/entities/btn_ctrl_ea.vhd Line: 100
+Info (12129): Elaborating entity "sync" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|sync:sync_ent" File: /home/simon/Uni/VHDL-PR/entities/clean_btn_ea.vhd Line: 23
+Info (12129): Elaborating entity "debouncer" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|debouncer:debouncer_ent" File: /home/simon/Uni/VHDL-PR/entities/clean_btn_ea.vhd Line: 34
+Info (12129): Elaborating entity "strb_generator" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|debouncer:debouncer_ent|strb_generator:strb_ent" File: /home/simon/Uni/VHDL-PR/entities/debouncer_ea.vhd Line: 63
+Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn_ctrl:btn_ctrl_ent|clean_btn:inc_clean_ent|debouncer:debouncer_ent|strb_generator:strb_ent|counter:cnt_ent" File: /home/simon/Uni/VHDL-PR/entities/strb_generator_ea.vhd Line: 32
+Info (12129): Elaborating entity "tilt_axis" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x" File: /home/simon/Uni/VHDL-PR/ex_11/tl_ea.vhd Line: 116
+Info (12129): Elaborating entity "delta_adc" using architecture "A:debug_rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent" File: /home/simon/Uni/VHDL-PR/entities/tilt_axis_ea.vhd Line: 55
+Info (12129): Elaborating entity "pwm" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|pwm:pwm_ent" File: /home/simon/Uni/VHDL-PR/entities/delta_adc_ea.vhd Line: 66
+Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|pwm:pwm_ent|counter:cnt_ent" File: /home/simon/Uni/VHDL-PR/entities/pwm_ea.vhd Line: 28
+Info (12129): Elaborating entity "strb_generator" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|delta_adc:adc_ent|strb_generator:sampling_strb_ent" File: /home/simon/Uni/VHDL-PR/entities/delta_adc_ea.vhd Line: 78
+Info (12129): Elaborating entity "moving_average_filter" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|moving_average_filter:mov_avg_ent" File: /home/simon/Uni/VHDL-PR/entities/tilt_axis_ea.vhd Line: 70
+Info (12129): Elaborating entity "sample_hold" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|sample_hold:sample_hold_ent" File: /home/simon/Uni/VHDL-PR/entities/tilt_axis_ea.vhd Line: 85
+Info (12129): Elaborating entity "tilt" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|tilt:tilt_ent" File: /home/simon/Uni/VHDL-PR/entities/tilt_axis_ea.vhd Line: 94
+Info (12129): Elaborating entity "bin2bcd" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|bin2bcd:bin2bcd_ent" File: /home/simon/Uni/VHDL-PR/entities/tilt_axis_ea.vhd Line: 106
+Info (12129): Elaborating entity "bcd_to_7seg" using architecture "A:rtl" for hierarchy "tl:tl_ent|tilt_axis:tilt_x|bcd_to_7seg:seg_ones_ent" File: /home/simon/Uni/VHDL-PR/entities/tilt_axis_ea.vhd Line: 114
+Info (12129): Elaborating entity "btn2strb" using architecture "A:rtl" for hierarchy "tl:tl_ent|btn2strb:btn2strb" File: /home/simon/Uni/VHDL-PR/ex_11/tl_ea.vhd Line: 150
+Info (12129): Elaborating entity "cmd_proc" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent" File: /home/simon/Uni/VHDL-PR/ex_11/tl_ea.vhd Line: 158
+Info (12129): Elaborating entity "accu_reg" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|accu_reg:accu_reg_dr_ent" File: /home/simon/Uni/VHDL-PR/entities/cmd_proc_ea.vhd Line: 85
+Info (12129): Elaborating entity "strb_generator" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|strb_generator:step_strb_ent" File: /home/simon/Uni/VHDL-PR/entities/cmd_proc_ea.vhd Line: 111
+Info (12129): Elaborating entity "counter" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|strb_generator:step_strb_ent|counter:cnt_ent" File: /home/simon/Uni/VHDL-PR/entities/strb_generator_ea.vhd Line: 32
+Info (12129): Elaborating entity "cmd_rom" using architecture "A:rtl" for hierarchy "tl:tl_ent|cmd_proc:cmd_proc_ent|cmd_rom:rom_ent" File: /home/simon/Uni/VHDL-PR/entities/cmd_proc_ea.vhd Line: 133
 Info (286030): Timing-Driven Synthesis is running
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "tl:tl_ent|cmd_proc:cmd_proc_ent|cmd_rom:rom_ent|ROMMEM" is uninferred due to inappropriate RAM size File: /home/simon/Uni/LVA-VHDL-PR/entities/cmd_rom_ea.vhd Line: 19
+    Info (276004): RAM logic "tl:tl_ent|cmd_proc:cmd_proc_ent|cmd_rom:rom_ent|ROMMEM" is uninferred due to inappropriate RAM size File: /home/simon/Uni/VHDL-PR/entities/cmd_rom_ea.vhd Line: 19
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276034): Inferred altshift_taps megafunction from the following design logic: "tl:tl_ent|tilt_axis:tilt_y|moving_average_filter:mov_avg_ent|filter_reg_rtl_0"
         Info (286033): Parameter NUMBER_OF_TAPS set to 1
@@ -1382,29 +1382,29 @@ Info (12133): Instantiated megafunction "tl:tl_ent|tilt_axis:tilt_y|moving_avera
     Info (12134): Parameter "WIDTH" = "16"
     Info (12134): Parameter "POWER_UP_STATE" = "DONT_CARE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_huv.tdf
-    Info (12023): Found entity 1: shift_taps_huv File: /home/simon/Uni/LVA-VHDL-PR/ex_11/quartus/db/shift_taps_huv.tdf Line: 29
+    Info (12023): Found entity 1: shift_taps_huv File: /home/simon/Uni/VHDL-PR/ex_11/quartus/db/shift_taps_huv.tdf Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_tfc1.tdf
-    Info (12023): Found entity 1: altsyncram_tfc1 File: /home/simon/Uni/LVA-VHDL-PR/ex_11/quartus/db/altsyncram_tfc1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_tfc1 File: /home/simon/Uni/VHDL-PR/ex_11/quartus/db/altsyncram_tfc1.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_uhf.tdf
-    Info (12023): Found entity 1: cntr_uhf File: /home/simon/Uni/LVA-VHDL-PR/ex_11/quartus/db/cntr_uhf.tdf Line: 26
+    Info (12023): Found entity 1: cntr_uhf File: /home/simon/Uni/VHDL-PR/ex_11/quartus/db/cntr_uhf.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_i1h.tdf
-    Info (12023): Found entity 1: cntr_i1h File: /home/simon/Uni/LVA-VHDL-PR/ex_11/quartus/db/cntr_i1h.tdf Line: 28
+    Info (12023): Found entity 1: cntr_i1h File: /home/simon/Uni/VHDL-PR/ex_11/quartus/db/cntr_i1h.tdf Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/simon/Uni/LVA-VHDL-PR/ex_11/quartus/PINOUT.vhd Line: 25
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/simon/Uni/LVA-VHDL-PR/ex_11/quartus/PINOUT.vhd Line: 28
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/simon/Uni/VHDL-PR/ex_11/quartus/PINOUT.vhd Line: 25
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/simon/Uni/VHDL-PR/ex_11/quartus/PINOUT.vhd Line: 28
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 785 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 845 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 47 output pins
-    Info (21061): Implemented 708 logic cells
+    Info (21061): Implemented 768 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 562 megabytes
-    Info: Processing ended: Mon Jan 26 14:53:25 2026
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:01:30
+    Info: Peak virtual memory: 579 megabytes
+    Info: Processing ended: Wed Mar  4 11:59:08 2026
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:41
 
 
